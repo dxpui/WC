@@ -997,3 +997,8 @@ td:nth-child(3) {
     width: 30px;
     margin-right: 10px;
 }
+
+.district-level,
+.address-level {
+    display: none;
+}
