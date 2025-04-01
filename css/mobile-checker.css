@@ -978,12 +978,6 @@ td:nth-child(3) {
     .popover {
         max-width: 60% !important;
     }
-    .popover-width-80{
-        max-width: 80% !important;
-    }
-    .popover-width-60{
-        max-width: 86% !important;
-    }
 }
 
 @media (max-width: 768px) {
