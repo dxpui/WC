@@ -1,0 +1,999 @@
+.fs-m {
+    font-size: 1.2rem;
+}
+
+.form-control {
+    border: 3px solid var(--color-default);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border: 3px solid var(--color-default);
+}
+
+.white-bg {
+    background-color: var(--color-white);
+    color: var(--color-default);
+}
+
+.gray-bg {
+    background-color: var(--color-light-gray);
+    color: var(--color-default);
+}
+
+input::-webkit-date-and-time-value {
+    text-align: left;
+}
+
+@media (min-width: 991px) {
+    .without-search .col-md-6 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+.pdf-content {
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media (forced-colors: active) {
+    .info-card .svg-arrow {
+        fill: aliceblue;
+    }
+
+    .info-card:hover .svg-arrow {
+        fill: aliceblue;
+        stroke: var(--color-default);
+    }
+
+    .info-card:hover .svg-arrow path {
+        stroke: var(--color-default);
+    }
+
+    .alert .alert-close svg {
+        fill: rgb(56, 143, 220);
+    }
+
+    /* Customize the appearance of the calendar icon in high contrast mode */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+
+    .info-card .svg-arrow-info {
+        fill: aliceblue;
+    }
+
+    .download-svg {
+        width: 24px;
+    }
+
+    .download-svg path {
+        stroke: #ffc107;
+    }
+
+    .header .menu>ul>li>button {
+        border-bottom: none;
+    }
+
+}
+
+.postcode-container {
+    font-size: 1rem;
+}
+
+.postcode-container-left {
+    padding: 40px;
+}
+
+@media (max-width: 1024px) {
+    .postcode-container-left {
+        padding: 40px 10px 10px 10px;
+    }
+}
+
+.postcode-container-right {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-inline: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .postcode-container-right {
+        padding: 40px 10px;
+    }
+}
+
+.postcode-container-left table .green-bg {
+    background-color: var(--color-green);
+}
+
+.postcode-container-left table .yellow-bg {
+    background-color: var(--color-yellow);
+}
+
+.postcode-container-left table .orange-bg {
+    background-color: var(--color-secondary);
+}
+
+.postcode-container-left .location-text {
+    border: 1px solid var(--color-default);
+}
+
+.postcode-container-left table .green-text {
+    color: var(--color-green);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.postcode-container table .blue-text {
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.postcode-container table .lightblue-text {
+    color: #b692fe;
+    font-weight: 700;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.postcode-container table .darkgreen-text {
+    color: #00743e;
+    font-weight: 700;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.container-radio .checkmark {
+    border-radius: 50%;
+}
+
+.container-radio:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container-radio input:checked~.checkmark {
+    background-color: var(--color-white);
+}
+
+.container-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    border-radius: 50%;
+}
+
+.container-radio input:checked~.checkmark:after {
+    display: block;
+}
+
+.container-radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    background: var(--color-default);
+}
+
+.collapse-left {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 0;
+    background-color: var(--color-light-gray);
+    border: none;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.collapse-left:hover,
+.collapse-left:active {
+    background-color: transparent;
+    border: none;
+}
+
+.collapse-left i {
+    color: var(--color-default);
+}
+
+.megenta-bg .postcode-number {
+    color: var(--color-default);
+}
+
+.megenta-bg .white-bg p {
+    color: var(--color-default) !important;
+}
+
+.postcode-left-outer {
+    transition: width 0.3s ease;
+}
+
+.postcode-left-outer.collapsed {
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+.postcode-right-outer.expend {
+    width: calc(100% - 50px);
+    transition: width 0.3s ease;
+}
+
+.modal-popup-width-75 {
+    max-width: 75% !important;
+}
+
+
+@media (min-width: 768px) {
+    .modal-popup-width-50 {
+        max-width: 50% !important;
+    }
+}
+
+
+.modal-popup-width-40 {
+    max-width: 40% !important;
+}
+
+.modal-popup-width-45 {
+    max-width: 45%;
+}
+
+@media (max-width: 1024px) {
+    .modal-popup-width-45 {
+        max-width: 100%;
+        margin-right: 3% !important;
+    }
+}
+
+.left-panel {
+    background-color: #35c95e;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.accordion-box {
+    border: 1px solid black;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0 !important;
+}
+
+.accordion-container {
+    background-color: #000045;
+    color: white;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    margin: 0;
+}
+
+.accordion-button {
+    cursor: pointer;
+    position: relative;
+    padding: 3px 40px 3px 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    box-shadow: none;
+    line-height: 24px;
+}
+
+.accordion-button .arrow {
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+}
+
+/* .accordion-item {
+    margin: 2px;
+    background-color: white;
+    border: none;
+    padding: 5px;
+} */
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: none !important;
+    border-top-right-radius: none !important;
+}
+
+.accordion-button:focus {
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.btn-link {
+    text-decoration: none !important;
+}
+
+.btn-link:hover {
+    text-decoration: none !important;
+}
+
+.popover-icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.custom-popover-width {
+    max-width: 100%;
+}
+
+/* accordion-new-design*/
+.item-list li {
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.accordion-item {
+    /* margin-bottom: 10px; */
+    border: 1px solid #ddd;
+    border-radius: 0px !important;
+    overflow: hidden;
+    padding: 7px 5px;
+}
+
+.accordion-item:not(:first-child) {
+    border-top: 1px solid #ddd;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--color-black);
+    background-color: var(--color-light-gray);
+    border: 1px solid #ddd;
+}
+
+.item-list li:hover,
+.item-list li.active {
+    background-color: var(--color-light-gray);
+    color: var(--color-black);
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.w-35 {
+    width: 35% !important;
+}
+
+.return-btn {
+    a {
+        text-decoration: none;
+        color: var(--color-default);
+        font-weight: bold;
+    }
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fs-2rem {
+    font-size: 2rem !important;
+}
+
+/* .search-container:focus {
+    border: 1px solid var(--color-default);
+    box-shadow: var(--btn-focus-box-shadow);
+} */
+
+.search-container .search-postcode {
+    border-right: none;
+}
+
+.search-container .input-group-text {
+    border-right: none;
+    border: 3px solid var(--color-default);
+    border-radius: 0;
+    margin-left: -4px !important;
+    background-color: transparent;
+
+}
+
+/* .search-container input:focus {
+    border: 3px solid var(--color-default);
+    box-shadow: none;
+    border-right: none;
+} */
+
+.location-pin {
+    height: 36px;
+    width: auto;
+}
+
+.bold-link {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-default);
+}
+
+.modal-dialog-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100% - 1rem);
+    margin: 0;
+    margin-left: 3%;
+}
+
+.border-color-default {
+    border-color: var(--color-default);
+    border: 3px solid var(--color-default);
+}
+
+.search-postcode {
+    height: 60px;
+    font-size: 2rem;
+}
+
+/* popover related css */
+.custom-popover {
+    font-size: 14px;
+    /* padding: 25px; */
+}
+
+.popover {
+    border-color: var(--color-default);
+    border: 3px solid var(--color-default);
+    max-width: 30% !important;
+}
+
+.px-5rem {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+}
+
+.m-btm-10px {
+    margin-bottom: 10px !important;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1300px) {
+    .btn-container {
+        display: grid;
+        grid-row-gap: 30px;
+    }
+}
+
+.btn-container button {
+    flex: 0 0 40%;
+}
+
+.empty-space {
+    flex: 0 0 10%;
+}
+
+.popover-icon-color {
+    border-color: var(--color-maroon);
+}
+
+.form-select {
+    border: 3px solid #000045;
+}
+
+.accordion-item {
+    border: 3px solid #000045;
+}
+
+.accordion-item:not(:first-child) {
+    border-top: 3px solid #000045;
+}
+
+/*********result-page*************/
+.empty-space-result-page {
+    flex: 0 0 10% !important;
+}
+
+/* chart css */
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 375px;
+    margin: auto;
+    text-align: center;
+}
+
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 8px solid #d0c9c9cf;
+    padding: 20px;
+}
+
+.chart-icon {
+    width: auto;
+    height: 32px;
+    margin-bottom: 10px;
+}
+
+.donut-chart {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: conic-gradient(gray 0deg 36deg, white 36deg 38deg);
+}
+
+.donut-chart::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.percent-text {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    z-index: 1;
+}
+
+.border-top-left {
+    border-top-left-radius: 20px;
+}
+
+.border-top-right {
+    border-top-right-radius: 20px;
+}
+
+.border-btm-left {
+    border-bottom-left-radius: 20px;
+}
+
+.border-btm-right {
+    border-bottom-right-radius: 20px;
+}
+
+/*********map*******/
+.dropdown-box {
+    display: flex;
+    align-items: center;
+    border: 3px solid #000045;
+    width: 100%;
+    background: white;
+    cursor: pointer;
+}
+
+.dropdown-box input:focus-visible {
+    box-shadow: none;
+    outline: none;
+}
+
+.color-box {
+    padding: 10px;
+    background: rgb(7, 180, 215);
+    border-radius: 2px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+.dropdown-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+}
+
+.add-btn {
+    color: rgb(21, 3, 3);
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.box-container {
+    display: flex;
+    align-items: center;
+}
+
+.box-container span {
+    line-height: 1;
+    font-size: 12px;
+    color: #333;
+}
+
+.bg-skyBlue {
+    background-color: rgb(7, 180, 215) !important;
+}
+
+.bg-navyBlue {
+    background-color: var(--color-anchor)
+}
+
+.bg-magenta {
+    background-color: #8F0057 !important;
+}
+
+.bg-green {
+    background-color: #36C280 !important;
+}
+
+.bg-pink {
+    background-color: #C400ED !important;
+}
+
+.bg-grey {
+    background-color: #ccc !important;
+}
+
+.color-magenta {
+    color: #8F0057 !important;
+}
+
+/**** WebChecker - Result Page - accordion-address-tab-button ***/
+
+
+.accordion-address-tab-button {
+    width: 100%;
+    outline: none;
+    box-shadow: none !important;
+    border: none !important;
+    justify-content: space-between;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    text-align: left;
+}
+
+.accordion-address-tab-button::after {
+    display: none !important;
+}
+
+.accordion-address-tab-button .icon {
+    font-size: 18px;
+    transition: transform 0.3s;
+    padding-inline: 10px;
+}
+
+.accordion-address-tab-button.collapsed .icon::before {
+    content: "\2b";
+    font-family: FontAwesome;
+}
+
+.accordion-address-tab-button:not(.collapsed) .icon::before {
+    content: "\f068";
+    font-family: FontAwesome;
+}
+
+/* .accordion-body {
+    transition: all 0.3s ease;
+    margin-top: -15px;
+    text-align: start;
+    padding-left: 7px;
+} */
+
+/* .accordion-collapse {
+    width: 100%;
+    box-sizing: border-box;
+} */
+
+table {
+    width: 100%;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 15px;
+}
+
+/* .accordion-collapse {
+    position: static;
+} */
+
+/* Remove border from accordion */
+/* .accordion-item-address-tab {
+    border: none;
+} */
+
+/* Ensure fixed width for the third column */
+td:nth-child(3) {
+    width: 33.33% !important;
+    max-width: 33.33% !important;
+    min-width: 33.33% !important;
+}
+
+td:nth-child(1) {
+    width: 10% !important;
+}
+
+td:nth-child(2) {
+    width: 5% !important;
+}
+
+td:nth-child(3) {
+    width: 85% !important;
+}
+
+.table-responsive td {
+    border: 3px solid var(--color-default);
+}
+
+/* Ensure 3-column layout on all devices */
+@media (max-width: 992px) {
+    .table-responsive td {
+        display: table-cell;
+        width: 33.33%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-responsive td {
+        display: table-cell;
+        width: 33.33%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 10px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+
+    .accordion-address-tab-button {
+        font-size: 12px;
+    }
+
+    /* .accordion-body {
+        font-size: 12px;
+    } */
+
+    .table-responsive td {
+        display: table-cell;
+        width: 33.33%;
+        text-align: center;
+    }
+}
+
+.chart-icon-address {
+    width: auto;
+    height: 36px;
+}
+
+.table-bordered {
+    border: 3px solid var(--color-default);
+}
+
+.custom-nav-tabs {
+    border-bottom: none;
+}
+
+.custom-nav-tabs .nav-item {
+    border: none;
+}
+
+.custom-tab-content .tab-pane {
+    background-color: var(--color-white);
+    padding: 10px;
+}
+
+.custom-nav-tabs .nav-link {
+    padding: 5px 40px;
+    border-radius: 0;
+    border: none;
+    color: var(--color-default);
+}
+
+.custom-nav-tabs .nav-link:hover {
+    color: var(--color-black);
+}
+
+.custom-nav-tabs .nav-link.active {
+    color: var(--color-default);
+    background-color: var(--color-white);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+    border-bottom: 5px solid var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .custom-nav-tabs .nav-link {
+        padding: 5px 20px;
+    }
+}
+
+.row.col-12.mt-5 {
+    margin-left: 5px;
+}
+
+/* Table 2 Styling */
+.table-postal-district td:nth-child(1) {
+    width: 48% !important;
+}
+
+.table-postal-district td:nth-child(2) {
+    width: 13% !important;
+}
+
+.table-postal-district td:nth-child(3) {
+    width: 13% !important;
+}
+
+.table-postal-district td:nth-child(4) {
+    width: 13% !important;
+}
+
+.table-postal-district td:nth-child(5) {
+    width: 13% !important;
+}
+
+.table-postal-district th {
+    border: none;
+    background-color: #fff;
+    /* Optional: Background color for distinction */
+}
+
+.table-postal-district {
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.table-postal-district>:not(caption)>* {
+    border-width: 0px;
+}
+
+/* .table-postal-district-row{
+    border-left: none;
+    border-right: none;
+} */
+
+.table-postal-district-row td {
+    border-left: 0px solid var(--color-default) !important;
+    border-right: 0px solid var(--color-default) !important;
+}
+
+.table-postal-district-row td:nth-child(2) {
+    /* border-left: 3px  solid var(--color-light-gray) !important; */
+    border-right: 3px solid var(--color-light-gray) !important;
+}
+
+.table-postal-district-row td:nth-child(3) {
+    border-left: 3px solid var(--color-light-gray) !important;
+    border-right: 3px solid var(--color-light-gray) !important;
+}
+
+.table-postal-district-row td:nth-child(4) {
+    border-left: 3px solid var(--color-light-gray) !important;
+    border-right: 3px solid var(--color-light-gray) !important;
+}
+
+.table-postal-district-row .accordion-body,
+.accordion-item-address-tab .accordion-body {
+    text-align: left;
+    padding-top: 0px;
+    padding-left: 10px;
+}
+
+.postal-tab-arrow.collapsed .icon::before {
+    font-family: FontAwesome;
+    content: '\f077';
+    font-size: 24px;
+}
+
+.postal-tab-arrow:not(.collapsed) .icon::before {
+    font-family: FontAwesome;
+    content: '\f078';
+    font-size: 24px;
+}
+
+.p-1px {
+    padding: 1px !important;
+}
+
+.p-2px {
+    padding: 2px !important;
+}
+
+.p-3px {
+    padding: 3px !important;
+}
+
+.accordion-button::after {
+    background-image: none !important;
+    content: '+';
+    font-size: 40px;
+    color: #333;
+    transition: transform 0.3s;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: '';
+    content: '−';
+    font-size: 40px;
+}
+
+.color-default {
+    color: var(--color-default);
+}
+
+/* #feedback-form-btn {
+    display: flex;
+    flex-direction: row;
+} */
+
+@media (max-width: 767.98px) {
+    .pr-mobile-2rm {
+        padding-right: 2rem;
+    }
+
+    .pl-mobile-0 {
+        padding-left: 0;
+    }
+
+    .full-width-mobile {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    /* .right-mobile {
+        margin-left: auto;
+    } */
+
+    #feedback-form-btn {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #feedback-form-btn a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .popover {
+        max-width: 60% !important;
+    }
+    .popover-width-80{
+        max-width: 80% !important;
+    }
+    .popover-width-60{
+        max-width: 86% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .width-md-100 {
+        width: 100%;
+    }
+}
+
+.post-d-img {
+    height: auto;
+    width: 30px;
+    margin-right: 10px;
+}
