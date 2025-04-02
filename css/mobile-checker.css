@@ -997,6 +997,10 @@ td:nth-child(3) {
     .btn-container.mb-5 {
         justify-content: space-around;
     }
+
+    div#feedback-form-btn {
+        justify-content: space-around;
+    }
 }
 
 .post-d-img {
