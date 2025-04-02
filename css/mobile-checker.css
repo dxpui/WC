@@ -995,7 +995,7 @@ td:nth-child(3) {
     }
     
     .btn-container.mb-5 {
-        justify-content: normal;
+        justify-content: space-around;
     }
 }
 
