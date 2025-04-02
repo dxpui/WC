@@ -789,12 +789,9 @@
                 <a href="more-information.html" class="btn btn-primary d-none d-md-inline"
                   aria-label="More information">More
                   information</a>
-                  <a href="javascript:void(0);" class="bold-link">Can't find your provider 
-                    <i class="popover-trigger popover-icon fa-solid fa-circle-info color-magenta" 
-                       data-bs-toggle="popover" 
-                       data-bs-placement="right" 
-                       data-bs-html="true" 
-                       data-bs-content="
+                <a href="javascript:void(0);" class="bold-link">Can't find your provider
+                  <i class="popover-trigger popover-icon fa-solid fa-circle-info color-magenta" data-bs-toggle="popover"
+                    data-bs-placement="right" data-bs-html="true" data-bs-content="
                         <div class='custom-popover'>
                           <div class='mb-4'>
                             <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
@@ -814,8 +811,8 @@
                             </p>
                           </div>
                         </div>">
-                    </i>
-                  </a>
+                  </i>
+                </a>
               </div>
             </div>
 
@@ -882,11 +879,80 @@
                       </div> -->
                     </div>
                   </div>
-                  <div class="col-12 text-center">
-                    <iframe frameborder="0" scrolling="no" width="100%" height="575px"
-                    src="assets/img/map.png" name="imgbox">
-                      <!-- <img src="" alt="" style="min-height: 575px; width: auto;"> -->
+                  <div class="col-12 iframe-wrapper">
+                    <iframe frameborder="0" scrolling="no" width="100%" src="assets/img/map.png"
+                      name="imgbox">
+
                     </iframe>
+                    <div class="row iframe-overlay">
+                      <div class="col-12 col-xxl-2 mb-2">
+                        <i style="color: #8F0057;"
+                          class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
+                          data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
+                          <div class='custom-popover col-12'>
+                            <div class='mb-4'>
+                              <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
+                              <p>The coverage checker the four main mobile network operators in the UK. All other mobile operators
+                                in the UK. All other mobile operators in UK provide their service over these networks
+                              </p>
+                       
+                              <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
+                       
+                              <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
+                       
+                              <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
+                       
+                              <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
+                              <p class='text-center d-md-none mt-2 '>
+                                <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
+                              </p>
+                            </div>
+                          </div>">
+                        </i>Key -
+                      </div>
+                      <div class="col-6 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-magenta"></div>
+                          <span>Good in-home and outdoor</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-green"></div>
+                          <span>Patchy in-home, good outdoor</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-skyBlue"></div>
+                          <span>Good<br /> (outdoor only)</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-pink"></div>
+                          <span>Patchy<br /> (outdoor only)</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-grey"></div>
+                          <span>None</span>
+                        </div>
+                      </div>
+
+
+                      <div class="col-12 d-flex justify-content-end">
+                        <a href="feedback-form.html" class="btn btn-primary mt-2"
+                          aria-label="More information">Provide Coverage
+                          Feedback map</a>
+                      </div>
+                    </div>
+
                   </div>
 
 
@@ -1126,7 +1192,7 @@
                   </div>
 
                 </div>
-                <div class="row mt-4">
+                <!-- <div class="row mt-4">
                   <div class="col-12 col-xxl-2 mb-2">
                     <i style="color: #8F0057;" class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
                       data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
@@ -1182,11 +1248,9 @@
                       <span>None</span>
                     </div>
                   </div>
-                </div>
-                <div class="mt-5 text-end mb-4">
-                  <a href="feedback-form.html" class="btn btn-primary me-3 me-md-0 width-md-100"
-                    aria-label="More information">Provide Coverage
-                    Feedback map</a>
+                </div> -->
+                <div class="mt-5 text-end">
+
                   <a href="more-information.html" class="btn btn-primary d-md-none width-md-100 mt-2"
                     aria-label="More information">More
                     information</a>
@@ -1200,7 +1264,7 @@
 
 
     <section>
-      <div class="row g-0">
+      <div class="row g-0 mtop-5">
         <div class="col-12 d-flex justify-content-center position-relative">
           <button class="btn btn-primary button-subscribe">
             Subscribe to our mailing list <i class="ms-4 fa-solid fa-arrow-right"></i>
