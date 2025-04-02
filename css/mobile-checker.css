@@ -89,7 +89,7 @@ input::-webkit-date-and-time-value {
 
 @media (max-width: 1024px) {
     .postcode-container-left {
-        padding: 40px 10px 10px 10px;
+        padding: 15px 10px 10px 10px;
     }
 }
 
@@ -101,7 +101,7 @@ input::-webkit-date-and-time-value {
 
 @media (max-width: 1024px) {
     .postcode-container-right {
-        padding: 40px 10px;
+        padding: 20px 10px;
     }
 }
 
@@ -978,9 +978,18 @@ td:nth-child(3) {
     .popover {
         max-width: 60% !important;
     }
-}
 
-@media (max-width: 768px) {
+    .location-pin {
+        height: 20px;
+        width: auto;
+    }
+    
+    .bold-link {
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--color-default);
+    }
+
     .width-md-100 {
         width: 100%;
     }
@@ -995,4 +1004,8 @@ td:nth-child(3) {
 .district-level,
 .address-level {
     display: none;
+}
+
+.language-notification .modal-content {
+    padding: 0px;
 }
