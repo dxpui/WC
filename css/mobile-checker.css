@@ -993,6 +993,10 @@ td:nth-child(3) {
     .width-md-100 {
         width: 100%;
     }
+    
+    .btn-container.mb-5 {
+        justify-content: normal;
+    }
 }
 
 .post-d-img {
@@ -1008,4 +1012,8 @@ td:nth-child(3) {
 
 .language-notification .modal-content {
     padding: 0px;
+}
+
+.breadcrumb-position {
+    display: block;
 }
