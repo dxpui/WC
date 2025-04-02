@@ -31,6 +31,12 @@ input::-webkit-date-and-time-value {
         flex: 0 0 auto;
         width: 25%;
     }
+
+    .accordion-item.accordion-box {
+        position: absolute;
+        margin-top: -1.5rem;
+        width: 30%;
+    }
 }
 
 .pdf-content {
@@ -999,7 +1005,7 @@ td:nth-child(3) {
         height: 20px;
         width: auto;
     }
-    
+
     .bold-link {
         font-weight: 700;
         font-size: 1rem;
@@ -1009,7 +1015,7 @@ td:nth-child(3) {
     .width-md-100 {
         width: 100%;
     }
-    
+
     .btn-container.mb-5 {
         justify-content: space-around;
     }
@@ -1017,6 +1023,7 @@ td:nth-child(3) {
     div#feedback-form-btn {
         justify-content: space-around;
     }
+    
 }
 
 .post-d-img {

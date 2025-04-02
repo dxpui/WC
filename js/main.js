@@ -553,6 +553,17 @@ $(document).ready(function () {
         }
     });
 
+    $(".accordion-button").on("click", function () {
+        let $accordionItem = $(this).closest(".accordion-item.accordion-box");
+
+        if ($accordionItem.hasClass("active")) {
+            $accordionItem.css("z-index", "").removeClass("active");
+        } else {
+            $(".accordion-item.accordion-box").css("z-index", "").removeClass("active"); // Reset others
+            $accordionItem.css("z-index", "1055").addClass("active");
+        }
+    });
+
 
 
     // // popover display on mouse over//
