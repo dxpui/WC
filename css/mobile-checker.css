@@ -2,6 +2,10 @@
     font-size: 1.2rem;
 }
 
+.mtop-5 {
+    margin-top: 3rem !important;
+}
+
 .form-control {
     border: 3px solid var(--color-default);
 }
@@ -267,6 +271,7 @@ input::-webkit-date-and-time-value {
     padding: 0;
     margin-bottom: 0;
     border-radius: 0 !important;
+    padding: 7px 5px;
 }
 
 .accordion-container {
@@ -332,29 +337,12 @@ input::-webkit-date-and-time-value {
 }
 
 /* accordion-new-design*/
+
 .item-list li {
     list-style: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin-bottom: 5px;
     cursor: pointer;
-}
-
-.accordion-item {
-    /* margin-bottom: 10px; */
-    border: 1px solid #ddd;
-    border-radius: 0px !important;
-    overflow: hidden;
-    padding: 7px 5px;
-}
-
-.accordion-item:not(:first-child) {
-    border-top: 1px solid #ddd;
-}
-
-.accordion-button:not(.collapsed) {
-    color: var(--color-black);
-    background-color: var(--color-light-gray);
-    border: 1px solid #ddd;
 }
 
 .item-list li:hover,
@@ -491,7 +479,7 @@ input::-webkit-date-and-time-value {
     border: 3px solid #000045;
 }
 
-.accordion-item {
+.custom-tab-content .accordion-item {
     border: 3px solid #000045;
 }
 
@@ -774,6 +762,7 @@ td:nth-child(3) {
 
     .accordion-address-tab-button {
         font-size: 12px;
+        line-height: 1.5;
     }
 
     /* .accordion-body {
@@ -789,8 +778,13 @@ td:nth-child(3) {
 
 .chart-icon-address {
     width: auto;
-    height: 36px;
+    height: 32px;
 }
+
+.chart-icon-postal {
+    width: auto;
+}
+
 
 .table-bordered {
     border: 3px solid var(--color-default);
@@ -840,6 +834,7 @@ td:nth-child(3) {
 /* Table 2 Styling */
 .table-postal-district td:nth-child(1) {
     width: 48% !important;
+    padding: 5px;
 }
 
 .table-postal-district td:nth-child(2) {
@@ -908,13 +903,13 @@ td:nth-child(3) {
 
 .postal-tab-arrow.collapsed .icon::before {
     font-family: FontAwesome;
-    content: '\f077';
+    content: '\f078';
     font-size: 24px;
 }
 
 .postal-tab-arrow:not(.collapsed) .icon::before {
     font-family: FontAwesome;
-    content: '\f078';
+    content: '\f077';
     font-size: 24px;
 }
 
@@ -944,7 +939,26 @@ td:nth-child(3) {
     font-size: 40px;
 }
 
-.more-info-accordion::after {
+/* .more-info-acco-outer .more-info-accordion {
+    border-top: 3px solid var(--color-default);
+}
+
+.more-info-acco-outer .accordion-item:first .more-info-accordion {
+    border-top: none;
+} */
+
+.more-info-acco-outer .accordion-item {
+    /* border: 3px solid var(--color-default); */
+    border-radius: 0px !important;
+    overflow: hidden;
+}
+
+.more-info-acco-outer .accordion-item:not(:first-child) {
+    border-top: 1px solid #ddd;
+}
+
+
+.more-info-acco-outer .more-info-accordion::after {
     background-image: none !important;
     font-family: FontAwesome;
     content: '\f078';
@@ -953,11 +967,34 @@ td:nth-child(3) {
     transition: transform 0.3s;
 }
 
-.more-info-accordion:not(.collapsed)::after {
+.more-info-acco-outer .more-info-accordion:not(.collapsed)::after {
     content: '';
     font-family: FontAwesome;
     content: '\f077';
     font-size: 20px;
+}
+
+.more-info-acco-outer .accordion-body {
+    padding: 0;
+}
+
+.more-info-acco-outer .accordion-header {
+    border: 3px solid var(--color-default);
+}
+
+.more-info-acco-outer .accordion-collapse {
+    border: 3px solid var(--color-default);
+    border-top: none;
+}
+
+.more-info-acco-outer .accordion-header .accordion-button {
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.more-info-acco-outer .accordion-button:not(.collapsed) {
+    color: var(--color-black);
+    background-color: var(--color-white);
 }
 
 .color-default {
@@ -1023,12 +1060,12 @@ td:nth-child(3) {
     div#feedback-form-btn {
         justify-content: space-around;
     }
-    
+
 }
 
 .post-d-img {
-    height: auto;
-    width: 30px;
+    height: 24px;
+    width: auto;
     margin-right: 10px;
 }
 
@@ -1068,6 +1105,8 @@ td:nth-child(3) {
 
 .iframe-wrapper .iframe-overlay {
     margin-top: 20px;
+    position: relative;
+    z-index: 999;
 }
 
 .expend .iframe-wrapper .iframe-overlay {
@@ -1077,6 +1116,13 @@ td:nth-child(3) {
     background-color: white;
     padding: 10px;
     margin: 20px;
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .expend .iframe-wrapper .iframe-overlay {
+        width: 100%;
+    }
 }
 
 .iframe-wrapper iframe img {
