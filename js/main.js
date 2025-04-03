@@ -565,7 +565,7 @@ $(document).ready(function () {
     });
 
     if (window.innerWidth <= 768) {
-        if ($('#displayonmobile').length) {
+        if ($('#displayOnMobile').length) {
             $('#landing-page-image-block').show();
         } else {
             $('#landing-page-image-block').remove();
