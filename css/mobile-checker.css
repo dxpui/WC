@@ -1074,7 +1074,7 @@ td:nth-child(3) {
     display: none;
 }
 
-.language-notification .modal-content {
+.modal-notification .modal-content {
     padding: 0px;
 }
 
