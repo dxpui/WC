@@ -1094,6 +1094,7 @@ td:nth-child(3) {
 @media (max-width: 768px) {
     .iframe-wrapper {
         height: auto;
+        min-height: 400px;
     }
 }
 
@@ -1121,7 +1122,7 @@ td:nth-child(3) {
 
 @media (max-width: 768px) {
     .expend .iframe-wrapper .iframe-overlay {
-        width: 100%;
+        width: 90%;
     }
 }
 
