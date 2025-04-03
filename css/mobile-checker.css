@@ -439,6 +439,7 @@ input::-webkit-date-and-time-value {
     border-color: var(--color-default);
     border: 3px solid var(--color-default);
     max-width: 30% !important;
+    word-wrap: break-word;
 }
 
 .px-5rem {
@@ -454,6 +455,11 @@ input::-webkit-date-and-time-value {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.btn-container.mb-4.i-icon {
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 1300px) {
