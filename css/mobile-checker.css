@@ -903,13 +903,13 @@ td:nth-child(3) {
 
 .postal-tab-arrow.collapsed .icon::before {
     font-family: FontAwesome;
-    content: '\f077';
+    content: '\f078';
     font-size: 24px;
 }
 
 .postal-tab-arrow:not(.collapsed) .icon::before {
     font-family: FontAwesome;
-    content: '\f078';
+    content: '\f077';
     font-size: 24px;
 }
 
