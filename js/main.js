@@ -564,6 +564,13 @@ $(document).ready(function () {
         }
     });
 
+    if (window.innerWidth <= 768) {
+        if ($('#displayonmobile').length) {
+            $('#landing-page-image-block').show();
+        } else {
+            $('#landing-page-image-block').remove();
+        }
+    }
 
 
     // // popover display on mouse over//
