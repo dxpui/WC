@@ -36,11 +36,11 @@ input::-webkit-date-and-time-value {
         width: 25%;
     }
 
-    .accordion-item.accordion-box {
+    /* .accordion-item.accordion-box {
         position: absolute;
         margin-top: -1.5rem;
         width: 30%;
-    }
+    } */
 }
 
 .pdf-content {
@@ -439,7 +439,6 @@ input::-webkit-date-and-time-value {
     border-color: var(--color-default);
     border: 3px solid var(--color-default);
     max-width: 30% !important;
-    word-wrap: break-word;
 }
 
 .px-5rem {
@@ -457,12 +456,7 @@ input::-webkit-date-and-time-value {
     align-items: center;
 }
 
-.btn-container.mb-4.i-icon {
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
     .btn-container {
         display: grid;
         grid-row-gap: 30px;
@@ -1012,7 +1006,7 @@ td:nth-child(3) {
     flex-direction: row;
 } */
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .pr-mobile-2rm {
         padding-right: 2rem;
     }
@@ -1071,19 +1065,19 @@ td:nth-child(3) {
         margin-left: 23%;
     }
 
-    .accordion-item.accordion-box {
+    /* .accordion-item.accordion-box {
         position: absolute;
         z-index: 1005;
         width: 82%;
         margin-left: 2%;
-    }
+    } */
 
-    .iframe-wrapper iframe {
+    /* .iframe-wrapper iframe {
         width: 100%;
         height: 100%;
         border: none;
         margin-top: 15%;
-    }
+    } */
 
 }
 
@@ -1110,22 +1104,22 @@ td:nth-child(3) {
 
 .iframe-wrapper {
     position: relative;
-    width: 100%;
+    /* width: 100%;
     height: 575px;
-    margin: auto;
+    margin: auto; */
 }
 
 @media (max-width: 768px) {
     .iframe-wrapper {
-        height: auto;
-        min-height: 400px;
+        /* height: auto;
+        min-height: 400px; */
     }
 }
 
 .iframe-wrapper iframe {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
-    border: none;
+    border: none; */
 }
 
 .iframe-wrapper .iframe-overlay {
@@ -1153,4 +1147,19 @@ td:nth-child(3) {
 .iframe-wrapper iframe img {
     width: 100% !important;
     object-fit: cover;
+}
+
+.col-form-label{
+    font-weight: 700;
+}
+
+.patch-container{
+    position: relative;
+    height: 50px;
+    z-index: 999;
+}
+
+.patch-container .accordion{
+    position: absolute;
+    width: 100%;
 }

@@ -747,8 +747,8 @@
                     <div class="btn-container mt-5" id="feedback-form-btn">
                       <a href="more-information.html" class="btn btn-primary" aria-label="More information">More
                         information </a>
-                      <a href="javascript:void(0);" class="fw-bold color-default">Can't find your provider<i data-bs-toggle="popover"
-                          data-bs-placement="right" data-bs-html="true" data-bs-content="
+                      <a href="javascript:void(0);" class="fw-bold color-default">Can't find your provider<i
+                          data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
                         <div class='custom-popover'>
                           <div class='mb-4'>
                             <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
@@ -783,49 +783,43 @@
               <h2 class="text-lg-start mb-4">Feedback Form For Your Mobile Provider
               </h2>
               <label class="mb-4">Please fill out the fields below.</label>
-              <div class="mb-4 col-5">
-                <label for="postcode" class="">Enter postcode</label>
+              <div class="col-md-10 mb-4">
+                <label for="postcode" class="col-form-label">Enter postcode</label>
                 <input type="text" class="form-control border-3px" id="postcode" style="min-width: 200px;"
                   placeholder="Enter postcode" value="CT1">
               </div>
-              <div class="mb-4">
-                <label for="network" class="col-form-label fw-bold">Mobile Network Operator/Mobile Virtual Network
+              <div class="col-md-10 mb-4">
+                <label for="network" class="col-form-label">Mobile Network Operator/Mobile Virtual Network
                   Operator</label>
-                <div class="col-10">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected="">EE Network</option>
-                    <option value="72579157">Three</option>
-                    <option value="72579158">O2</option>
-                    <option value="72579159">Vodafone</option>
-                  </select>
-                </div>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">EE Network</option>
+                  <option value="72579157">Three</option>
+                  <option value="72579158">O2</option>
+                  <option value="72579159">Vodafone</option>
+                </select>
               </div>
-              <div class="mb-4">
-                <label for="network" class="col-form-label fw-bold">Coverage level displayed on checker</label>
-                <div class="col-10">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected="">Mostly Good In-Home</option>
-                    <option value="72579156">EE Network</option>
-                    <option value="72579157">Three</option>
-                    <option value="72579158">O2</option>
-                    <option value="72579159">Vodafone</option>
-                  </select>
-                </div>
+              <div class="col-md-10 mb-4">
+                <label for="network" class="col-form-label">Coverage level displayed on checker</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">Mostly Good In-Home</option>
+                  <option value="72579156">EE Network</option>
+                  <option value="72579157">Three</option>
+                  <option value="72579158">O2</option>
+                  <option value="72579159">Vodafone</option>
+                </select>
               </div>
-              <div class="mb-4">
-                <label for="network" class="col-form-label fw-bold">What`s wrong?</label>
-                <div class="col-10">
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected="">Feedback</option>
-                    <option value="72579157">Feedback 1</option>
-                    <option value="72579158">Feedback 2</option>
-                    <option value="72579159">Feedback 3</option>
-                    <option value="72579160">Feedback 4</option>
-                  </select>
-                </div>
+              <div class="col-md-10 mb-4">
+                <label for="network" class="col-form-label">What`s wrong?</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected="">Feedback</option>
+                  <option value="72579157">Feedback 1</option>
+                  <option value="72579158">Feedback 2</option>
+                  <option value="72579159">Feedback 3</option>
+                  <option value="72579160">Feedback 4</option>
+                </select>
               </div>
-              <a class="btn-link btn btn-primary d-flex w-25 justify-content-between mx-auto mx-md-0">
-                <span class="text-decoration-none mx-auto" id="feedback-form-submit">Submit</span>
+              <a id="feedback-form-submit" class="btn btn-primary">
+                Submit
               </a>
             </div>
           </div>
@@ -833,34 +827,15 @@
       </div>
     </section>
 
-
-    <!-- <section>
-      <div class="row g-0">
-        <div class="col-12 d-flex justify-content-center position-relative">
-          <button class="btn btn-primary button-subscribe">
-            Subscribe to our mailing list <i class="ms-4 fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-        <div class="col-12">
-          <div class="row row-cols-auto g-0 multicolor-strip">
-            <div class="col bg-blue"></div>
-            <div class="col bg-megenta"></div>
-            <div class="col bg-pink"></div>
-            <div class="col bg-yellow"></div>
-            <div class="col bg-green"></div>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section>
       <div class="container">
         <div class="row">
-          <div class="modal fade" id="feedback-form-notification" tabindex="-1"
-             aria-hidden="true" data-bs-backdrop="static">
+          <div class="modal fade" id="feedback-form-notification" tabindex="-1" aria-hidden="true"
+            data-bs-backdrop="static">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content border-color-default rounded-0">
                 <div class="modal-body pb-0">
-                  <h3 class="ms-3 mb-3 mt-4 text-center">Thank you for submitted your feedback on your network coverage
+                  <h3 class="ms-3 my-3 text-center">Thank you for submitted your feedback on your network coverage
                     experience.</h3>
                 </div>
                 <div class="d-grid gap-2 mx-auto mb-4 mt-4">

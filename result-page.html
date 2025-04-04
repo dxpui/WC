@@ -5,7 +5,6 @@
   <!-- Required meta tags  -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <title>Web Checker</title>
   <link rel="icon" href="assets/img/favicon.ico" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -726,14 +725,14 @@
     <section class="postcode-container">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-5 position-relative postcode-left-outer">
+          <div class="col-lg-5 position-relative postcode-left-outer">
             <button type="submit" class="btn btn-primary collapse-left d-none d-md-inline" id="collapseButton"><i
                 class="fa-solid fa-chevron-left"></i><span
                 class="visually-hidden-focusable text-dark">Button</span></button>
             <div class="postcode-container-left">
               <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
               <h2 class="mb-2 mb-lg-0">Mobile coverage checker</h2>
-              <div class="mb-4 col-xl-8">
+              <div class="col-xl-8 my-4">
                 <label for="postcode" class="mb-1 fs-m">Search by postcode</label>
                 <div class="search-container input-group mb-3">
                   <input type="text" class="form-control search-postcode" id="postcode" placeholder="" value="CT1 2EH"
@@ -781,16 +780,16 @@
                     </div>
                   </div>
                 </section>
-                <p class="mt-4 text-start mb-5">We've scored mobile network operators based on 4G/5G download and upload
+                <p class="my-4 text-start">We've scored mobile network operators based on 4G/5G download and upload
                   speed tests, using crowdsourced meansurements
                   , in the CTI district.
                 </p>
               </div>
-              <div class="btn-container mb-4 i-icon">
-                <a href="more-information.html" class="btn btn-primary d-none d-md-inline"
+              <div class="row mb-4 d-flex justify-content-between align-items-center">
+                <a href="more-information.html" class="btn btn-primary d-none d-md-inline col-auto my-2"
                   aria-label="More information">More
                   information</a>
-                <a href="javascript:void(0);" class="bold-link">Can't find your provider
+                <a href="javascript:void(0);" class="bold-link col-auto my-2">Can't find your provider
                   <i class="popover-trigger popover-icon fa-solid fa-circle-info color-magenta" data-bs-toggle="popover"
                     data-bs-placement="auto" data-bs-html="true" data-bs-content="
                         <div class='custom-popover'>
@@ -818,7 +817,7 @@
             </div>
 
           </div>
-          <div class="col-md-7 postcode-right-outer gray-bg ">
+          <div class="col-lg-7 postcode-right-outer gray-bg ">
             <div class="postcode-container-right">
               <h2 class="mb-2">Mobile Coverage
               </h2>
@@ -854,21 +853,23 @@
                       </select>
                     </div>
                     <div class="col-md-12 col-xl-7">
-                      <div class="accordion" id="accordionExample">
-                        <div class="accordion-item accordion-box">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button accordion-map-tab-button collapsed" type="button"
-                              data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                              aria-controls="collapseOne">
-                              <div class="color-box bg-skyBlue "></div><span>Patch (outdoor only)</span>
-                            </button>
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                            data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                              There is a reasonable chance of a good connection to support mobile services
-                              in
-                              some parts of a typical home, as well as outdoo
+                      <div class="patch-container">
+                        <div class="accordion" id="accordionExample">
+                          <div class="accordion-item accordion-box">
+                            <h2 class="accordion-header" id="headingOne">
+                              <button class="accordion-button accordion-map-tab-button collapsed" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                <div class="color-box bg-skyBlue "></div><span>Patch (outdoor only)</span>
+                              </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                              data-bs-parent="#accordionExample">
+                              <div class="accordion-body">
+                                There is a reasonable chance of a good connection to support mobile services
+                                in
+                                some parts of a typical home, as well as outdoo
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -881,9 +882,11 @@
                     </div>
                   </div>
                   <div class="col-12 iframe-wrapper">
-                    <iframe frameborder="0" scrolling="no" width="100%" src="assets/img/map.png" name="imgbox">
-
-                    </iframe>
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
                     <div class="row iframe-overlay">
                       <div class="col-12 col-xxl-2 mb-2">
                         <i style="color: #8F0057;"
@@ -947,7 +950,7 @@
 
 
                       <div class="col-12 d-flex justify-content-end">
-                        <a href="feedback-form.html" class="btn btn-primary mt-2" aria-label="More information">Provide
+                        <a href="feedback-form.html" class="btn btn-primary width-md-100 mt-2" aria-label="More information">Provide
                           Coverage
                           Feedback</a>
                       </div>
