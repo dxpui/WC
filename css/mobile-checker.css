@@ -1067,6 +1067,10 @@ td:nth-child(3) {
         justify-content: space-around;
     }
 
+    .accordion-address-tab-button .icon {
+      margin-left: 23%;
+    }
+
 }
 
 .post-d-img {
