@@ -554,7 +554,11 @@ $(document).ready(function () {
         $("#loader").toggleClass("hidden");
     });
 
-    $('#language-notification').modal('show');
+    
+    if (!sessionStorage.getItem('modalShown')) {
+        $('#language-notification').modal('show');
+        sessionStorage.setItem('modalShown', 'true');
+      }
 
     $('#language-notification').on('click', function () {
         $('#language-notification').modal('hide');
