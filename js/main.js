@@ -477,6 +477,30 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+
+    if (window.innerWidth <= 768) {
+        $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
+        $('#collapseButton').hide();
+        $(document).on('click', '.accordion-collapse .accordion-body .item-list li', function () {
+            var $leftDrawer = $('.postcode-left-outer');
+            var $rightContainer = $('.postcode-right-outer');
+
+            if ($leftDrawer.hasClass('collapsed')) {
+                $leftDrawer.removeClass('collapsed').addClass('col-md-5');
+                $rightContainer.addClass('col-md-7').removeClass('expend');
+                $(".postcode-container-left ").css("display", "block");
+
+            } else {
+                $('#collapseButton').show();
+                $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'block');
+                $leftDrawer.addClass('collapsed').removeClass('col-md-5');
+                $rightContainer.removeClass('col-md-7').addClass('expend');
+                $(".postcode-container-left ").css("display", "none");
+            }
+
+        });
+    }
+
     $('.content-faq').hide();
     /* Panel Collapse Left-Right*/
     $('.collapse-left').on('click', function () {
@@ -493,14 +517,21 @@ $(document).ready(function () {
             $rightContainer.removeClass('col-md-7').addClass('expend');
             $(".postcode-container-left ").css("display", "none");
         }
+
+        if (window.innerWidth <= 768) {
+            $('#collapseButton').hide();
+            $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
+        }
     });
 
     $("#collapseButton").click(function () {
-        let icon = $(this).find("i");
-        if (icon.hasClass("fa-chevron-left")) {
-            icon.removeClass("fa-chevron-left").addClass("fa-chevron-right");
-        } else {
-            icon.removeClass("fa-chevron-right").addClass("fa-chevron-left");
+        if (window.innerWidth > 768) {
+            let icon = $(this).find("i");
+            if (icon.hasClass("fa-chevron-left")) {
+                icon.removeClass("fa-chevron-left").addClass("fa-chevron-right");
+            } else {
+                icon.removeClass("fa-chevron-right").addClass("fa-chevron-left");
+            }
         }
     });
 
@@ -554,6 +585,7 @@ $(document).ready(function () {
     });
 
     $(".accordion-button").on("click", function () {
+        //
         let $accordionItem = $(this).closest(".accordion-item.accordion-box");
 
         if ($accordionItem.hasClass("active")) {
