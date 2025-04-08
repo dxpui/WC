@@ -917,6 +917,10 @@ input::-webkit-date-and-time-value {
 
 
 @media (max-width: 768px) {
+    .pr-mobile-1rm {
+        padding-right: 1rem;
+    }
+
     .pr-mobile-2rm {
         padding-right: 2rem;
     }
