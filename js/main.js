@@ -554,11 +554,11 @@ $(document).ready(function () {
         $("#loader").toggleClass("hidden");
     });
 
-    
+
     if (!sessionStorage.getItem('modalShown')) {
         $('#language-notification').modal('show');
         sessionStorage.setItem('modalShown', 'true');
-      }
+    }
 
     $('#language-notification').on('click', function () {
         $('#language-notification').modal('hide');
@@ -653,3 +653,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // end chart script
+
+// Below code is written to check the fix for i icon mouse over work in both ios and android
+$(document).ready(function () {
+    $('.popover-trigger').each(function () {
+        $(this).popover({
+            trigger: 'click',   
+            html: true,       
+            placement: 'auto'
+        });
+    });
+
+    // Optional: Close other popovers when one is opened
+    $(document).on('click', function (e) {
+        $('.popover-trigger').each(function () {
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                $(this).popover('hide');
+            }
+        });
+    });
+});
