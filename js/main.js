@@ -496,6 +496,8 @@ $(document).ready(function () {
                 $leftDrawer.addClass('collapsed').removeClass('col-md-5');
                 $rightContainer.removeClass('col-md-7').addClass('expend');
                 $(".postcode-container-left ").css("display", "none");
+                $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
+                $('.postcode-right-outer.gray-bg.expend').removeClass('expend');
             }
 
         });
