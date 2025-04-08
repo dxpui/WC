@@ -434,9 +434,9 @@ input::-webkit-date-and-time-value {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
-    width: 375px;
+    width: 335px;
     margin: auto;
     text-align: center;
 }
@@ -702,7 +702,8 @@ input::-webkit-date-and-time-value {
 
 @media (max-width: 768px) {
     .chart-icon-address {
-        height: 24px;
+        height: 100%;
+        max-height: 24px;
     }
 }
 
@@ -748,7 +749,7 @@ input::-webkit-date-and-time-value {
 
 @media (max-width: 768px) {
     .custom-nav-tabs .nav-link {
-        padding: 5px 18px;
+        padding: 5px 15px;
     }
 }
 
@@ -1046,4 +1047,17 @@ input::-webkit-date-and-time-value {
 
 .ml-30 {
     margin-left: 30px;
-  }
+}
+
+.coverage-btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .coverage-btn-container {
+        justify-content: center;
+    }
+}
