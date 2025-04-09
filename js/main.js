@@ -506,6 +506,9 @@ $(document).ready(function () {
     $('.content-faq').hide();
     /* Panel Collapse Left-Right*/
     $('.collapse-left').on('click', function () {
+        if ($('.default-msg:visible').length > 0) {
+            return false;
+        }
         var $leftDrawer = $('.postcode-left-outer');
         var $rightContainer = $('.postcode-right-outer');
 
@@ -527,6 +530,9 @@ $(document).ready(function () {
     });
 
     $("#collapseButton").click(function () {
+        if ($('.default-msg:visible').length > 0) {
+            return false;
+        }
         if (window.innerWidth > 768) {
             let icon = $(this).find("i");
             if (icon.hasClass("fa-chevron-left")) {
