@@ -1061,3 +1061,7 @@ input::-webkit-date-and-time-value {
         justify-content: center;
     }
 }
+
+.form-select option{
+    width: 100%;
+}
