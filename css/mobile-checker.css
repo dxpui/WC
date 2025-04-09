@@ -1066,3 +1066,9 @@ input::-webkit-date-and-time-value {
 .form-select option{
     width: 100%;
 }
+
+.scrollable-content {
+    max-height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
