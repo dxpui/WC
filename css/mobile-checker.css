@@ -154,8 +154,9 @@ input::-webkit-date-and-time-value {
 }
 
 .collapse-left:hover,
+.collapse-left:focus,
 .collapse-left:active {
-    background-color: transparent;
+    background-color: var(--color-light-gray) !important;
     border: none;
 }
 
