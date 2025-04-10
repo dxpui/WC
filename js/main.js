@@ -543,6 +543,12 @@ $(document).ready(function () {
         }
     });
 
+    $('.faq-back-btn-click').on('click', function () {
+        $('.postcode-left-outer').removeClass('collapsed').addClass('col-md-5');
+        $('.postcode-right-outer').addClass('col-md-7').removeClass('expend');
+        $(".postcode-container-left ").css("display", "block");
+    });
+
     /* accordion */
     $('.item-list li').on('click', function () {
         $('.item-list li').removeClass('active');
