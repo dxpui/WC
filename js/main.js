@@ -504,6 +504,7 @@ $(document).ready(function () {
     }
 
     $('.content-faq').hide();
+    $('#collapseButton').hide();
     /* Panel Collapse Left-Right*/
     $('.collapse-left').on('click', function () {
         if ($('.default-msg:visible').length > 0) {
@@ -544,9 +545,11 @@ $(document).ready(function () {
     });
 
     $('.faq-back-btn-click').on('click', function () {
+        $('#collapseButton').hide();
         $('.postcode-left-outer').removeClass('collapsed').addClass('col-md-5');
         $('.postcode-right-outer').addClass('col-md-7').removeClass('expend');
         $(".postcode-container-left ").css("display", "block");
+        $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
     });
 
     /* accordion */
@@ -555,6 +558,7 @@ $(document).ready(function () {
         $(this).addClass('active');
 
         let contentId = $(this).data('content-id');
+        $('#collapseButton').show();
         $('.default-msg').hide();
         $('.content').hide();
         $('#' + contentId).show();
