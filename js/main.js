@@ -564,6 +564,19 @@ $(document).ready(function () {
         $('#' + contentId).show();
     });
 
+    $('.item-list').each(function () {
+        var $list = $(this);
+        var listItems = $list.find('li');
+  
+        if (listItems.length > 4) {
+          $list.css({
+            'max-height': '200px',
+            'overflow-y': 'auto',
+            'margin-right': '4px'
+          });
+        }
+      });
+
     setTimeout(function () {
         $("#loader").addClass("hidden");
     }, 500);
