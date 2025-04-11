@@ -306,6 +306,10 @@ input::-webkit-date-and-time-value {
     width: 35% !important;
 }
 
+.ok-btn-width {
+    width: 100px !important;
+}
+
 .fw-600 {
     font-weight: 600 !important;
 }
