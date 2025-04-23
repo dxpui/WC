@@ -1067,7 +1067,7 @@ input::-webkit-date-and-time-value {
     }
 }
 
-.form-select option{
+.form-select option {
     width: 100%;
 }
 
@@ -1075,4 +1075,12 @@ input::-webkit-date-and-time-value {
     max-height: 100vh;
     overflow-y: auto;
     scroll-behavior: smooth;
-  }
+}
+
+.postcode-container-left .EPiServerForms .Form__MainBody {
+    margin-left: -4px !important;
+}
+
+.postcode-container-left .EPiServerForms .Form__Description {
+    padding-left: 0px !important;
+}
