@@ -7006,3 +7006,9 @@ input::-webkit-date-and-time-value {
     white-space: nowrap;
     margin-left: 2px;
 }
+
+.accordion-address-tab-button:focus-visible .icon,
+.accordion-address-tab-button:active .icon {
+  outline: 3px solid var(--color-outline-focus);
+  outline-offset: 0;
+}
