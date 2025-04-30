@@ -160,6 +160,11 @@ input::-webkit-date-and-time-value {
     border: none;
 }
 
+.collapse-left:focus-visible {
+    background-color: var(--color-secondary) !important;
+    border: none;
+}
+
 .collapse-left i {
     color: var(--color-default);
 }
@@ -348,6 +353,16 @@ input::-webkit-date-and-time-value {
 
 }
 
+.search-container .input-group-text:hover {
+    background-color: var(--color-default);
+    color: var(--color-white);
+}
+
+.search-container .input-group-text:focus-visible {
+    outline: none;
+    background-color: var(--color-secondary);
+}
+
 .location-pin {
     height: 36px;
     width: auto;
@@ -478,6 +493,20 @@ input::-webkit-date-and-time-value {
     background: white;
     border-radius: 50%;
     position: absolute;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        width: 295px;
+    }
+    .donut-chart {
+        width: 80px;
+        height: 80px;
+    }
+    .donut-chart::before {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .percent-text {
@@ -758,6 +787,12 @@ input::-webkit-date-and-time-value {
     }
 }
 
+@media (max-width: 567px) {
+    .custom-nav-tabs .nav-link {
+        padding: 5px;
+    }
+}
+
 .row.col-12.mt-5 {
     margin-left: 5px;
 }
@@ -997,12 +1032,6 @@ input::-webkit-date-and-time-value {
 .modal-notification .modal-content {
     padding: 0px;
 }
-
-.breadcrumb-position {
-    display: block;
-}
-
-
 
 .iframe-wrapper {
     position: relative;
