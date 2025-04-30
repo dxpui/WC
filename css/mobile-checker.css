@@ -1084,3 +1084,9 @@ input::-webkit-date-and-time-value {
 .postcode-container-left .EPiServerForms .Form__Description {
     padding-left: 0px !important;
 }
+
+.accordion-address-tab-button:focus-visible .icon,
+ .accordion-address-tab-button:active .icon {
+   outline: 3px solid var(--color-outline-focus);
+   outline-offset: 0;
+ }
