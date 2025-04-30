@@ -6,23 +6,26 @@
     margin-top: 3rem !important;
 }
 
-.form-control {
+.postcode-container .form-control {
     border: 3px solid var(--color-default);
 }
 
-.form-control:focus,
-.form-select:focus,
-.form-check-input:focus {
+.postcode-container .form-select {
+    border: 3px solid #000045;
+}
+
+.postcode-container .form-control:focus,
+.postcode-container .form-select:focus,
+.postcode-container .form-check-input:focus {
     border: 3px solid var(--color-default);
+}
+
+.postcode-container .form-select option {
+    width: 100%;
 }
 
 .white-bg {
     background-color: var(--color-white);
-    color: var(--color-default);
-}
-
-.gray-bg {
-    background-color: var(--color-light-gray);
     color: var(--color-default);
 }
 
@@ -429,10 +432,6 @@ input::-webkit-date-and-time-value {
 
 .popover-icon-color {
     border-color: var(--color-maroon);
-}
-
-.form-select {
-    border: 3px solid #000045;
 }
 
 .custom-tab-content .accordion-item {
@@ -894,7 +893,7 @@ input::-webkit-date-and-time-value {
     padding: 3px !important;
 }
 
-.accordion-button::after {
+.postcode-container .accordion-button::after {
     background-image: none !important;
     content: '+';
     font-size: 40px;
@@ -902,7 +901,7 @@ input::-webkit-date-and-time-value {
     transition: transform 0.3s;
 }
 
-.accordion-button:not(.collapsed)::after {
+.postcode-container .accordion-button:not(.collapsed)::after {
     content: '';
     content: '−';
     font-size: 40px;
@@ -958,11 +957,6 @@ input::-webkit-date-and-time-value {
     color: var(--color-black);
     background-color: var(--color-white);
 }
-
-.color-default {
-    color: var(--color-default);
-}
-
 
 @media (max-width: 768px) {
     .pr-mobile-1rm {
@@ -1101,10 +1095,6 @@ input::-webkit-date-and-time-value {
     .coverage-btn-container {
         justify-content: center;
     }
-}
-
-.form-select option {
-    width: 100%;
 }
 
 .scrollable-content {
