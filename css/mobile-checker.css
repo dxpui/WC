@@ -499,10 +499,12 @@ input::-webkit-date-and-time-value {
     .chart-container {
         width: 295px;
     }
+
     .donut-chart {
         width: 80px;
         height: 80px;
     }
+
     .donut-chart::before {
         width: 60px;
         height: 60px;
@@ -779,6 +781,11 @@ input::-webkit-date-and-time-value {
     background-color: var(--color-white);
     border-color: var(--bs-nav-tabs-link-active-border-color);
     border-bottom: 5px solid var(--color-primary);
+}
+
+.custom-nav-tabs .nav-link:focus-visible {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 0;
 }
 
 @media (max-width: 768px) {
@@ -1115,7 +1122,7 @@ input::-webkit-date-and-time-value {
 }
 
 .accordion-address-tab-button:focus-visible .icon,
- .accordion-address-tab-button:active .icon {
-   outline: 3px solid var(--color-outline-focus);
-   outline-offset: 0;
- }
+.accordion-address-tab-button:active .icon {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 0;
+}
