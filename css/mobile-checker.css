@@ -306,6 +306,16 @@ input::-webkit-date-and-time-value {
     color: var(--color-black);
 }
 
+.item-list li a {
+    color: var(--color-default);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.item-list li a:hover {
+    text-decoration: underline;
+}
+
 .w-60 {
     width: 60% !important;
 }
@@ -956,6 +966,11 @@ input::-webkit-date-and-time-value {
 .more-info-acco-outer .accordion-button:not(.collapsed) {
     color: var(--color-black);
     background-color: var(--color-white);
+}
+
+.more-info-acco-outer .accordion-button:focus-visible{
+    outline: 3px solid var(--color-outline-focus) !important;
+    outline-offset: 0;
 }
 
 @media (max-width: 768px) {
