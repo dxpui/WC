@@ -263,11 +263,11 @@ input::-webkit-date-and-time-value {
     border-top-right-radius: none !important;
 }
 
-.accordion-button:focus {
+/* .accordion-button:focus {
     border-color: transparent !important;
     outline: none !important;
     box-shadow: none !important;
-}
+} */
 
 
 .btn-link {
