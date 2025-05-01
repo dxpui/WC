@@ -350,12 +350,10 @@ input::-webkit-date-and-time-value {
     margin-bottom: 10px !important;
 }
 
-.return-btn {
-    a {
-        text-decoration: none;
-        color: var(--color-default);
-        font-weight: bold;
-    }
+.return-btn a {
+    text-decoration: none;
+    color: var(--color-default);
+    font-weight: bold;
 }
 
 .search-container .search-postcode {
@@ -1143,14 +1141,14 @@ input::-webkit-date-and-time-value {
 
 @media (max-width: 992px) {
     .iframe-wrapper .map-container {
-        height: 600px;
+        height: 700px;
     }
 
 }
 
 @media (max-width: 768px) {
     .iframe-wrapper .map-container {
-        height: 500px;
+        height: 600px;
     }
 
 }
