@@ -478,6 +478,22 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
+    var $icon = $('#infoIcon');
+    // Initialize Bootstrap popover
+    $icon.popover();
+    // Handle keyboard accessibility
+    $icon.on('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault(); // Prevent scroll on Space
+            $(this).trigger('click'); // Simulate click to toggle popover
+        }
+    });
+
+    // Hide popover on blur (when focus is lost)
+    $icon.on('blur', function () {
+        $icon.popover('hide');
+      });
+
     if (window.innerWidth <= 768) {
         $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
         $('#collapseButton').hide();
@@ -567,15 +583,15 @@ $(document).ready(function () {
     $('.item-list').each(function () {
         var $list = $(this);
         var listItems = $list.find('li');
-  
+
         if (listItems.length > 4) {
-          $list.css({
-            'max-height': '200px',
-            'overflow-y': 'auto',
-            'margin-right': '4px'
-          });
+            $list.css({
+                'max-height': '200px',
+                'overflow-y': 'auto',
+                'margin-right': '4px'
+            });
         }
-      });
+    });
 
     setTimeout(function () {
         $("#loader").addClass("hidden");
