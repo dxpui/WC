@@ -1152,3 +1152,13 @@ input::-webkit-date-and-time-value {
     }
 
 }
+
+.accordion-button:focus-visible {
+    outline: var(--color-outline-focus) auto 3px;
+    outline-offset: 2px;
+}
+
+.accordion-box .accordion-button:focus-visible {
+    outline: 3px solid var(--color-outline-focus) !important;
+    outline-offset: 0;
+}
