@@ -478,7 +478,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    var $icon = $('#infoIcon');
+     // for info I icon in result page
+    var $icon = $('.popover-trigger');
     // Initialize Bootstrap popover
     $icon.popover();
     // Handle keyboard accessibility
