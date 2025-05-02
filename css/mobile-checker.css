@@ -1156,3 +1156,9 @@ input::-webkit-date-and-time-value {
     outline: 3px solid var(--color-outline-focus) !important;
     outline-offset: 0;
 }
+
+.EPiServerForms .FormSubmitButton:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-default);
+    outline: 0 !important;
+}
