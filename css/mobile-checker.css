@@ -233,12 +233,15 @@ input::-webkit-date-and-time-value {
     padding: 0;
     margin-bottom: 0;
     border-radius: 0 !important;
-    padding: 7px 5px;
 }
 
 .accordion-box .accordion-button:focus-visible {
     outline: 3px solid var(--color-outline-focus) !important;
-    outline-offset: 0;
+    outline-offset: 3px;
+}
+
+.accordion-box .accordion-map-tab-button{
+    padding: 10px 5px;
 }
 
 .accordion-container {
@@ -1150,15 +1153,4 @@ input::-webkit-date-and-time-value {
         height: 600px;
     }
 
-}
-
-.accordion-box .accordion-button:focus-visible {
-    outline: 3px solid var(--color-outline-focus) !important;
-    outline-offset: 0;
-}
-
-.EPiServerForms .FormSubmitButton:focus {
-    background-color: var(--color-secondary);
-    color: var(--color-default);
-    outline: 0 !important;
 }
