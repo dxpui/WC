@@ -478,7 +478,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-     // for info I icon in result page
+    // for info I icon in result page
     var $icon = $('.popover-trigger');
     // Initialize Bootstrap popover
     $icon.popover();
@@ -493,7 +493,7 @@ $(document).ready(function () {
     // Hide popover on blur (when focus is lost)
     $icon.on('blur', function () {
         $icon.popover('hide');
-      });
+    });
 
     if (window.innerWidth <= 768) {
         $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
@@ -682,7 +682,8 @@ document.addEventListener("DOMContentLoaded", function () {
         chart.querySelector(".percent-text").innerText = percentage + "%";
 
         let totalSegments = 10;
-        let blueSegments = Math.round((percentage / 100) * totalSegments);
+        let value = parseInt(chart.getAttribute("data-percentage")); // Still using data attribute
+        let blueSegments = getSegmentsFromValue(value);
         let anglePerSegment = 36; // Each segment is 36 degrees
         let gap = 2;
         let currentAngle = 0;
@@ -698,6 +699,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         chart.style.background = `conic-gradient(${gradientParts.join(", ")})`;
     });
+
+    function getSegmentsFromValue(value) {
+        if (value < 1) return 0;
+        if (value <= 19) return 1;
+        if (value <= 29) return 2;
+        if (value <= 39) return 3;
+        if (value <= 49) return 4;
+        if (value <= 59) return 5;
+        if (value <= 69) return 6;
+        if (value <= 79) return 7;
+        if (value <= 89) return 8;
+        if (value <= 99) return 9;
+        return 10; // 90+
+    }
 });
 
 // end chart script
