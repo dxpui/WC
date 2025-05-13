@@ -701,7 +701,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function getSegmentsFromValue(value) {
-        if (value < 1) return 0;
+        if (value <= 9) return 0;
         if (value <= 19) return 1;
         if (value <= 29) return 2;
         if (value <= 39) return 3;
@@ -711,7 +711,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (value <= 79) return 7;
         if (value <= 89) return 8;
         if (value <= 99) return 9;
-        return 10; // 90+
+        return 10;
     }
 });
 
