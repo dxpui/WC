@@ -753,6 +753,10 @@ $(document).ready(function () {
       activateTab($tabs.index(this));
     });
 
+    $('#afterMapIframe').on('focus', function () {
+        activateTab(1); // move to Address tab, index 1
+    });
+
     // Handle tabbing out of the last element in a panel
     $panels.each(function (i) {
         const $focusables = $(this).find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
