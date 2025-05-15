@@ -714,5 +714,57 @@ document.addEventListener("DOMContentLoaded", function () {
         return 10;
     }
 });
-
 // end chart script
+
+/* Tab - Navigation Logic - Start*/
+
+$(document).ready(function () {
+    const $tabs = $('.nav-tabs .nav-link');
+    const $panels = $('.tab-pane');
+    
+    function activateTab(index) {
+      const $targetTab = $tabs.eq(index);
+      const targetSelector = $targetTab.attr('data-bs-target');
+      $tabs.removeClass('active').attr('aria-selected', 'false').attr('tabindex', '-1');
+      $panels.removeClass('active show');
+      $targetTab.addClass('active').attr('aria-selected', 'true').removeAttr('tabindex');
+      $(targetSelector).addClass('active show');
+      $targetTab.focus();
+    }
+    
+    // Handle arrow key navigation
+    $tabs.on('keydown', function (e) {
+      const index = $tabs.index(this);
+      let newIndex = index;
+      if (e.key === 'ArrowRight') {
+        newIndex = (index + 1) % $tabs.length;
+      } else if (e.key === 'ArrowLeft') {
+        newIndex = (index - 1 + $tabs.length) % $tabs.length;
+      } else {
+        return; // Do nothing for other keys
+      }
+      e.preventDefault();
+      activateTab(newIndex);
+    });
+    
+    // Handle click activation
+    $tabs.on('click', function (e) {
+      e.preventDefault();
+      activateTab($tabs.index(this));
+    });
+
+    // Handle tabbing out of the last element in a panel
+    $panels.each(function (i) {
+        const $focusables = $(this).find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const $last = $focusables.last();
+        $last.on('keydown', function (e) {
+            if (e.key === 'Tab' && !e.shiftKey && i + 1 < $tabs.length) {
+                e.preventDefault();
+                activateTab(i + 1);
+            }
+        });
+    });
+});
+/* Tab - Navigation Logic  - End*/
+
+
