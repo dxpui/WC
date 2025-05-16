@@ -816,7 +816,7 @@
           <div class="col-lg-7 postcode-right-outer gray-bg ">
             <div class="postcode-container-right">
               <h2 class="mb-2">Mobile Coverage
-              </h2>
+              </h2> 
               <ul class="nav nav-tabs custom-nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                   <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#map" type="button"
@@ -835,7 +835,7 @@
 
               <!-- Tab Content -->
               <div class="tab-content custom-tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="map" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade show active " id="map" role="tabpanel" aria-labelledby="map-tab">
                   <div class="row g-3 align-items-center mb-3 mt-3">
                     <div class="col-auto">
                       <label for="network" class="col-form-label"><b>Network :</b></label>
@@ -870,11 +870,6 @@
                           </div>
                         </div>
                       </div>
-                      <!-- <div class="dropdown-box">
-                        <div class="color-box"></div>
-                        <input type="text" value="Patchy (Outdoor Only)" readonly>
-                        <button class="add-btn">+</button>
-                      </div> -->
                     </div>
                   </div>
                   <div class="col-12 iframe-wrapper">
@@ -951,9 +946,17 @@
                     </div>
 
                   </div>
-
-
+                   <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
                 </div>
+                <!-- <div class="tab-pane fade active show" id="map" role="tabpanel" aria-labelledby="map-tab">
+                  <div class="col-12 iframe-wrapper">
+                    <iframe id="mapFrame" class="map-container" tabindex="0"
+                      src="https://covmaps.europa.uk.com/apps/gbof/nipro_gbof_v7.php?opt=nosec20&amp;mnoNum=1&amp;lang=en-gb"
+                      width="100%" style="border:0;" allowfullscreen="">
+                    </iframe>
+                     <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
+                  </div>
+                </div> -->
 
                 <!-- <div class="col-12 iframe-wrapper">
                   <iframe id="mapFrame" class="map-container"
@@ -1156,7 +1159,7 @@
 
 
                 </div>
-                <div class="tab-pane fade" id="postal-district" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="tab-pane fade" id="postal-district" role="tabpanel" aria-labelledby="postal-tab">
                   <div class="container bg-white pt-3" id="accordionContainer-postal">
                     <h4>Results for CTI postal district</h4>
                     <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
