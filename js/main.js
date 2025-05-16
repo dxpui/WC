@@ -795,4 +795,30 @@ $(document).ready(function () {
 });
 /* Tab - Navigation Logic  - End*/
 
+$(document).ready(function () {
+    function updateIcons() {
+      $('.accordion-address-tab-button').each(function () {
+        var target = $($(this).attr('data-bs-target'));
+        var icon = $(this).find('.plus-minus-icon');
 
+        if (target.hasClass('show')) {
+          icon.text('+');
+        } else {
+          icon.text('_');
+        }
+      });
+    }
+
+    updateIcons();
+
+     $('.accordion-collapse').on('shown.bs.collapse', function () {
+      var icon = $(this).prev().find('.plus-minus-icon');
+      icon.text('−');
+    });
+
+    // On hide: set icon to plus
+    $('.accordion-collapse').on('hidden.bs.collapse', function () {
+      var icon = $(this).prev().find('.plus-minus-icon');
+      icon.text('+');
+    });
+  });

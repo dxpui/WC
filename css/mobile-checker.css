@@ -886,13 +886,13 @@ input::-webkit-date-and-time-value {
 
 .postal-tab-arrow.collapsed .icon::before {
     font-family: FontAwesome;
-    content: '\f078';
+    content: '\2b';
     font-size: 24px;
 }
 
 .postal-tab-arrow:not(.collapsed) .icon::before {
     font-family: FontAwesome;
-    content: '\f077';
+    content: '\f068';
     font-size: 24px;
 }
 
