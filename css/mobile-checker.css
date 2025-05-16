@@ -1161,3 +1161,7 @@ input::-webkit-date-and-time-value {
     height: 1px;
     overflow: hidden;
 }
+
+span.plus-minus-icon {
+    font-size: 28px;
+}
