@@ -713,6 +713,30 @@ document.addEventListener("DOMContentLoaded", function () {
         if (value <= 99) return 9;
         return 10;
     }
+
+    const $panels = $('.tab-pane');
+    const $tabs = $('.nav-tabs .nav-link');
+    $panels.each(function (i) {
+        const $focusables = $(this).find('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const $last = $focusables.last();
+        $last.on('keydown', function (e) {
+            if (e.key === 'Tab' && !e.shiftKey && i + 1 < $tabs.length) {
+                e.preventDefault();
+                activateTab(i + 1);
+            }
+        });
+    });
+
+    $('#afterMapIframe').on('focus', function () {
+        activateTab(1); // move to Address tab, index 1
+    });
+
+    function activateTab(index) {
+        const $targetTab = $tabs.eq(index);
+        $targetTab.tab('show');
+        $targetTab.focus();
+    }
+
 });
 
 // end chart script

@@ -1154,3 +1154,10 @@ input::-webkit-date-and-time-value {
     }
 
 }
+
+.hiddenMapIFrame {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
