@@ -745,36 +745,40 @@ document.addEventListener("DOMContentLoaded", function () {
 $(document).ready(function () {
     const $tabs = $('.nav-tabs .nav-link');
     const $panels = $('.tab-pane');
-    
+
     function activateTab(index) {
-      const $targetTab = $tabs.eq(index);
-      const targetSelector = $targetTab.attr('data-bs-target');
-      $tabs.removeClass('active').attr('aria-selected', 'false').attr('tabindex', '-1');
-      $panels.removeClass('active show');
-      $targetTab.addClass('active').attr('aria-selected', 'true').removeAttr('tabindex');
-      $(targetSelector).addClass('active show');
-      $targetTab.focus();
+        const $targetTab = $tabs.eq(index);
+        const targetSelector = $targetTab.attr('data-bs-target');
+        $tabs.removeClass('active').attr('aria-selected', 'false').attr('tabindex', '-1');
+        $panels.removeClass('active show');
+        $targetTab.addClass('active').attr('aria-selected', 'true').removeAttr('tabindex');
+        $(targetSelector).addClass('active show');
+        $targetTab.focus();
     }
-    
+
     // Handle arrow key navigation
     $tabs.on('keydown', function (e) {
-      const index = $tabs.index(this);
-      let newIndex = index;
-      if (e.key === 'ArrowRight') {
-        newIndex = (index + 1) % $tabs.length;
-      } else if (e.key === 'ArrowLeft') {
-        newIndex = (index - 1 + $tabs.length) % $tabs.length;
-      } else {
-        return; // Do nothing for other keys
-      }
-      e.preventDefault();
-      activateTab(newIndex);
+        const index = $tabs.index(this);
+        let newIndex = index;
+        if (e.key === 'ArrowRight') {
+            newIndex = (index + 1) % $tabs.length;
+            activateTab(newIndex);
+        } else if (e.key === 'ArrowLeft') {
+            newIndex = (index - 1 + $tabs.length) % $tabs.length;
+            activateTab(newIndex);
+        } else if (e.key === 'Tab' && e.shiftKey && index > 0) {
+            newIndex = (index - 1 + $tabs.length) % $tabs.length;
+            activateTab(newIndex);
+        } else {
+            return; // Do nothing for other keys
+        }
+        e.preventDefault();
     });
-    
+
     // Handle click activation
     $tabs.on('click', function (e) {
-      e.preventDefault();
-      activateTab($tabs.index(this));
+        e.preventDefault();
+        activateTab($tabs.index(this));
     });
 
     $('#afterMapIframe').on('focus', function () {
@@ -797,28 +801,28 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     function updateIcons() {
-      $('.accordion-address-tab-button').each(function () {
-        var target = $($(this).attr('data-bs-target'));
-        var icon = $(this).find('.plus-minus-icon');
+        $('.accordion-address-tab-button').each(function () {
+            var target = $($(this).attr('data-bs-target'));
+            var icon = $(this).find('.plus-minus-icon');
 
-        if (target.hasClass('show')) {
-          icon.text('+');
-        } else {
-          icon.text('_');
-        }
-      });
+            if (target.hasClass('show')) {
+                icon.text('+');
+            } else {
+                icon.text('_');
+            }
+        });
     }
 
     updateIcons();
 
-     $('.accordion-collapse').on('shown.bs.collapse', function () {
-      var icon = $(this).prev().find('.plus-minus-icon');
-      icon.text('−');
+    $('.accordion-collapse').on('shown.bs.collapse', function () {
+        var icon = $(this).prev().find('.plus-minus-icon');
+        icon.text('−');
     });
 
     // On hide: set icon to plus
     $('.accordion-collapse').on('hidden.bs.collapse', function () {
-      var icon = $(this).prev().find('.plus-minus-icon');
-      icon.text('+');
+        var icon = $(this).prev().find('.plus-minus-icon');
+        icon.text('+');
     });
-  });
+});
