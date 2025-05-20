@@ -1165,3 +1165,11 @@ input::-webkit-date-and-time-value {
 span.plus-minus-icon {
     font-size: 28px;
 }
+
+.h4-class{
+    font-size: 1.188rem;
+    line-height: 145%;
+    font-weight: 400;
+    word-wrap: break-word;
+    letter-spacing: -0.19px;
+}
