@@ -826,3 +826,17 @@ $(document).ready(function () {
         icon.text('+');
     });
 });
+
+let lastFocusedElement;
+
+$('#staticBackdrop').on('show.bs.modal', function () {
+  // Store the element that triggered the modal
+  lastFocusedElement = document.activeElement;
+});
+
+$('#staticBackdrop').on('hidden.bs.modal', function () {
+  // Return focus to the triggering element
+  if (lastFocusedElement) {
+    $(lastFocusedElement).focus();
+  }
+});
