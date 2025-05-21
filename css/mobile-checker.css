@@ -806,13 +806,19 @@ input::-webkit-date-and-time-value {
     .custom-nav-tabs .nav-link {
         padding: 5px 15px;
     }
+    .custom-nav-tabs .nav-item,  .custom-nav-tabs .nav-link {
+        flex: 1 1 auto;
+        text-align: center;
+    }
 }
 
 @media (max-width: 567px) {
     .custom-nav-tabs .nav-link {
-        padding: 5px;
+        padding: 5px 10px;
     }
 }
+
+
 
 .row.col-12.mt-5 {
     margin-left: 5px;
