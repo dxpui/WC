@@ -547,19 +547,40 @@ $(document).ready(function () {
         }
     });
 
+    const button = $("#collapseButton");
+    const icon = button.find("i");
+    addAriaAttribute(icon, true);
+
     $("#collapseButton").click(function () {
         if ($('.default-msg:visible').length > 0) {
             return false;
         }
         if (window.innerWidth > 768) {
             let icon = $(this).find("i");
-            if (icon.hasClass("fa-chevron-left")) {
-                icon.removeClass("fa-chevron-left").addClass("fa-chevron-right");
-            } else {
-                icon.removeClass("fa-chevron-right").addClass("fa-chevron-left");
-            }
+            addAriaAttribute(icon, false);
         }
     });
+
+    function addAriaAttribute(icon, onPageLoad) {
+
+        if (onPageLoad) {
+            if (icon.hasClass("fa-chevron-left")) {
+                icon.attr("aria-label", "minimise mobile checker pane");
+            }
+        } else {
+            if (icon.hasClass("fa-chevron-left")) {
+                icon
+                    .removeClass("fa-chevron-left")
+                    .addClass("fa-chevron-right")
+                    .attr("aria-label", "expand mobile checker pane");
+            } else {
+                icon
+                    .removeClass("fa-chevron-right")
+                    .addClass("fa-chevron-left")
+                    .attr("aria-label", "minimise mobile checker pane");
+            }
+        }
+    }
 
     $('.faq-back-btn-click').on('click', function () {
         $('#collapseButton').hide();
@@ -830,13 +851,13 @@ $(document).ready(function () {
 let lastFocusedElement;
 
 $('#staticBackdrop').on('show.bs.modal', function () {
-  // Store the element that triggered the modal
-  lastFocusedElement = document.activeElement;
+    // Store the element that triggered the modal
+    lastFocusedElement = document.activeElement;
 });
 
 $('#staticBackdrop').on('hidden.bs.modal', function () {
-  // Return focus to the triggering element
-  if (lastFocusedElement) {
-    $(lastFocusedElement).focus();
-  }
+    // Return focus to the triggering element
+    if (lastFocusedElement) {
+        $(lastFocusedElement).focus();
+    }
 });
