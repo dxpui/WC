@@ -676,28 +676,12 @@ $(document).ready(function () {
             $('#landing-page-image-block').remove();
         }
     }
-
-
-    // // // popover display on mouse over//
-    // $('.popover-trigger').popover({
-    //     trigger: 'manual'
-    // });
-
-    // $('.popover-trigger').on('mouseenter', function () {
-    //     $(this).popover('show');
-    // });
-
-    // $('.popover-trigger').on('mouseleave', function () {
-    //     $(this).popover('hide');
-    // });
-
 });
 
 
 // chart script
 document.addEventListener("DOMContentLoaded", function () {
     const charts = document.querySelectorAll(".donut-chart");
-
     charts.forEach(chart => {
         let percentage = chart.getAttribute("data-percentage");
         chart.querySelector(".percent-text").innerText = percentage + "%";
@@ -847,7 +831,6 @@ $(document).ready(function () {
         icon.text('+');
     });
 
-    // 
 
     let lastFocusedElement;
 
@@ -863,10 +846,11 @@ $(document).ready(function () {
         }
     });
 
-     // Set initial ARIA label based on expanded state
+    // Set initial ARIA label based on expanded state
     $('.accordion-address-tab-button').each(function () {
         let $btn = $(this);
         let labelText = $.trim($btn.contents().get(0).nodeValue);
+        // let labelText = $btn.find('.label').text().trim(); // for backend
         let isExpanded = $btn.attr('aria-expanded') === 'true';
 
         const $row = $btn.closest('tr');
@@ -882,6 +866,7 @@ $(document).ready(function () {
         let $collapse = $(this);
         let $button = $('button[data-bs-target="#' + this.id + '"]');
         let labelText = $.trim($button.contents().get(0).nodeValue);
+        // let labelText = $btn.find('.label').text().trim();  // for backend
         let isExpanded = $collapse.hasClass('show');
         $button.attr('aria-expanded', isExpanded.toString());
 
@@ -891,4 +876,64 @@ $(document).ready(function () {
 
         $button.attr('aria-label', combined + ' button ' + (isExpanded ? 'expanded' : 'collapsed'));
     });
+
+    //for Map Tab - drop down select
+    const $select = $('.form-select');
+
+    // Update aria-label on change
+    $select.on('change', function () {
+        const selectedText = $(this).find('option:selected').text();
+        $(this).attr('aria-label', `Selected network: ${selectedText}`);
+    });
+
+    // Handle expanded/collapsed state (for custom dropdown UI use)
+    $select.on('focus', function () {
+        $(this).attr('aria-expanded', 'true');
+    });
+
+    $select.on('blur', function () {
+        $(this).attr('aria-expanded', 'false');
+    });
+
+    // Initial label set on page load
+    const initialText = $select.find('option:selected').text();
+    $select.attr('aria-label', `Selected network: ${initialText}`);
+    $select.attr('aria-expanded', 'false'); // default collapsed
+
+    function updateAriaLabel($button) {
+        const isExpanded = $button.attr('aria-expanded') === 'true';
+        const labelText = $.trim($button.text());
+        $button.attr('aria-label', labelText + ' button ' + (isExpanded ? 'expanded' : 'collapsed'));
+    }
+
+    // Function to observe changes to aria-expanded
+    function observeButton($button) {
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.attributeName === 'aria-expanded') {
+                    updateAriaLabel($button);
+                }
+            });
+        });
+
+        observer.observe($button[0], {
+            attributes: true,
+            attributeFilter: ['aria-expanded']
+        });
+
+        // Initialize label on load
+        updateAriaLabel($button);
+    }
+
+    // Apply observer to each accordion-map-tab-button
+    $('.accordion-button.accordion-map-tab-button').each(function () {
+        observeButton($(this));
+    });
+
+    $('.accordion-collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+        const targetId = $(this).attr('id');
+        const $button = $(`button[data-bs-target="#${targetId}"]`);
+        updateAriaLabel($button); // Call your existing function
+    });
+
 });
