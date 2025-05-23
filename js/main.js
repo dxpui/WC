@@ -846,18 +846,49 @@ $(document).ready(function () {
         var icon = $(this).prev().find('.plus-minus-icon');
         icon.text('+');
     });
-});
 
-let lastFocusedElement;
+    // 
 
-$('#staticBackdrop').on('show.bs.modal', function () {
-    // Store the element that triggered the modal
-    lastFocusedElement = document.activeElement;
-});
+    let lastFocusedElement;
 
-$('#staticBackdrop').on('hidden.bs.modal', function () {
-    // Return focus to the triggering element
-    if (lastFocusedElement) {
-        $(lastFocusedElement).focus();
-    }
+    $('#staticBackdrop').on('show.bs.modal', function () {
+        // Store the element that triggered the modal
+        lastFocusedElement = document.activeElement;
+    });
+
+    $('#staticBackdrop').on('hidden.bs.modal', function () {
+        // Return focus to the triggering element
+        if (lastFocusedElement) {
+            $(lastFocusedElement).focus();
+        }
+    });
+
+     // Set initial ARIA label based on expanded state
+    $('.accordion-address-tab-button').each(function () {
+        let $btn = $(this);
+        let labelText = $.trim($btn.contents().get(0).nodeValue);
+        let isExpanded = $btn.attr('aria-expanded') === 'true';
+
+        const $row = $btn.closest('tr');
+        const logoAlt = $row.find('td:eq(0) img').attr('aria-label') || '';
+        const combined = `${logoAlt}, ${labelText}`;
+
+        $btn.attr('aria-label', combined + ' button ' + (isExpanded ? 'expanded' : 'collapsed'));
+    });
+
+    // Listen for any collapse shown or hidden events
+    $('.accordion-collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+        let $btn = $(this);
+        let $collapse = $(this);
+        let $button = $('button[data-bs-target="#' + this.id + '"]');
+        let labelText = $.trim($button.contents().get(0).nodeValue);
+        let isExpanded = $collapse.hasClass('show');
+        $button.attr('aria-expanded', isExpanded.toString());
+
+        const $row = $btn.closest('tr');
+        const logoAlt = $row.find('td:eq(0) img').attr('aria-label') || '';
+        const combined = `${logoAlt}, ${labelText}`;
+
+        $button.attr('aria-label', combined + ' button ' + (isExpanded ? 'expanded' : 'collapsed'));
+    });
 });
