@@ -937,3 +937,71 @@ $(document).ready(function () {
     });
 
 });
+
+$(document).ready(function () {
+    const $allLinks = $('.content-link');
+    const $allContentBoxes = $('.scrollable-content');
+
+    // Helper to get all focusable elements
+    function getFocusableElements($container) {
+      return $container.find('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])').filter(':visible');
+    }
+
+    // Show selected content, hide others
+    function showContent(contentId) {
+      $allContentBoxes.hide();
+      const $target = $('#' + contentId);
+      $target.show();
+      $target.attr('tabindex', '-1');
+      $target.focus();
+
+      const focusables = getFocusableElements($target);
+      if (focusables.length > 0) {
+        focusables.last().off('keydown').on('keydown', function (e) {
+          if (e.key === 'Tab' && !e.shiftKey) {
+            e.preventDefault();
+            focusNextLink($currentLink);
+          }
+        });
+      } else {
+        // No focusable content: wait for tab from content itself
+        $target.off('keydown').on('keydown', function (e) {
+          if (e.key === 'Tab' && !e.shiftKey) {
+            e.preventDefault();
+            focusNextLink($currentLink);
+          }
+        });
+      }
+    }
+
+    let $currentLink = null;
+
+    $allLinks.on('click', function (e) {
+      e.preventDefault();
+      $currentLink = $(this);
+      const contentId = $currentLink.parent().data('content-id');
+      if (contentId) {
+        showContent(contentId);
+      }
+    });
+
+    function focusNextLink($link) {
+      const currentIndex = $allLinks.index($link);
+      const nextLink = $allLinks.get(currentIndex + 1);
+
+      if (nextLink) {
+        const $nextLink = $(nextLink);
+        const $parentCollapse = $nextLink.closest('.accordion-collapse');
+
+        if (!$parentCollapse.hasClass('show')) {
+          const collapseId = $parentCollapse.attr('id');
+          const $accordionButton = $(`.accordion-button[data-bs-target="#${collapseId}"]`);
+          $accordionButton[0]?.click();
+        }
+
+        requestAnimationFrame(() => {
+          $nextLink[0]?.focus();
+        });
+      }
+    }
+  });
