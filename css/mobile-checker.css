@@ -1126,6 +1126,16 @@ input::-webkit-date-and-time-value {
     max-height: 100vh;
     overflow-y: auto;
     scroll-behavior: smooth;
+    display: none;
+}
+
+.scrollable-content.active {
+    display: block;
+}
+
+.scrollable-content:focus-visible {
+    outline: 3px solid var(--color-outline-focus);
+    outline-offset: 5;
 }
 
 .postcode-container-left .EPiServerForms .Form__MainBody {
