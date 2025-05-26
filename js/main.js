@@ -941,42 +941,95 @@ $(document).ready(function () {
 $(document).ready(function () {
     const $allLinks = $('.content-link');
     const $allContentBoxes = $('.scrollable-content');
+    const $leftContainer = $('.postcode-container-left'); // container with left links
+    let $currentLink = null;
 
-    // Helper to get all focusable elements
     function getFocusableElements($container) {
-      return $container.find('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])').filter(':visible');
+      return $container
+        .find('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])')
+        .filter(':visible:not([disabled])');
     }
 
-    // Show selected content, hide others
     function showContent(contentId) {
       $allContentBoxes.hide();
       const $target = $('#' + contentId);
       $target.show();
-      $target.attr('tabindex', '-1');
-      $target.focus();
+      $target.attr('tabindex', '-1').focus();
 
       const focusables = getFocusableElements($target);
+
+      // Remove previous listeners
+      $target.off('keydown');
+      focusables.off('keydown');
+
       if (focusables.length > 0) {
-        focusables.last().off('keydown').on('keydown', function (e) {
-          if (e.key === 'Tab' && !e.shiftKey) {
+        const $first = $(focusables[0]);
+        const $last = $(focusables[focusables.length - 1]);
+
+        // Shift+Tab on first focusable = back to sidebar link
+        $first.on('keydown', function (e) {
+          if (e.key === 'Tab' && e.shiftKey) {
             e.preventDefault();
-            focusNextLink($currentLink);
+            $currentLink?.focus();
           }
         });
-      } else {
-        // No focusable content: wait for tab from content itself
-        $target.off('keydown').on('keydown', function (e) {
+
+        // Tab on last focusable = go to next focusable on left side
+        $last.on('keydown', function (e) {
           if (e.key === 'Tab' && !e.shiftKey) {
             e.preventDefault();
-            focusNextLink($currentLink);
+            focusNextFocusableOnLeft();
+          }
+        });
+
+      } else {
+        // No focusables – handle Tab on container itself
+        $target.on('keydown', function (e) {
+          if (e.key === 'Tab') {
+            e.preventDefault();
+            if (e.shiftKey) {
+              $currentLink?.focus();
+            } else {
+              focusNextFocusableOnLeft();
+            }
           }
         });
       }
     }
 
-    let $currentLink = null;
+    function focusNextFocusableOnLeft() {
+      // Get all focusable elements on the left container
+      const focusables = getFocusableElements($leftContainer);
 
-    $allLinks.on('click', function (e) {
+      // Find index of current link in that list
+      const currentIndex = focusables.index($currentLink);
+
+      // Focus next focusable after current index
+      const $nextFocusable = focusables.eq(currentIndex + 1);
+
+      if ($nextFocusable.length) {
+        // If next focusable is inside collapsed accordion, expand it
+        const $parentCollapse = $nextFocusable.closest('.accordion-collapse');
+        if ($parentCollapse.length && !$parentCollapse.hasClass('show')) {
+          const collapseId = $parentCollapse.attr('id');
+          const $accordionButton = $(`.accordion-button[data-bs-target="#${collapseId}"]`);
+          $accordionButton[0]?.click();
+          // Wait for expand animation before focus
+          setTimeout(() => {
+            $nextFocusable[0]?.focus();
+            $currentLink = $nextFocusable;
+          }, 100);
+        } else {
+          $nextFocusable[0]?.focus();
+          $currentLink = $nextFocusable;
+        }
+      } else {
+        // No more focusable left, optionally blur or do nothing
+        $currentLink?.blur();
+      }
+    }
+
+    $('.content-link').on('click', function (e) {
       e.preventDefault();
       $currentLink = $(this);
       const contentId = $currentLink.parent().data('content-id');
@@ -984,24 +1037,4 @@ $(document).ready(function () {
         showContent(contentId);
       }
     });
-
-    function focusNextLink($link) {
-      const currentIndex = $allLinks.index($link);
-      const nextLink = $allLinks.get(currentIndex + 1);
-
-      if (nextLink) {
-        const $nextLink = $(nextLink);
-        const $parentCollapse = $nextLink.closest('.accordion-collapse');
-
-        if (!$parentCollapse.hasClass('show')) {
-          const collapseId = $parentCollapse.attr('id');
-          const $accordionButton = $(`.accordion-button[data-bs-target="#${collapseId}"]`);
-          $accordionButton[0]?.click();
-        }
-
-        requestAnimationFrame(() => {
-          $nextLink[0]?.focus();
-        });
-      }
-    }
   });
