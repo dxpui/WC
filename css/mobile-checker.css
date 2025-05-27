@@ -942,7 +942,7 @@ input::-webkit-date-and-time-value {
 .more-info-acco-outer .more-info-accordion::after {
     background-image: none !important;
     font-family: FontAwesome;
-    content: '\f078';
+    content: '\f078' !important;
     font-size: 20px;
     color: #333;
     transition: transform 0.3s;
