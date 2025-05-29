@@ -274,6 +274,19 @@ $(".tree-reset").click(function () {
 
 /* PostCode Checker Block */
 $(document).ready(function () {
+
+    //to remove the openAccordions sessionstorage only for webchecker
+    if ($("#page-webchecker").length > 0) {
+        sessionStorage.removeItem('openAccordions');
+        $('.accordion').on('hidden.bs.collapse', function (e) {
+            sessionStorage.removeItem('openAccordions');
+        });
+ 
+        $('.accordion').on('shown.bs.collapse', function (e) {
+            sessionStorage.removeItem('openAccordions');
+        });
+    }
+    
     if (localStorage['ScrollPositionX'] !== "null") {
         $(document).scrollTop(localStorage['ScrollPositionX']);
         localStorage['ScrollPositionX'] = "null";
