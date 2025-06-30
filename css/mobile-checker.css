@@ -40,11 +40,6 @@ input::-webkit-date-and-time-value {
     }
 }
 
-.pdf-content {
-    display: block;
-    margin-bottom: 10px;
-}
-
 .postcode-container {
     font-size: 1rem;
 }
@@ -172,10 +167,6 @@ input::-webkit-date-and-time-value {
     color: var(--color-default);
 }
 
-.megenta-bg .postcode-number {
-    color: var(--color-default);
-}
-
 .megenta-bg .white-bg p {
     color: var(--color-default) !important;
 }
@@ -194,20 +185,10 @@ input::-webkit-date-and-time-value {
     transition: width 0.3s ease;
 }
 
-.modal-popup-width-75 {
-    max-width: 75% !important;
-}
-
-
 @media (min-width: 768px) {
     .modal-popup-width-50 {
         max-width: 50% !important;
     }
-}
-
-
-.modal-popup-width-40 {
-    max-width: 40% !important;
 }
 
 .modal-popup-width-45 {
@@ -219,12 +200,6 @@ input::-webkit-date-and-time-value {
         max-width: 100%;
         margin-right: 3% !important;
     }
-}
-
-.left-panel {
-    background-color: #35c95e;
-    padding: 15px;
-    border-radius: 5px;
 }
 
 .accordion-box {
@@ -252,7 +227,7 @@ input::-webkit-date-and-time-value {
     margin: 0;
 }
 
-.accordion-button {
+.mobile-checker-container .accordion-button {
     cursor: pointer;
     position: relative;
     padding: 3px 10px 3px 10px;
@@ -263,13 +238,13 @@ input::-webkit-date-and-time-value {
     line-height: 24px;
 }
 
-.accordion-button .arrow {
+.mobile-checker-container .accordion-button .arrow {
     position: absolute;
     right: 15px;
     font-size: 1.5rem;
 }
 
-.accordion-item:first-of-type .accordion-button {
+.postcode-container .accordion-item:first-of-type .accordion-button {
     border-top-left-radius: none !important;
     border-top-right-radius: none !important;
 }
@@ -452,7 +427,7 @@ input::-webkit-date-and-time-value {
     border: 3px solid #000045;
 }
 
-.accordion-item:not(:first-child) {
+.mobile-checker-container .accordion-item:not(:first-child) {
     border-top: 3px solid #000045;
 }
 
@@ -1090,7 +1065,7 @@ input::-webkit-date-and-time-value {
     object-fit: cover;
 }
 
-.col-form-label {
+.mobile-checker-container .col-form-label {
     font-weight: 700;
 }
 
