@@ -14,15 +14,15 @@
     border: 3px solid #000045;
 }
 
-.postcode-container .form-control:focus,
-.postcode-container .form-select:focus,
-.postcode-container .form-check-input:focus {
-    border: 3px solid var(--color-default);
-}
+    .postcode-container .form-control:focus,
+    .postcode-container .form-select:focus,
+    .postcode-container .form-check-input:focus {
+        border: 3px solid var(--color-default);
+    }
 
-.postcode-container .form-select option {
-    width: 100%;
-}
+    .postcode-container .form-select option {
+        width: 100%;
+    }
 
 .white-bg {
     background-color: var(--color-white);
@@ -113,11 +113,11 @@ input::-webkit-date-and-time-value {
     border-radius: 50%;
 }
 
-.container-radio:hover input~.checkmark {
+.container-radio:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
-.container-radio input:checked~.checkmark {
+.container-radio input:checked ~ .checkmark {
     background-color: var(--color-white);
 }
 
@@ -128,7 +128,7 @@ input::-webkit-date-and-time-value {
     border-radius: 50%;
 }
 
-.container-radio input:checked~.checkmark:after {
+.container-radio input:checked ~ .checkmark:after {
     display: block;
 }
 
@@ -151,34 +151,30 @@ input::-webkit-date-and-time-value {
     border-bottom-left-radius: 50%;
 }
 
-.collapse-left:hover,
-.collapse-left:focus,
-.collapse-left:active {
-    background-color: var(--color-light-gray) !important;
-    border: none;
-}
+    .collapse-left:hover,
+    .collapse-left:focus,
+    .collapse-left:active {
+        background-color: var(--color-light-gray) !important;
+        border: none;
+    }
 
-.collapse-left:focus-visible {
-    background-color: var(--color-secondary) !important;
-    border: none;
-}
+    .collapse-left:focus-visible {
+        background-color: var(--color-secondary) !important;
+        border: none;
+    }
 
-.collapse-left i {
-    color: var(--color-default);
-}
-
-.megenta-bg .white-bg p {
-    color: var(--color-default) !important;
-}
+    .collapse-left i {
+        color: var(--color-default);
+    }
 
 .postcode-left-outer {
     transition: width 0.3s ease;
 }
 
-.postcode-left-outer.collapsed {
-    width: 50px;
-    transition: width 0.3s ease;
-}
+    .postcode-left-outer.collapsed {
+        width: 50px;
+        transition: width 0.3s ease;
+    }
 
 .postcode-right-outer.expend {
     width: calc(100% - 50px);
@@ -208,16 +204,13 @@ input::-webkit-date-and-time-value {
     padding: 0;
     margin-bottom: 0;
     border-radius: 0 !important;
+    padding: 7px 5px;
 }
 
-.accordion-box .accordion-button:focus-visible {
-    outline: 3px solid var(--color-outline-focus) !important;
-    outline-offset: 3px;
-}
-
-.accordion-box .accordion-map-tab-button{
-    padding: 10px 5px;
-}
+    .accordion-box .accordion-button:focus-visible {
+        outline: 3px solid var(--color-outline-focus) !important;
+        outline-offset: 0;
+    }
 
 .accordion-container {
     background-color: #000045;
@@ -238,11 +231,11 @@ input::-webkit-date-and-time-value {
     line-height: 24px;
 }
 
-.mobile-checker-container .accordion-button .arrow {
-    position: absolute;
-    right: 15px;
-    font-size: 1.5rem;
-}
+    .mobile-checker-container .accordion-button .arrow {
+        position: absolute;
+        right: 15px;
+        font-size: 1.5rem;
+    }
 
 .postcode-container .accordion-item:first-of-type .accordion-button {
     border-top-left-radius: none !important;
@@ -253,9 +246,9 @@ input::-webkit-date-and-time-value {
     text-decoration: none !important;
 }
 
-.btn-link:hover {
-    text-decoration: none !important;
-}
+    .btn-link:hover {
+        text-decoration: none !important;
+    }
 
 .popover-icon {
     font-size: 24px;
@@ -263,10 +256,10 @@ input::-webkit-date-and-time-value {
     margin-left: 5px;
 }
 
-.popover-icon:focus-visible {
-    outline: 3px solid var(--color-outline-focus) !important;
-    outline-offset: 0;
-}
+    .popover-icon:focus-visible {
+        outline: 3px solid var(--color-outline-focus) !important;
+        outline-offset: 0;
+    }
 
 .custom-popover-width {
     max-width: 100%;
@@ -281,21 +274,21 @@ input::-webkit-date-and-time-value {
     cursor: pointer;
 }
 
-.item-list li:hover,
-.item-list li.active {
-    background-color: var(--color-light-gray);
-    color: var(--color-black);
-}
+    .item-list li:hover,
+    .item-list li.active {
+        background-color: var(--color-light-gray);
+        color: var(--color-black);
+    }
 
-.item-list li a {
-    color: var(--color-default);
-    text-decoration: none;
-    display: inline-block;
-}
+    .item-list li a {
+        color: var(--color-default);
+        text-decoration: none;
+        display: inline-block;
+    }
 
-.item-list li a:hover {
-    text-decoration: underline;
-}
+        .item-list li a:hover {
+            text-decoration: underline;
+        }
 
 .w-60 {
     width: 60% !important;
@@ -342,18 +335,17 @@ input::-webkit-date-and-time-value {
     border-radius: 0;
     margin-left: -4px !important;
     background-color: transparent;
-
 }
 
-.search-container .input-group-text:hover {
-    background-color: var(--color-default);
-    color: var(--color-white);
-}
+    .search-container .input-group-text:hover {
+        background-color: var(--color-default);
+        color: var(--color-white);
+    }
 
-.search-container .input-group-text:focus-visible {
-    outline: none;
-    background-color: var(--color-secondary);
-}
+    .search-container .input-group-text:focus-visible {
+        outline: none;
+        background-color: var(--color-secondary);
+    }
 
 .location-pin {
     height: 36px;
@@ -474,14 +466,14 @@ input::-webkit-date-and-time-value {
     background: conic-gradient(gray 0deg 36deg, white 36deg 38deg);
 }
 
-.donut-chart::before {
-    content: "";
-    width: 80px;
-    height: 80px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-}
+    .donut-chart::before {
+        content: "";
+        width: 80px;
+        height: 80px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+    }
 
 @media (max-width: 768px) {
     .chart-container {
@@ -493,10 +485,10 @@ input::-webkit-date-and-time-value {
         height: 80px;
     }
 
-    .donut-chart::before {
-        width: 60px;
-        height: 60px;
-    }
+        .donut-chart::before {
+            width: 60px;
+            height: 60px;
+        }
 }
 
 .percent-text {
@@ -533,10 +525,10 @@ input::-webkit-date-and-time-value {
     cursor: pointer;
 }
 
-.dropdown-box input:focus-visible {
-    box-shadow: none;
-    outline: none;
-}
+    .dropdown-box input:focus-visible {
+        box-shadow: none;
+        outline: none;
+    }
 
 .color-box {
     padding: 10px;
@@ -568,11 +560,11 @@ input::-webkit-date-and-time-value {
     align-items: center;
 }
 
-.box-container span {
-    line-height: 1;
-    font-size: 12px;
-    color: #333;
-}
+    .box-container span {
+        line-height: 1;
+        font-size: 12px;
+        color: #333;
+    }
 
 .bg-skyBlue {
     background-color: rgb(7, 180, 215) !important;
@@ -620,25 +612,25 @@ input::-webkit-date-and-time-value {
     text-align: left;
 }
 
-.accordion-address-tab-button::after {
-    display: none !important;
-}
+    .accordion-address-tab-button::after {
+        display: none !important;
+    }
 
-.accordion-address-tab-button .icon {
-    font-size: 18px;
-    transition: transform 0.3s;
-    padding-inline: 10px;
-}
+    .accordion-address-tab-button .icon {
+        font-size: 18px;
+        transition: transform 0.3s;
+        padding-inline: 10px;
+    }
 
-.accordion-address-tab-button.collapsed .icon::before {
-    content: "\2b";
-    font-family: FontAwesome;
-}
+    .accordion-address-tab-button.collapsed .icon::before {
+        content: "\2b";
+        font-family: FontAwesome;
+    }
 
-.accordion-address-tab-button:not(.collapsed) .icon::before {
-    content: "\f068";
-    font-family: FontAwesome;
-}
+    .accordion-address-tab-button:not(.collapsed) .icon::before {
+        content: "\f068";
+        font-family: FontAwesome;
+    }
 
 .network-check table {
     width: 100%;
@@ -744,9 +736,9 @@ input::-webkit-date-and-time-value {
     border-bottom: none;
 }
 
-.custom-nav-tabs .nav-item {
-    border: none;
-}
+    .custom-nav-tabs .nav-item {
+        border: none;
+    }
 
 .custom-tab-content .tab-pane {
     background-color: var(--color-white);
@@ -760,27 +752,27 @@ input::-webkit-date-and-time-value {
     color: var(--color-default);
 }
 
-.custom-nav-tabs .nav-link:hover {
-    color: var(--color-black);
-}
+    .custom-nav-tabs .nav-link:hover {
+        color: var(--color-black);
+    }
 
-.custom-nav-tabs .nav-link.active {
-    color: var(--color-default);
-    background-color: var(--color-white);
-    border-color: var(--bs-nav-tabs-link-active-border-color);
-    border-bottom: 5px solid var(--color-primary);
-}
+    .custom-nav-tabs .nav-link.active {
+        color: var(--color-default);
+        background-color: var(--color-white);
+        border-color: var(--bs-nav-tabs-link-active-border-color);
+        border-bottom: 5px solid var(--color-primary);
+    }
 
-.custom-nav-tabs .nav-link:focus-visible {
-    outline: 3px solid var(--color-outline-focus);
-    outline-offset: 0;
-}
+    .custom-nav-tabs .nav-link:focus-visible {
+        outline: 3px solid var(--color-outline-focus);
+        outline-offset: 0;
+    }
 
 @media (max-width: 768px) {
     .custom-nav-tabs .nav-link {
         padding: 5px 15px;
     }
-    .custom-nav-tabs .nav-item,  .custom-nav-tabs .nav-link {
+    .custom-nav-tabs .nav-item, .custom-nav-tabs .nav-link {
         flex: 1 1 auto;
         text-align: center;
     }
@@ -791,8 +783,6 @@ input::-webkit-date-and-time-value {
         padding: 5px 10px;
     }
 }
-
-
 
 .row.col-12.mt-5 {
     margin-left: 5px;
@@ -832,9 +822,9 @@ input::-webkit-date-and-time-value {
     border-top: none;
 }
 
-.table-postal-district>:not(caption)>* {
-    border-width: 0px;
-}
+    .table-postal-district > :not(caption) > * {
+        border-width: 0px;
+    }
 
 
 .table-postal-district-row td {
@@ -842,20 +832,20 @@ input::-webkit-date-and-time-value {
     border-right: 0px solid var(--color-default) !important;
 }
 
-.table-postal-district-row td:nth-child(2) {
-    /* border-left: 3px  solid var(--color-light-gray) !important; */
-    border-right: 3px solid var(--color-light-gray) !important;
-}
+    .table-postal-district-row td:nth-child(2) {
+        /* border-left: 3px  solid var(--color-light-gray) !important; */
+        border-right: 3px solid var(--color-light-gray) !important;
+    }
 
-.table-postal-district-row td:nth-child(3) {
-    border-left: 3px solid var(--color-light-gray) !important;
-    border-right: 3px solid var(--color-light-gray) !important;
-}
+    .table-postal-district-row td:nth-child(3) {
+        border-left: 3px solid var(--color-light-gray) !important;
+        border-right: 3px solid var(--color-light-gray) !important;
+    }
 
-.table-postal-district-row td:nth-child(4) {
-    border-left: 3px solid var(--color-light-gray) !important;
-    border-right: 3px solid var(--color-light-gray) !important;
-}
+    .table-postal-district-row td:nth-child(4) {
+        border-left: 3px solid var(--color-light-gray) !important;
+        border-right: 3px solid var(--color-light-gray) !important;
+    }
 
 .table-postal-district-row .accordion-body,
 .accordion-item-address-tab .accordion-body {
@@ -909,9 +899,9 @@ input::-webkit-date-and-time-value {
     overflow: hidden;
 }
 
-.more-info-acco-outer .accordion-item:not(:first-child) {
-    border-top: 1px solid #ddd;
-}
+    .more-info-acco-outer .accordion-item:not(:first-child) {
+        border-top: 1px solid #ddd;
+    }
 
 
 .more-info-acco-outer .more-info-accordion::after {
@@ -981,10 +971,10 @@ input::-webkit-date-and-time-value {
         gap: 10px;
     }
 
-    #feedback-form-btn a {
-        width: 100%;
-        text-align: center;
-    }
+        #feedback-form-btn a {
+            width: 100%;
+            text-align: center;
+        }
 
     .popover {
         max-width: 60% !important;
@@ -1016,7 +1006,6 @@ input::-webkit-date-and-time-value {
     .accordion-address-tab-button .icon {
         margin-left: 23%;
     }
-
 }
 
 .post-d-img {
@@ -1038,11 +1027,11 @@ input::-webkit-date-and-time-value {
     position: relative;
 }
 
-.iframe-wrapper .iframe-overlay {
-    margin-top: 20px;
-    position: relative;
-    z-index: 999;
-}
+    .iframe-wrapper .iframe-overlay {
+        margin-top: 20px;
+        position: relative;
+        z-index: 999;
+    }
 
 .expend .iframe-wrapper .iframe-overlay {
     position: absolute;
@@ -1075,10 +1064,10 @@ input::-webkit-date-and-time-value {
     z-index: 999;
 }
 
-.patch-container .accordion {
-    position: absolute;
-    width: 100%;
-}
+    .patch-container .accordion {
+        position: absolute;
+        width: 100%;
+    }
 
 .ml-30 {
     margin-left: 30px;
@@ -1135,14 +1124,23 @@ input::-webkit-date-and-time-value {
     .iframe-wrapper .map-container {
         height: 700px;
     }
-
 }
 
 @media (max-width: 768px) {
     .iframe-wrapper .map-container {
         height: 600px;
     }
+}
 
+.accordion-box .accordion-button:focus-visible {
+    outline: 3px solid var(--color-outline-focus) !important;
+    outline-offset: 0;
+}
+
+.EPiServerForms .FormSubmitButton:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-default);
+    outline: 0 !important;
 }
 
 .hiddenMapIFrame {
@@ -1156,7 +1154,7 @@ span.plus-minus-icon {
     font-size: 28px;
 }
 
-.h4-class{
+.h4-class {
     font-size: 1.188rem;
     line-height: 145%;
     font-weight: 400;
