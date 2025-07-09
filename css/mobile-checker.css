@@ -1161,3 +1161,7 @@ span.plus-minus-icon {
     word-wrap: break-word;
     letter-spacing: -0.19px;
 }
+
+.more-info-acco-outer ul.item-list.p-0 {
+    max-height: 250px !important;
+}
