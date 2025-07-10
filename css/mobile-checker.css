@@ -1165,3 +1165,18 @@ span.plus-minus-icon {
 .more-info-acco-outer ul.item-list.p-0 {
     max-height: 250px !important;
 }
+
+.mobile-checker-container .accordion-address-tab-button {
+  color: black !important;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-checker-container .accordion-address-tab-button:hover,
+.mobile-checker-container .accordion-address-tab-button:focus,
+.mobile-checker-container .accordion-address-tab-button:active {
+  color: black !important;
+  outline: none;
+  box-shadow: none;
+}
