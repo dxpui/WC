@@ -658,15 +658,15 @@ input::-webkit-date-and-time-value {
 }
 
 .network-check td:nth-child(1) {
-    width: 10% !important;
+    width: 12% !important;
 }
 
 .network-check td:nth-child(2) {
-    width: 5% !important;
+    width: 7% !important;
 }
 
 .network-check td:nth-child(3) {
-    width: 85% !important;
+    width: 81% !important;
 }
 
 .network-check td {
