@@ -1180,3 +1180,15 @@ span.plus-minus-icon {
   outline: none;
   box-shadow: none;
 }
+
+#page-webchecker.ios-safari .network-check td:nth-child(1) {
+    width: 12% !important;
+}
+
+#page-webchecker.ios-safari .network-check td:nth-child(2) {
+    width: 7% !important;
+}
+
+#page-webchecker.ios-safari .network-check td:nth-child(3) {
+    width: 81% !important;
+}
