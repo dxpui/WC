@@ -1182,7 +1182,7 @@ span.plus-minus-icon {
 }
 
 #page-webchecker.ios-safari .network-check td:nth-child(1) {
-    width: 14% !important;
+    width: 19% !important;
 }
 
 #page-webchecker.ios-safari .network-check td:nth-child(2) {
@@ -1190,5 +1190,5 @@ span.plus-minus-icon {
 }
 
 #page-webchecker.ios-safari .network-check td:nth-child(3) {
-    width: 75% !important;
+    width: 70% !important;
 }
