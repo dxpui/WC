@@ -657,6 +657,16 @@ input::-webkit-date-and-time-value {
     min-width: 33.33% !important;
 }
 
+.network-check {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.network-check td {
+    word-wrap: break-word;
+    min-width: 50px;
+}
+
 .network-check td:nth-child(1) {
     width: 15% !important;
 }
