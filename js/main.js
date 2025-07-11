@@ -952,16 +952,6 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    var isIOS = /iPad|iPhone|iPod/.test(userAgent);
-    var isSafari = /^((?!chrome|android).)*safari/i.test(userAgent);
-
-    if (isIOS && isSafari) {
-      $('#page-webchecker').addClass('ios-safari');
-    }
-
-    const $allLinks = $('.content-link');
     const $allContentBoxes = $('.scrollable-content');
     const $leftContainer = $('.postcode-container-left'); // container with left links
     let $currentLink = null;
