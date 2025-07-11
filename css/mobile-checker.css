@@ -651,11 +651,11 @@ input::-webkit-date-and-time-value {
 }
 
 /* Ensure fixed width for the third column */
-.network-check td:nth-child(3) {
+/* .network-check td:nth-child(3) {
     width: 33.33% !important;
     max-width: 33.33% !important;
     min-width: 33.33% !important;
-}
+} */
 
 .network-check {
     width: 100%;
@@ -664,7 +664,7 @@ input::-webkit-date-and-time-value {
 
 .network-check td {
     word-wrap: break-word;
-    min-width: 50px;
+    /* min-width: 50px; */
 }
 
 .network-check td:nth-child(1) {
@@ -687,7 +687,7 @@ input::-webkit-date-and-time-value {
 @media (max-width: 992px) {
     .network-check td {
         display: table-cell;
-        width: 33.33%;
+        /* width: 33.33%; */
         text-align: center;
     }
 }
@@ -695,7 +695,7 @@ input::-webkit-date-and-time-value {
 @media (max-width: 768px) {
     .network-check td {
         display: table-cell;
-        width: 33.33%;
+        /* width: 33.33%; */
         text-align: center;
     }
 }
@@ -716,7 +716,7 @@ input::-webkit-date-and-time-value {
 
     .network-check td {
         display: table-cell;
-        width: 33.33%;
+        /* width: 33.33%; */
         text-align: center;
     }
 }
