@@ -729,10 +729,9 @@ input::-webkit-date-and-time-value {
 @media (max-width: 768px) {
     .chart-icon-address {
         height: 100%;
-        /* max-height: 24px; */
+        max-height: 34px;
     }
 
-    
     .network-check td:nth-child(1) {
         width: 25% !important;
     }
