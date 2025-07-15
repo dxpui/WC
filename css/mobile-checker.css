@@ -1194,3 +1194,21 @@ span.plus-minus-icon {
   outline: none;
   box-shadow: none;
 }
+
+/* Default: tabs stretch evenly */
+.custom-nav-tabs .nav-item {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Use flex layout for the tab list */
+.custom-nav-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+/* When there are exactly 2 tabs, size to content */
+.mobile-checker-container:has(.custom-nav-tabs > .nav-item:nth-child(2):last-child) 
+.custom-nav-tabs .nav-item {
+  flex: 0 0 auto;
+}
