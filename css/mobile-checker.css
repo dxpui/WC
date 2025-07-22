@@ -727,6 +727,14 @@ input::-webkit-date-and-time-value {
 }
 
 @media (max-width: 768px) {
+    .chart-icon-address {
+        width: auto;
+        height: auto;
+        max-height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
     .network-check td:nth-child(1) {
         width: 25% !important;
     }
