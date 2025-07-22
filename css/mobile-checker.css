@@ -722,14 +722,14 @@ input::-webkit-date-and-time-value {
 }
 
 .chart-icon-address {
-    height: auto;
-    max-width: 80px;
+    width: auto;
+    height: 32px;
 }
 
 @media (max-width: 768px) {
     .chart-icon-address {
         height: auto;
-        max-height: 40px;
+        max-height: 32px;
     }
 
     .network-check td:nth-child(1) {
