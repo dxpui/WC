@@ -698,7 +698,7 @@
       </div>
     </section>
     <section>
-      <div class="modal modal-notification fade" id="language-notification" tabindex="-1" aria-hidden="true"
+      <div class="modal modal-notification fade z-99999" id="language-notification" tabindex="-1" aria-hidden="true"
         data-bs-backdrop="static">
         <div class="modal-dialog modal-popup-width-50 modal-dialog-centered">
           <div class="modal-content border-color-default rounded-0">
@@ -722,28 +722,539 @@
     <section class="postcode-container">
       <div class="container-fluid mobile-checker-container" id="page-webchecker">
         <div class="row">
-          <div class="col-lg-5 position-relative postcode-left-outer">
-            <button type="submit" class="btn btn-primary collapse-left d-none d-md-inline" id="collapseButton"><i
-                class="fa-solid fa-chevron-left"></i><span
+          <div class="col-lg-8 postcode-right-outer">
+            <div class="postcode-container-right">
+
+              <div class="row g-3 align-items-center mb-3 mt-3">
+                <div class="col-auto">
+                  <h2 class="mb-4">Map Your Mobile</h2>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col-md-12 col-xl-6 ">
+                  <div class="search-container input-group mb-3">
+                    <label for="postcode" class="mb-1 fs-m mt-3 me-2">Postcode</label>
+                    <input type="text" class="form-control search-postcode" id="postcode" placeholder="" value="CT1 2EH"
+                      aria-label="Enter postcode" aria-describedby="Enter-postcode">
+                    <a href="" class="input-group-text" id="Enter-postcode"><i class="fas fa-search fs-2rem"></i> <span
+                        class="visually-hidden-focusable">Search</span> </a>
+                    <div class="d-flex justify-content-center align-items-center location-cross">
+                      <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=" gray-bg postcode-container-right ">
+                <button type="submit" class="btn btn-primary collapse-left d-md-inline"
+                  id="collapseButton"><i class="fa-solid fa-chevron-right"></i><span
+                    class="visually-hidden-focusable text-dark">Button</span></button>
+                <div class="row g-3 align-items-center mb-1">
+                  <div class="col-auto">
+                    <h2 class="mb-0">Coverage</h2>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col-md-12 col-xl-6 mt-4">
+                    <div class="patch-container z-9999">
+                      <div class="accordion" id="accordionMapPatch">
+                        <div class="accordion-item accordion-box active" style="z-index: 1055;">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button accordion-map-tab-button collapsed" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false"
+                              aria-controls="collapseOne1" aria-label="Can't find your provider">
+                              <div class="color-box bg-skyBlue "></div><span>Can't find your provider?</span>
+                            </button>
+                          </h2>
+                          <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionMapPatch1">
+                            <div class="accordion-body position-relative">
+                              <div class="custom-popover position-relative">
+                                <div class="mb-4">
+                                  <h3 class="mb-3 mt-2">I can't find my service provider for the checker</h3>
+                                  <p>The coverage checker uses the four main mobile network operators in the UK. All
+                                    other
+                                    mobile operators in the UK provide their service over these networks.</p>
+                                  <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
+                                  <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT
+                                    Mobile and Lyca mobile</p>
+                                  <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
+                                  <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="nav nav-tabs custom-nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map"
+                      type="button" role="tab" tabindex="0" aria-controls="map" aria-label="Map Tab"
+                      aria-selected="true"><b>Map</b></button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address"
+                      type="button" role="tab" tabindex="-1" aria-controls="address" aria-label="Address Tab"
+                      aria-selected="false"><b>Address</b></button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="postal-district-tab" data-bs-toggle="tab"
+                      data-bs-target="#postal-district" type="button" role="tab" tabindex="-1"
+                      aria-controls="postal-district" aria-label="Postal District Tab" aria-selected="false"><b>Postal
+                        district</b></button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content custom-tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active " id="map" role="tabpanel" aria-labelledby="map-tab">
+                    <div class="row g-3 align-items-center mb-3 mt-3">
+                      <div class="col-auto">
+                        <label for="network" class="col-form-label"><b>Network :</b></label>
+                      </div>
+                      <div class="col">
+                        <select class="form-select" aria-label="Select mobile network provider">
+                          <option selected="">EE</option>
+                          <option value="72579157">Three</option>
+                          <option value="72579158">O2</option>
+                          <option value="72579159">Vodafone</option>
+                        </select>
+                      </div>
+                      <div class="col-md-12 col-xl-7">
+                        <div class="patch-container">
+                          <div class="accordion" id="accordionMapPatch">
+                            <div class="accordion-item accordion-box">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button accordion-map-tab-button collapsed" type="button"
+                                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                  aria-controls="collapseOne">
+                                  <div class="color-box bg-skyBlue "></div><span>Patch (outdoor only)</span>
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionMapPatch">
+                                <div class="accordion-body">
+                                  There is a reasonable chance of a good connection to support mobile services
+                                  in
+                                  some parts of a typical home, as well as outdoors
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 iframe-wrapper">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
+                        width="100%" height="400" style="border:0;" title="Mobile Coverage Map" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                      </iframe>
+                      <div class="row iframe-overlay">
+                        <div class="col-12 col-xxl-2 mb-2">
+                          <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
+                            class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
+                            data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
+                          <div class='custom-popover col-12'>
+                            <div class='mb-4'>
+                              <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
+                              <p>The coverage checker the four main mobile network operators in the UK. All other mobile operators
+                                in the UK. All other mobile operators in UK provide their service over these networks
+                              </p>
+                       
+                              <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
+                       
+                              <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
+                       
+                              <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
+                       
+                              <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
+                              <p class='text-center d-lg-none mt-2 '>
+                                <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
+                              </p>
+                            </div>
+                          </div>">
+                          </i>Key -
+                        </div>
+                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
+                          <div class="box-container">
+                            <div class="color-box bg-magenta"></div>
+                            <span>Good in-home and outdoor</span>
+                          </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
+                          <div class="box-container">
+                            <div class="color-box bg-green"></div>
+                            <span>Patchy in-home, good outdoor</span>
+                          </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
+                          <div class="box-container">
+                            <div class="color-box bg-skyBlue"></div>
+                            <span>Good<br /> (outdoor only)</span>
+                          </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
+                          <div class="box-container">
+                            <div class="color-box bg-pink"></div>
+                            <span>Patchy<br /> (outdoor only)</span>
+                          </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
+                          <div class="box-container">
+                            <div class="color-box bg-grey"></div>
+                            <span>None</span>
+                          </div>
+                        </div>
+
+
+                        <!-- <div class="col-12 d-flex justify-content-end">
+                          <a href="feedback-form.html" class="btn btn-primary width-md-100 mt-2"
+                            aria-label="More information">Provide Coverage Feedback</a>
+                        </div> -->
+                      </div>
+
+                    </div>
+                    <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
+                  </div>
+                  <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
+                    <div class="container bg-white pt-3" id="accordionContainer">
+                      <h3 class="h4-class">Results for Flat 1, Starrs House, 14D, The Precints</h3>
+                      <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
+                        exercitationem
+                        necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
+                      <div class="table-responsive network-check pr-mobile-1rm">
+                        <table class="table table-bordered">
+                          <tbody>
+                            <!-- Row 1 -->
+                            <tr>
+                              <td> <img src="assets/img/EE-Logo-2012.png" alt="Icon 1" aria-label="EE"
+                                  class="chart-icon-address">
+                              </td>
+                              <td class="bg-pink"></td>
+                              <td>
+                                <div class="accordion" id="accordion1">
+                                  <div class="accordion-item-address-tab">
+                                    <h2 class="accordion-header" id="heading1">
+                                      <button class="accordion-address-tab-button collapsed text-start" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
+                                        aria-controls="collapse1"
+                                        aria-label="EE, Good in-home and outdoor button collapsed">
+                                        Good in-home and outdoor
+                                        <span class="icon"></span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapse1" class="accordion-collapse collapse"
+                                      data-bs-parent="#accordionContainer">
+                                      <div class="accordion-body">
+                                        There is a good chance of getting a connection good enough to support mobile
+                                        services in a
+                                        typical home, as well as outdoors
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr>
+                              <td> <img src="assets/img/Three-UK-logo.png" alt="Icon 2" aria-label="Three"
+                                  class="chart-icon-address">
+                              </td>
+                              <td class="bg-magenta"></td>
+                              <td>
+                                <div class="accordion" id="accordion2">
+                                  <div class="accordion-item-address-tab">
+                                    <h2 class="accordion-header" id="heading2">
+                                      <button class="accordion-address-tab-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
+                                        aria-controls="collapse2"
+                                        aria-label="Three, Patchy in-home and good outdoor button collapsed">
+                                        Patchy in-home and good outdoor
+                                        <span class="icon"></span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapse2" class="accordion-collapse collapse"
+                                      data-bs-parent="#accordionContainer">
+                                      <div class="accordion-body">
+                                        There is a reasonable chance of a good connection to support mobile services
+                                        in
+                                        some parts of a typical home, as well as outdoors
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr>
+                              <td> <img src="assets/img/O2-Logo.png" alt="Icon 3" aria-label="O2"
+                                  class="chart-icon-address"></td>
+                              <td class="bg-green"></td>
+                              <td>
+                                <div class="accordion" id="accordion3">
+                                  <div class="accordion-item-address-tab">
+                                    <h2 class="accordion-header" id="heading3">
+                                      <button class="accordion-address-tab-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
+                                        aria-controls="collapse3" aria-label="O2, Good (outdoor only) button collapsed">
+                                        Good (outdoor only)
+                                        <span class="icon"></span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapse3" class="accordion-collapse collapse"
+                                      data-bs-parent="#accordionContainer">
+                                      <div class="accordion-body">
+                                        There is a good chance of getting a connection good enough to support mobile
+                                        services in a
+                                        typical home, as well as outdoors
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> <img src="assets/img/Vodafone_Logo.png" alt="Icon 4" aria-label="Vodafone"
+                                  class="chart-icon-address">
+                              <td class="bg-skyBlue"></td>
+                              <td>
+                                <div class="accordion" id="accordion4">
+                                  <div class="accordion-item-address-tab">
+                                    <h2 class="accordion-header" id="heading4">
+                                      <button class="accordion-address-tab-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
+                                        aria-controls="collapse4"
+                                        aria-label="Vodafone, Patchy (outdoor only) button collapsed">
+                                        Patchy (outdoor only)
+                                        <span class="icon"></span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapse4" class="accordion-collapse collapse"
+                                      data-bs-parent="#accordionContainer">
+                                      <div class="accordion-body">
+                                        This is expanded content for Row 3. You can add more details here.
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="mt-2 pb-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
+                        exercitationem
+                        necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-md-2 col-xxl-2 mb-2">
+                        <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
+                          class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
+                          data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
+                        <div class='custom-popover col-12'>
+                          <div class='mb-4'>
+                            <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
+                            <p>The coverage checker the four main mobile network operators in the UK. All other mobile operators
+                              in the UK. All other mobile operators in UK provide their service over these networks
+                            </p>
+                     
+                            <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
+                     
+                            <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
+                     
+                            <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
+                     
+                            <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
+                            <p class='text-center d-lg-none mt-2 '>
+                              <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
+                            </p>
+                          </div>
+                        </div>">
+                        </i>Key -
+                      </div>
+                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-magenta"></div>
+                          <span>Good in-home and outdoor</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-green"></div>
+                          <span>Patchy in-home, good outdoor</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-skyBlue"></div>
+                          <span>Good<br /> (outdoor only)</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-pink"></div>
+                          <span>Patchy<br /> (outdoor only)</span>
+                        </div>
+                      </div>
+
+                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                        <div class="box-container">
+                          <div class="color-box bg-grey"></div>
+                          <span>None</span>
+                        </div>
+                      </div>
+
+
+                      <div class="col-12 d-flex justify-content-end">
+                        <a href="feedback-form.html" class="btn btn-primary width-md-100 mt-2"
+                          aria-label="More information">Provide
+                          Coverage
+                          Feedback map</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="tab-pane fade" id="postal-district" role="tabpanel" aria-labelledby="postal-district-tab">
+                    <div class="container bg-white pt-3" id="accordionContainer-postal">
+                      <h3 class="h4-class">Results for CTI postal district</h3>
+                      <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
+                        exercitationem
+                        necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
+                      <div class="table-responsive network-check pr-mobile-1rm">
+                        <table class="table table-bordered table-postal-district">
+                          <tbody>
+                            <!-- Row 1 -->
+                            <tr>
+                              <th><span class="visually-hidden">Header</span></th>
+                              <th><img src="assets/img/EE-Logo-2012.png" alt="Icon 1" class="chart-icon-postal"></th>
+                              <th> <img src="assets/img/Three-UK-logo.png" alt="Icon 2" class="chart-icon-postal"></th>
+                              <th><img src="assets/img/O2-Logo.png" alt="Icon 3" class="chart-icon-postal"></th>
+                              <th> <img src="assets/img/Vodafone_Logo.png" alt="Icon 4" class="chart-icon-postal"></th>
+                            </tr>
+                            <tr class="table-postal-district-row">
+                              <td>
+                                <div class="accordion" id="accordion1">
+                                  <div class="accordion-item-address-tab">
+                                    <h2 class="accordion-header" id="heading1">
+                                      <button class="accordion-address-tab-button postal-tab-arrow expanded text-start"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse11"
+                                        aria-expanded="true" aria-controls="collapse1">
+
+                                        <span class="lh-base d-flex"> <img class="post-d-img"
+                                            src="assets/img/web-icons/tree-fill.svg" alt="tree icon" /> <span>Good
+                                            (outdoor only)</span></span>
+                                        <span class="icon"></span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapse11" class="accordion-collapse collapse show"
+                                      data-bs-parent="#accordionContainer-postal">
+                                      <div class="accordion-body">
+                                        There is a good chance of getting a connection good enough to support mobile
+                                        services in a
+                                        typical home, as well as outdoors
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                90%
+                              </td>
+                              <td>
+                                81%
+                              </td>
+                              <td>
+                                80%
+                              </td>
+                              <td>
+                                79%
+                              </td>
+
+                            </tr>
+                            <tr class="table-postal-district-row">
+                              <td>
+                                <div class="accordion" id="accordion2">
+                                  <div class="accordion-item-address-tab">
+                                    <h2 class="accordion-header" id="heading2">
+                                      <button class="accordion-address-tab-button  postal-tab-arrow expanded text-start"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse12"
+                                        aria-expanded="true" aria-controls="collapse2">
+
+                                        <span class="lh-base d-flex">
+                                          <img class="post-d-img" src="assets/img/web-icons/house-fill-door.svg"
+                                            alt="house icon" />
+                                          <span> Good in-home and outdoor coverage </span>
+                                        </span>
+                                        <span class="icon"></span>
+                                      </button>
+                                    </h2>
+                                    <div id="collapse12" class="accordion-collapse collapse show"
+                                      data-bs-parent="#accordionContainer-postal">
+                                      <div class="accordion-body">
+                                        There is a good chance of getting a connection good enough to support mobile
+                                        services in a
+                                        typical home, as well as outdoors
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                62%
+                              </td>
+                              <td>
+                                50%
+                              </td>
+                              <td>
+                                46%
+                              </td>
+                              <td>
+                                38%
+                              </td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="mt-2 pb-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
+                        exercitationem
+                        necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="mt-3 text-end">
+
+                  <a href="more-information.html" class="btn btn-primary d-md-none width-md-100 mt-2"
+                    aria-label="More information">More
+                    information2</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 position-relative postcode-left-outer">
+            <button type="submit" class="btn btn-primary collapse-left d-none d-md-inline" style="margin-top: 2px;"
+              id="collapseButton"><i class="fa-solid fa-chevron-right"></i><span
                 class="visually-hidden-focusable text-dark">Button</span></button>
             <div class="postcode-container-left">
               <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
-              <h2 class="mb-2 mb-lg-0">Mobile coverage checker</h2>
-              <div class="col-xl-8 my-4">
-                <label for="postcode" class="mb-1 fs-m">Search by postcode</label>
-                <div class="search-container input-group mb-3">
-                  <input type="text" class="form-control search-postcode" id="postcode" placeholder="" value="CT1 2EH"
-                    aria-label="Enter postcode" aria-describedby="Enter-postcode">
-                  <a href="" class="input-group-text" id="Enter-postcode"><i class="fas fa-search fs-2rem"></i> <span
-                      class="visually-hidden-focusable">Search</span> </a>
-                </div>
-              </div>
-              <div class="mb-4">
-                <img class="location-pin" src="assets/img/web-icons/location-pin.svg" alt="Location Pin" /></a>
-                <a href="" class="bold-link">Use current location</a>
-              </div>
-              <div class="col-md-12 text-center">
-                <h3 class="text-start fw-bold h2">Performance</h3>
+              <h2 class="mb-2 mb-lg-2">Performance in SE1</h2>
+
+              <div class="col-md-12 text-center mt-5">
                 <section>
                   <div class="chart-container pl-mobile-0">
                     <div class="chart-wrapper border-top-left">
@@ -781,482 +1292,11 @@
                   , in the CTI district.
                 </p>
               </div>
-              <div class="row coverage-btn-container">
-                <a href="more-information.html" class="btn btn-primary col-auto my-4"
-                  aria-label="More information">More information</a>
-              
-                <div class="d-inline w-auto">
-                  <span class="fw-bold pe-none">Can't find your provider</span>
-                  <i tabindex="0" role="button" aria-label="More info"
-                    class="popover-trigger popover-icon fa-solid fa-circle-info color-magenta check pe-auto"
-                    data-bs-toggle="popover" data-bs-placement="auto" data-bs-html="true" data-bs-content="
-                      <div class='custom-popover'>
-                        <div class='mb-4'>
-                          <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
-                          <p>The coverage checker uses the four main mobile network operators in the UK. All other mobile operators in the UK provide their service over these networks.</p>
-                          <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
-                          <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
-                          <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
-                          <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
-                          <p class='text-center d-md-none mt-2'>
-                            <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
-                          </p>
-                        </div>
-                      </div>">
-                  </i>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-lg-7 postcode-right-outer gray-bg ">
-            <div class="postcode-container-right">
-              <h2 class="mb-2">Mobile Coverage
-              </h2> 
-              <ul class="nav nav-tabs custom-nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button"
-                    role="tab" tabindex="0" aria-controls="map" aria-label="Map Tab" aria-selected="true"><b>Map</b></button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address" type="button"
-                    role="tab" tabindex="-1" aria-controls="address" aria-label="Address Tab" aria-selected="false"><b>Address</b></button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="postal-district-tab" data-bs-toggle="tab" data-bs-target="#postal-district"
-                    type="button" role="tab" tabindex="-1" aria-controls="postal-district" aria-label="Postal District Tab"  aria-selected="false"><b>Postal
-                      district</b></button>
-                </li>
-              </ul>
-
-              <!-- Tab Content -->
-              <div class="tab-content custom-tab-content" id="myTabContent">
-                <div class="tab-pane fade show active " id="map" role="tabpanel" aria-labelledby="map-tab">
-                  <div class="row g-3 align-items-center mb-3 mt-3">
-                    <div class="col-auto">
-                      <label for="network" class="col-form-label"><b>Network :</b></label>
-                    </div>
-                    <div class="col">
-                      <select class="form-select" aria-label="Select mobile network provider">
-                        <option selected="">EE</option>
-                        <option value="72579157">Three</option>
-                        <option value="72579158">O2</option>
-                        <option value="72579159">Vodafone</option>
-                      </select>
-                    </div>
-                    <div class="col-md-12 col-xl-7">
-                      <div class="patch-container">
-                        <div class="accordion" id="accordionMapPatch">
-                          <div class="accordion-item accordion-box">
-                            <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button accordion-map-tab-button collapsed" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                aria-controls="collapseOne">
-                                <div class="color-box bg-skyBlue "></div><span>Patch (outdoor only)</span>
-                              </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                              data-bs-parent="#accordionMapPatch">
-                              <div class="accordion-body">
-                                There is a reasonable chance of a good connection to support mobile services
-                                in
-                                some parts of a typical home, as well as outdoors
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 iframe-wrapper">
-                    <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
-                    width="100%" height="400" style="border:0;" title="Mobile Coverage Map" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-                    <div class="row iframe-overlay">
-                      <div class="col-12 col-xxl-2 mb-2">
-                        <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
-                          class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
-                          data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
-                          <div class='custom-popover col-12'>
-                            <div class='mb-4'>
-                              <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
-                              <p>The coverage checker the four main mobile network operators in the UK. All other mobile operators
-                                in the UK. All other mobile operators in UK provide their service over these networks
-                              </p>
-                       
-                              <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
-                       
-                              <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
-                       
-                              <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
-                       
-                              <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
-                              <p class='text-center d-lg-none mt-2 '>
-                                <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
-                              </p>
-                            </div>
-                          </div>">
-                        </i>Key -
-                      </div>
-                      <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                        <div class="box-container">
-                          <div class="color-box bg-magenta"></div>
-                          <span>Good in-home and outdoor</span>
-                        </div>
-                      </div>
-
-                      <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                        <div class="box-container">
-                          <div class="color-box bg-green"></div>
-                          <span>Patchy in-home, good outdoor</span>
-                        </div>
-                      </div>
-
-                      <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                        <div class="box-container">
-                          <div class="color-box bg-skyBlue"></div>
-                          <span>Good<br /> (outdoor only)</span>
-                        </div>
-                      </div>
-
-                      <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                        <div class="box-container">
-                          <div class="color-box bg-pink"></div>
-                          <span>Patchy<br /> (outdoor only)</span>
-                        </div>
-                      </div>
-
-                      <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                        <div class="box-container">
-                          <div class="color-box bg-grey"></div>
-                          <span>None</span>
-                        </div>
-                      </div>
-
-
-                      <div class="col-12 d-flex justify-content-end">
-                        <a href="feedback-form.html" class="btn btn-primary width-md-100 mt-2" aria-label="More information">Provide Coverage Feedback</a>
-                      </div>
-                    </div>
-
-                  </div>
-                   <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
-                </div>
-                <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
-                  <div class="container bg-white pt-3" id="accordionContainer">
-                    <h3 class="h4-class">Results for Flat 1, Starrs House, 14D, The Precints</h3>
-                    <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
-                      exercitationem
-                      necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
-                    <div class="table-responsive network-check pr-mobile-1rm">
-                      <table class="table table-bordered">
-                        <tbody>
-                          <!-- Row 1 -->
-                          <tr>
-                            <td> <img src="assets/img/EE-Logo-2012.png" alt="Icon 1" aria-label="EE" class="chart-icon-address">
-                            </td>
-                            <td class="bg-pink"></td>
-                            <td>
-                              <div class="accordion" id="accordion1">
-                                <div class="accordion-item-address-tab">
-                                  <h2 class="accordion-header" id="heading1">
-                                    <button class="accordion-address-tab-button collapsed text-start" type="button"
-                                      data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"
-                                      aria-controls="collapse1"
-                                      aria-label="EE, Good in-home and outdoor button collapsed">
-                                      Good in-home and outdoor
-                                      <span class="icon"></span>
-                                    </button>
-                                  </h2>
-                                  <div id="collapse1" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionContainer">
-                                    <div class="accordion-body">
-                                      There is a good chance of getting a connection good enough to support mobile
-                                      services in a
-                                      typical home, as well as outdoors
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <!-- Row 2 -->
-                          <tr>
-                            <td> <img src="assets/img/Three-UK-logo.png" alt="Icon 2" aria-label="Three" class="chart-icon-address">
-                            </td>
-                            <td class="bg-magenta"></td>
-                            <td>
-                              <div class="accordion" id="accordion2">
-                                <div class="accordion-item-address-tab">
-                                  <h2 class="accordion-header" id="heading2">
-                                    <button class="accordion-address-tab-button collapsed" type="button"
-                                      data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
-                                      aria-controls="collapse2"
-                                      aria-label="Three, Patchy in-home and good outdoor button collapsed">
-                                      Patchy in-home and good outdoor
-                                      <span class="icon"></span>
-                                    </button>
-                                  </h2>
-                                  <div id="collapse2" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionContainer">
-                                    <div class="accordion-body">
-                                      There is a reasonable chance of a good connection to support mobile services
-                                      in
-                                      some parts of a typical home, as well as outdoors
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <!-- Row 3 -->
-                          <tr>
-                            <td> <img src="assets/img/O2-Logo.png" alt="Icon 3" aria-label="O2" class="chart-icon-address"></td>
-                            <td class="bg-green"></td>
-                            <td>
-                              <div class="accordion" id="accordion3">
-                                <div class="accordion-item-address-tab">
-                                  <h2 class="accordion-header" id="heading3">
-                                    <button class="accordion-address-tab-button collapsed" type="button"
-                                      data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
-                                      aria-controls="collapse3"
-                                      aria-label="O2, Good (outdoor only) button collapsed">
-                                      Good (outdoor only)
-                                      <span class="icon"></span>
-                                    </button>
-                                  </h2>
-                                  <div id="collapse3" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionContainer">
-                                    <div class="accordion-body">
-                                      There is a good chance of getting a connection good enough to support mobile
-                                      services in a
-                                      typical home, as well as outdoors
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td> <img src="assets/img/Vodafone_Logo.png" alt="Icon 4" aria-label="Vodafone" class="chart-icon-address">
-                            <td class="bg-skyBlue"></td>
-                            <td>
-                              <div class="accordion" id="accordion4">
-                                <div class="accordion-item-address-tab">
-                                  <h2 class="accordion-header" id="heading4">
-                                    <button class="accordion-address-tab-button collapsed" type="button"
-                                      data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
-                                      aria-controls="collapse4"
-                                      aria-label="Vodafone, Patchy (outdoor only) button collapsed" >
-                                      Patchy (outdoor only)
-                                      <span class="icon"></span>
-                                    </button>
-                                  </h2>
-                                  <div id="collapse4" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionContainer">
-                                    <div class="accordion-body">
-                                      This is expanded content for Row 3. You can add more details here.
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <p class="mt-2 pb-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
-                      exercitationem
-                      necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-md-2 col-xxl-2 mb-2">
-                      <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;" class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
-                        data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="
-                        <div class='custom-popover col-12'>
-                          <div class='mb-4'>
-                            <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
-                            <p>The coverage checker the four main mobile network operators in the UK. All other mobile operators
-                              in the UK. All other mobile operators in UK provide their service over these networks
-                            </p>
-                     
-                            <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
-                     
-                            <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
-                     
-                            <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
-                     
-                            <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
-                            <p class='text-center d-lg-none mt-2 '>
-                              <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
-                            </p>
-                          </div>
-                        </div>">
-                      </i>Key -
-                    </div>
-                    <div class="col-6 col-md-2 col-xxl-2 mb-2">
-                      <div class="box-container">
-                        <div class="color-box bg-magenta"></div>
-                        <span>Good in-home and outdoor</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6 col-md-2 col-xxl-2 mb-2">
-                      <div class="box-container">
-                        <div class="color-box bg-green"></div>
-                        <span>Patchy in-home, good outdoor</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6 col-md-2 col-xxl-2 mb-2">
-                      <div class="box-container">
-                        <div class="color-box bg-skyBlue"></div>
-                        <span>Good<br /> (outdoor only)</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6 col-md-2 col-xxl-2 mb-2">
-                      <div class="box-container">
-                        <div class="color-box bg-pink"></div>
-                        <span>Patchy<br /> (outdoor only)</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6 col-md-2 col-xxl-2 mb-2">
-                      <div class="box-container">
-                        <div class="color-box bg-grey"></div>
-                        <span>None</span>
-                      </div>
-                    </div>
-
-
-                    <div class="col-12 d-flex justify-content-end">
-                      <a href="feedback-form.html" class="btn btn-primary width-md-100 mt-2" aria-label="More information">Provide
-                        Coverage
-                        Feedback map</a>
-                    </div>
-                  </div>
-
-
-                </div>
-                <div class="tab-pane fade" id="postal-district" role="tabpanel" aria-labelledby="postal-district-tab">
-                  <div class="container bg-white pt-3" id="accordionContainer-postal">
-                    <h3 class="h4-class">Results for CTI postal district</h3>
-                    <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
-                      exercitationem
-                      necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
-                    <div class="table-responsive network-check pr-mobile-1rm">
-                      <table class="table table-bordered table-postal-district">
-                        <tbody>
-                          <!-- Row 1 -->
-                          <tr>
-                            <th><span class="visually-hidden">Header</span></th>
-                            <th><img src="assets/img/EE-Logo-2012.png" alt="Icon 1" class="chart-icon-postal"></th>
-                            <th> <img src="assets/img/Three-UK-logo.png" alt="Icon 2" class="chart-icon-postal"></th>
-                            <th><img src="assets/img/O2-Logo.png" alt="Icon 3" class="chart-icon-postal"></th>
-                            <th> <img src="assets/img/Vodafone_Logo.png" alt="Icon 4" class="chart-icon-postal"></th>
-                          </tr>
-                          <tr class="table-postal-district-row">
-                            <td>
-                              <div class="accordion" id="accordion1">
-                                <div class="accordion-item-address-tab">
-                                  <h2 class="accordion-header" id="heading1">
-                                    <button class="accordion-address-tab-button postal-tab-arrow expanded text-start"
-                                      type="button" data-bs-toggle="collapse" data-bs-target="#collapse11"
-                                      aria-expanded="true" aria-controls="collapse1">
-
-                                      <span class="lh-base d-flex"> <img class="post-d-img"
-                                          src="assets/img/web-icons/tree-fill.svg" alt="tree icon" /> <span>Good
-                                          (outdoor only)</span></span>
-                                      <span class="icon"></span>
-                                    </button>
-                                  </h2>
-                                  <div id="collapse11" class="accordion-collapse collapse show"
-                                    data-bs-parent="#accordionContainer-postal">
-                                    <div class="accordion-body">
-                                      There is a good chance of getting a connection good enough to support mobile
-                                      services in a
-                                      typical home, as well as outdoors
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              90%
-                            </td>
-                            <td>
-                              81%
-                            </td>
-                            <td>
-                              80%
-                            </td>
-                            <td>
-                              79%
-                            </td>
-
-                          </tr>
-                          <tr class="table-postal-district-row">
-                            <td>
-                              <div class="accordion" id="accordion2">
-                                <div class="accordion-item-address-tab">
-                                  <h2 class="accordion-header" id="heading2">
-                                    <button class="accordion-address-tab-button  postal-tab-arrow expanded text-start"
-                                      type="button" data-bs-toggle="collapse" data-bs-target="#collapse12"
-                                      aria-expanded="true" aria-controls="collapse2">
-
-                                      <span class="lh-base d-flex">
-                                        <img class="post-d-img" src="assets/img/web-icons/house-fill-door.svg"
-                                          alt="house icon" />
-                                        <span> Good in-home and outdoor coverage </span>
-                                      </span>
-                                    <span class="icon"></span>
-                                    </button>
-                                  </h2>
-                                  <div id="collapse12" class="accordion-collapse collapse show"
-                                    data-bs-parent="#accordionContainer-postal">
-                                    <div class="accordion-body">
-                                      There is a good chance of getting a connection good enough to support mobile
-                                      services in a
-                                      typical home, as well as outdoors
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              62%
-                            </td>
-                            <td>
-                              50%
-                            </td>
-                            <td>
-                              46%
-                            </td>
-                            <td>
-                              38%
-                            </td>
-
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                    <p class="mt-2 pb-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
-                      exercitationem
-                      necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
-                  </div>
-
-                </div>
-              </div>
-
-
-              <div class="mt-3 text-end">
-
-                <a href="more-information.html" class="btn btn-primary d-md-none width-md-100 mt-2"
-                  aria-label="More information">More
-                  information</a>
+              <div class="row coverage-btn-container justify-content-center">
+                <a href="feedback-form.html" class="btn btn-primary col-auto my-4"
+                  aria-label="Provide Coverage Feedback">Provide Coverage Feedback </a>
+                <a href="more-information.html" class="btn btn-primary col-auto my-4" aria-label="More information">
+                  Frequently Asked Questions</a>
               </div>
             </div>
           </div>
