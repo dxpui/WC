@@ -148,8 +148,19 @@ input::-webkit-date-and-time-value {
     border-radius: 0;
     background-color: var(--color-light-gray);
     border: none;
-    /* border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%; */
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.collapse-left-override {
+    position: absolute;
+    right: -42px !important;
+    top: 0 !important;
+    left: auto !important; 
+    margin-left: -5% !important;
+    border-radius: 0 !important;
+    background-color: var(--color-light-gray) !important;
+    border: none !important;
 }
 
     .collapse-left:hover,
