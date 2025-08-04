@@ -765,9 +765,12 @@ input::-webkit-date-and-time-value {
     border-bottom: none;
 }
 
-    .custom-nav-tabs .nav-item {
-        border: none;
-    }
+        .custom-nav-tabs .nav-item {
+            border: none;
+            border-right: 5px solid white;
+            border-top: 5px solid white;
+            border-left: 5px solid white;
+        }
 
 .custom-tab-content .tab-pane {
     background-color: var(--color-white);
@@ -775,7 +778,7 @@ input::-webkit-date-and-time-value {
 }
 
 .custom-nav-tabs .nav-link {
-    padding: 5px 40px;
+    padding: 5px 80px;
     border-radius: 0;
     border: none;
     color: var(--color-default);
@@ -1227,14 +1230,14 @@ span.plus-minus-icon {
 
 /* Default: tabs stretch evenly */
 .custom-nav-tabs .nav-item {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   text-align: center;
 }
 
 /* Use flex layout for the tab list */
 .custom-nav-tabs {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 /* When there are exactly 2 tabs, size to content */
