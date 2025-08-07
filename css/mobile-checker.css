@@ -1093,7 +1093,7 @@ input::-webkit-date-and-time-value {
 .patch-container {
     position: relative;
     height: 50px;
-    z-index: 999;
+    z-index: 99;
 }
 
     .patch-container .accordion {
@@ -1272,12 +1272,12 @@ span.plus-minus-icon {
   gap: 14.5rem !important;
 }
 
-.z-9999 {
-    z-index: 9999 !important;
+.z-999 {
+    z-index: 999 !important;
 }
 
-.z-99999 {
-    z-index: 99999 !important;
+.z-9999 {
+    z-index: 9999 !important;
 }
 
 .location-cross {
