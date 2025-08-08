@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Scrollbar Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .custom-scrollbar {
+      max-height: 200px;
+      overflow-y: scroll;
+      margin-right: 4px;
+      -webkit-overflow-scrolling: touch;
+      position: relative;
+      border: 1px solid #ccc;
+      padding: 0;
+    }
+
+    .custom-scrollbar li {
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Custom scrollbar for WebKit (Chrome, Safari including iOS) */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    /* Firefox scrollbar styling */
+    @supports (scrollbar-width: thin) {
+      .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f1f1f1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>FAQs</h2>
+
+  <ul class="custom-scrollbar">
+    <li><a href="#">How is the coverage information created and how do you make sure it is accurate?</a></li>
+    <li><a href="#">How often is the coverage information updated?</a></li>
+    <li><a href="#">The map says I should have good coverage but I’m not getting reliable service. Why?</a></li>
+    <li><a href="#">Your map is different to the operators’ maps. Why?</a></li>
+    <li><a href="#">I live in an area without 4G or 5G coverage, where can I get information about my signal?</a></li>
+    <li><a href="#">What can I do to improve my connection indoors?</a></li>
+    <li><a href="#">Why does the checker say “N/A” or “-1” on the postal district section?</a></li>
+    <li><a href="#">Why do I see unexpected or conflicting scores between coverage and performance across my district?</a></li>
+    <li><a href="#">Extra question for scroll test 1</a></li>
+    <li><a href="#">Extra question for scroll test 2</a></li>
+    <li><a href="#">Extra question for scroll test 3</a></li>
+    <li><a href="#">Extra question for scroll test 4</a></li>
+  </ul>
+
+</body>
+</html>
