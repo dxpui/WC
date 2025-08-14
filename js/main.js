@@ -1050,3 +1050,61 @@ $(document).ready(function () {
       }
     });
   });
+
+//   $(document).ready(function () {
+//   var $listItems = $(".item-list li");
+//   var itemsToShow = 3;
+//   var expanded = false;
+//   console.log($listItems.length)
+//   $listItems.slice(0, itemsToShow).addClass("visible");
+
+//   $(".toggle-link").on("click", function () {
+//     if (!expanded) {
+//       $listItems.addClass("visible");
+//       $(this).text("Show less");
+//     } else {
+//       $listItems.removeClass("visible").slice(0, itemsToShow).addClass("visible");
+//       $(this).text("Load more");
+//     }
+//     expanded = !expanded;
+//   });
+// });
+
+/* Load More Button feature realted JS - start */
+var itemsToShow = 3;
+
+$(".accordion-body").each(function () {
+  var $body = $(this);
+  var $listItems = $body.find(".item-list li");
+  var $toggle = $body.find(".toggle-link");
+  var expanded = false;
+
+   // If more than itemsToShow, hide extra items initially
+  if ($listItems.length > itemsToShow) {
+    $listItems.slice(0, itemsToShow).addClass("visible");
+  } else {
+    $listItems.addClass("visible"); // Show all
+    $toggle.hide(); // Hide "Load more"
+  }
+
+  $toggle.on("click", function (e) {
+    e.preventDefault();
+    if (!expanded) {
+      $listItems.addClass("visible");
+      $(this).text("Show less");
+    } else {
+      $listItems.removeClass("visible").slice(0, itemsToShow).addClass("visible");
+      $(this).text("Load more");
+    }
+    expanded = !expanded;
+  });
+
+  // Reset when accordion collapses
+  $body.closest(".accordion-collapse").on("hidden.bs.collapse", function () {
+    $listItems.removeClass("visible").slice(0, itemsToShow).addClass("visible");
+    $toggle.text("Load more");
+    expanded = false;
+  });
+});
+
+/* Load More Button feature realted css - end */

@@ -1209,9 +1209,9 @@ span.plus-minus-icon {
     letter-spacing: -0.19px;
 }
 
-.more-info-acco-outer ul.item-list.p-0 {
-    max-height: 250px !important;
-}
+/* .more-info-acco-outer ul.item-list.p-0 {
+    max-height: 200px !important;
+} */
 
 .mobile-checker-container .accordion-address-tab-button {
   color: var(--color-default) !important;
@@ -1287,3 +1287,80 @@ span.plus-minus-icon {
     height: 60px;
     border: 3px solid #d0c9c9cf !important;
 }
+
+/* Load More Button feature realted css - start */
+
+.item-list li {
+  display: none;
+}
+
+.item-list li.visible {
+  display: list-item;
+}
+
+.load-more-btn {
+  margin-top: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  background: #0056b3;
+}
+.accordion-body {
+  position: relative; /* allows absolute positioning inside */
+}
+
+.toggle-btn {
+  /* position: absolute; */
+  bottom: 0px;
+  right: 5px;
+  background: var(--color-default);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.item-list {
+  padding-bottom: 40px; /* space for button */
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end; /* move button to right */
+  margin-right: 10px;
+  margin-bottom: 5px;
+  
+}
+
+.item-list {
+  max-height: none !important;
+  overflow-y: visible !important;
+}
+
+.item-list {
+  margin-right: 4px;
+}
+
+.toggle-link {
+  color:var(--color-default);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.toggle-link:hover {
+  text-decoration: none;
+}
+
+ul.item-list.p-0 {
+    margin-bottom: 0px;
+}
+
+/* Load More Button feature realted css - end */
