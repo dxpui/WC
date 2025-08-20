@@ -1397,3 +1397,10 @@ ul.item-list.p-0 {
  .bg-aliceblue {
     background-color: aliceblue !important;
   }
+
+  .breadcrumb-title {
+        display: block;
+        background-color: var(--color-default);
+        width: 100%;
+        padding: 5px 1px 5px 5px;
+    }
