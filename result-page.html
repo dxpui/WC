@@ -696,6 +696,10 @@
           </nav>
         </div>
       </div>
+      <div>
+         <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
+        <h2 class="mb-2 mb-lg-0 mt-3 ms-2 text-white" >Map Your Mobile</h2>
+      </div>
     </section>
     <section>
       <div class="modal modal-notification fade z-9999" id="language-notification" tabindex="-1" aria-hidden="true"
@@ -726,15 +730,15 @@
             <div class="postcode-container-right">
 
               <div class="row g-3 align-items-center mb-3 mt-3">
-                <div class="col-auto">
+                <!-- <div class="col-auto">
                   <h2 class="mb-4">Map Your Mobile</h2>
                 </div>
                 <div class="col">
-                </div>
-                <div class="col-md-12 col-xl-6 ">
+                </div> -->
+                <div class="col-md-12 col-xl-8 ">
                   <div class="search-container input-group mb-3">
-                    <label for="postcode" class="mb-1 fs-m mt-3 me-2">Postcode</label>
-                    <input type="text" class="form-control search-postcode" id="postcode" placeholder="" value="CT1 2EH"
+                    <label for="postcode" class="mb-1 fs-m mt-3 me-2">Search by Postcode</label>
+                    <input type="text" class="form-control search-postcode bg-aliceblue" id="postcode" placeholder="" value="CT1 2EH"
                       aria-label="Enter postcode" aria-describedby="Enter-postcode">
                     <a href="" class="input-group-text" id="Enter-postcode"><i class="fas fa-search fs-2rem"></i> <span
                         class="visually-hidden-focusable">Search</span> </a>
@@ -749,7 +753,7 @@
                   <div class="col-auto">
                     <h2 class="mb-0">Coverage</h2>
                   </div>
-                  <div class="col">
+                  <!-- <div class="col">
                   </div>
                   <div class="col-md-12 col-xl-6 mt-4">
                     <div class="patch-container z-999">
@@ -783,7 +787,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
 
                 <ul class="nav nav-tabs custom-nav-tabs" id="myTab" role="tablist">
@@ -1235,10 +1239,52 @@
 
 
                 <div class="mt-3 text-end">
+                    <div class="row g-3 align-items-center mb-1">
+                  <div class="col-auto">
+                    <!-- <h2 class="mb-0">Provide Coverage Feedback</h2> -->
+                     <a href="feedback-form.html" class="btn btn-primary col-auto my-4"
+                  aria-label="Provide Coverage Feedback">Provide Coverage Feedback </a>
+                  </div>
+                  <div class="col">
+                  </div>
+                  <div class="col-md-12 col-xl-6 mt-4">
+                    <div class="patch-container z-999">
+                      <div class="accordion" id="accordionMapPatch">
+                        <div class="accordion-item accordion-box active">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button accordion-map-tab-button collapsed" type="button"
+                              data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false"
+                              aria-controls="collapseOne1" aria-label="Can't find your provider">
+                              <div class="color-box bg-skyBlue "></div><span>Can't find your provider?</span>
+                            </button>
+                          </h2>
+                          <div id="collapseOne1" class="accordion-collapse collapse acordion-content-upward" aria-labelledby="headingOne1"
+                            data-bs-parent="#accordionMapPatch1">
+                            <div class="accordion-body position-relative">
+                              <div class="custom-popover position-relative text-start">
+                                <div class="mb-4">
+                                  <h3 class="mb-3 mt-2">I can't find my service provider for the checker</h3>
+                                  <p>The coverage checker uses the four main mobile network operators in the UK. All
+                                    other
+                                    mobile operators in the UK provide their service over these networks.</p>
+                                  <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
+                                  <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT
+                                    Mobile and Lyca mobile</p>
+                                  <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
+                                  <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                   <a href="more-information.html" class="btn btn-primary d-md-none width-md-100 mt-2"
                     aria-label="More information">More
-                    information2</a>
+                    information</a>
                 </div>
                   <button type="submit" class="btn btn-primary collapse-left collapse-left-override d-md-inline d-none"
                   id="collapseButton"><i class="fa-solid fa-chevron-right"></i><span
@@ -1252,8 +1298,11 @@
                 class="visually-hidden-focusable text-dark">Button</span></button> -->
             <div class="postcode-container-left">
               <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
-              <h2 class="mb-2 mb-lg-2">Performance in SE1</h2>
-
+              <h2 class="mb-2 mb-lg-2">Performance across SE1</h2>
+<p class="my-4 text-start">We've scored mobile network operators based on 4G/5G download and upload
+  speed tests, using crowdsourced meansurements
+  , in the CTI district.
+</p>
               <div class="col-md-12 text-center mt-5">
                 <section>
                   <div class="chart-container pl-mobile-0">
@@ -1293,8 +1342,8 @@
                 </p>
               </div>
               <div class="row coverage-btn-container justify-content-center">
-                <a href="feedback-form.html" class="btn btn-primary col-auto my-4"
-                  aria-label="Provide Coverage Feedback">Provide Coverage Feedback </a>
+                <!-- <a href="feedback-form.html" class="btn btn-primary col-auto my-4"
+                  aria-label="Provide Coverage Feedback">Provide Coverage Feedback </a> -->
                 <a href="more-information.html" class="btn btn-primary col-auto my-4" aria-label="More information">
                   Frequently Asked Questions</a>
               </div>

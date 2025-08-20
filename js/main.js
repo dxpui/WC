@@ -572,6 +572,17 @@ $(document).ready(function () {
             let icon = $(this).find("i");
             addAriaAttribute(icon, false);
         }
+
+        if ($(".postcode-right-outer").hasClass("expend")) {
+            $(".search-container").closest(".col-md-12.col-xl-8, .col-md-12.col-xl-7")
+                .removeClass("col-xl-8")
+                .addClass("col-xl-7");
+        } else {
+            $(".search-container").closest(".col-md-12.col-xl-7, .col-md-12.col-xl-8")
+                .removeClass("col-xl-7")
+                .addClass("col-xl-8");
+        }
+
     });
 
     function addAriaAttribute(icon, onPageLoad) {

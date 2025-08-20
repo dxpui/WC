@@ -45,7 +45,7 @@ input::-webkit-date-and-time-value {
 }
 
 .postcode-container-left {
-    padding: 40px;
+    padding: 30px;
 }
 
 @media (max-width: 1024px) {
@@ -1281,7 +1281,7 @@ span.plus-minus-icon {
 }
 
 .location-cross {
-    margin-left: 5px !important;
+    margin-left: 1rem !important;
     font-size: 35px;
     width: 50px;
     height: 60px;
@@ -1374,7 +1374,7 @@ ul.item-list.p-0 {
   background: #fff;   
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   border-radius: 8px;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -1394,3 +1394,6 @@ ul.item-list.p-0 {
     margin-left: 10px;
     padding-right: 1px;
     }
+ .bg-aliceblue {
+    background-color: aliceblue !important;
+  }
