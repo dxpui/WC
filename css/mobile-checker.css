@@ -1404,3 +1404,55 @@ ul.item-list.p-0 {
         width: 100%;
         padding: 5px 1px 5px 5px;
     }
+@media (max-width: 768px) {
+    .location-cross {
+        margin-left: 0.5rem !important;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        border: 3px solid #d0c9c9cf !important;
+    }
+
+    .fs-15px {
+        font-size: 15px !important;
+    }
+
+    .search-postcode {
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .input-group-text {
+        height: 42px;
+        font-size: 15px;
+    }
+
+    .postcode-container-right {
+        padding: 0px 10px;
+    }
+
+    .pdng-left-btm {
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+
+    /* Expanded iframe */
+    .expanded iframe {
+        height: 600px;
+    }
+
+    #iframe-height-toggle {
+        width: 40px;
+        padding-left: 7px;
+        padding-top: 5px;
+        line-height: 35px;
+        height: 40px;
+        border: 1px solid var(--color-black);
+        background-color: #b49d9d42;
+        justify-content: center;
+        font-size: 25px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 0 0 50% 50%;
+    }
+}        /*******Mobile - Iframe Height Adjustment - End *********/

@@ -1060,26 +1060,26 @@ $(document).ready(function () {
         showContent(contentId);
       }
     });
+
+  // Iframe height toggle - mobile view only
+   let isDown = true;
+    const iframeWrapper = document.getElementById('iframe-wrapper');
+
+    $("#iframe-height-toggle").on("click", function () {
+    iframeWrapper.classList.toggle('expanded');
+       
+    const icon = $(this).find("i");
+
+    if (isDown) {
+        icon.removeClass("fa-chevron-down").addClass("fa-chevron-up"); 
+    } else {
+        icon.removeClass("fa-chevron-up").addClass("fa-chevron-down");
+    }
+    
+    isDown = !isDown;
+    });
+
   });
-
-//   $(document).ready(function () {
-//   var $listItems = $(".item-list li");
-//   var itemsToShow = 3;
-//   var expanded = false;
-//   console.log($listItems.length)
-//   $listItems.slice(0, itemsToShow).addClass("visible");
-
-//   $(".toggle-link").on("click", function () {
-//     if (!expanded) {
-//       $listItems.addClass("visible");
-//       $(this).text("Show less");
-//     } else {
-//       $listItems.removeClass("visible").slice(0, itemsToShow).addClass("visible");
-//       $(this).text("Load more");
-//     }
-//     expanded = !expanded;
-//   });
-// });
 
 /* Load More Button feature realted JS - start */
 var itemsToShow = 3;
@@ -1116,6 +1116,6 @@ $(".accordion-body").each(function () {
     $toggle.text("Load more");
     expanded = false;
   });
-});
 
-/* Load More Button feature realted css - end */
+  /* Load More Button feature realted css - end */
+});
