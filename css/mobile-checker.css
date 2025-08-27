@@ -1453,17 +1453,6 @@ ul.item-list.p-0 {
     }
 }        /*******Mobile - Iframe Height Adjustment - End *********/
 
-@media screen and (min-width: 1024px) {
-    .postcode-container-right {
-        padding-top: 4px;
-        padding-bottom: 50px;
-        padding-inline: 0.5rem;
-        padding-left: 20px;
-        margin-left: -10px;
-        padding-right: 20px;
-    }
-}
-
 .color-black {
     color: var(--color-black) !important;
 }
