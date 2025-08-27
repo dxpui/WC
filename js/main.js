@@ -576,9 +576,9 @@ $(document).ready(function () {
         if ($(".postcode-right-outer").hasClass("expend")) {
             $(".search-container").closest(".col-md-12.col-xl-8, .col-md-12.col-xl-7")
                 .removeClass("col-xl-8")
-                .addClass("col-xl-7");
+                .addClass("col-xl-5");
         } else {
-            $(".search-container").closest(".col-md-12.col-xl-7, .col-md-12.col-xl-8")
+            $(".search-container").closest(".col-md-12.col-xl-5")
                 .removeClass("col-xl-7")
                 .addClass("col-xl-8");
         }
