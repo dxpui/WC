@@ -1209,6 +1209,9 @@ span.plus-minus-icon {
     }
 
 @media (max-width: 768px) {
+    .EPiServerFormsFeedback {
+            margin-top: 2rem !important;
+        }
     .mt-ps-code {
         margin-top: 8px !important;
     }
@@ -1501,6 +1504,11 @@ ul.item-list.p-0 {
 .max-w-370 {
     max-width: 370px;
 }
+
+.max-w-380 {
+    max-width: 380px;
+}
+
 
 i.fa-solid.fa-location-crosshairs {
     cursor: pointer !important;
