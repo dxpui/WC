@@ -1485,6 +1485,10 @@ ul.item-list.p-0 {
     max-width: 250px;
 }
 
+.max-w-300 {
+    max-width: 300px;
+}
+
 .wc-box-border {
     border: 1px solid #000 !important;
     color: #d0c9c9cf !important;
