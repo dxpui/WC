@@ -785,6 +785,10 @@ input::-webkit-date-and-time-value {
     color: var(--color-default);
     background-color: #d3d3d3;
     margin-bottom: 0px;
+    font-family: var(--font-family-default) !important;
+    font-weight: 700;
+    font-style: Bold !important;
+    font-size: 24px;
 }
 
     .custom-nav-tabs .nav-link:hover {
@@ -804,9 +808,6 @@ input::-webkit-date-and-time-value {
     }
 
 @media (max-width: 768px) {
-    .custom-nav-tabs .nav-link {
-        padding: 5px 15px;
-    }
 
     .custom-nav-tabs .nav-item, .custom-nav-tabs .nav-link {
         flex: 1 1 auto;
@@ -1224,6 +1225,7 @@ span.plus-minus-icon {
 
     .custom-nav-tabs .nav-link {
         padding: 5px 10px !important;
+         font-size: 20px !important;
     }
 
     .collapse-left {
