@@ -50,6 +50,8 @@ input::-webkit-date-and-time-value {
 
 .postcode-container-left {
     padding: 30px;
+    padding-left: 40px;
+    padding-right: 20px;
 }
 
 @media (max-width: 1024px) {
@@ -492,7 +494,15 @@ input::-webkit-date-and-time-value {
         position: absolute;
     }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
+    .order-mbl-1 {
+            order: 1 !important;
+    }
+    
+    .order-mbl-2 {
+            order: 2 !important;
+    }
     .chart-container {
         width: 295px;
     }
@@ -1262,6 +1272,20 @@ span.plus-minus-icon {
     padding-left: 1rem;
 }
 
+.acordion-content-downward {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    /*padding-top: 1rem;*/
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
 .breadcrumb-title {
     display: block;
     background-color: var(--color-default);
@@ -1370,6 +1394,10 @@ ul.item-list.p-0 {
 
 @media (max-width: 768px) {
 
+    .max-w-380 {
+            max-width: 340px !important;
+        }
+
     h2.mb-0.pdng-left-btm {
         margin-bottom: 0px !important;
         margin-top: 15px !important;
@@ -1441,7 +1469,23 @@ ul.item-list.p-0 {
 }
 
 .gray-bg {
-    background-color: rgba(212, 212, 212, 0.25);
+    background-color: #D4D4D440;
+    color: var(--color-default);
+}
+
+.gray-bg-dark {
+    background-color: #E8E8E8 !important;
+    color: var(--color-default);
+}
+
+.gray-bg-dark:hover {
+    background-color: #E8E8E8 !important;
+}
+
+.gray-bg-dark:hover,
+.gray-bg-dark:focus,
+.gray-bg-dark:active {
+    background-color: #E8E8E8 !important;
     color: var(--color-default);
 }
 
@@ -1534,4 +1578,31 @@ i.fa-solid.fa-location-crosshairs {
 
 .mt-ps-code {
     margin-top: 12px;
+}
+
+div#landing-page-image-block {
+    padding-right: 20px;
+    padding-left: 30px;
+}
+
+.mt-title {
+    margin-top: 12px !important;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+div#lblPostcode {
+  padding-left: 10px;
+}
+
+div#donut-chart {
+    margin-top: 1rem !important;
+}
+
+.btn-order{
+    order: 1;
+}
+
+.accordion-order{
+    order: 2;
 }
