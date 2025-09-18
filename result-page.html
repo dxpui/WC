@@ -732,9 +732,9 @@
           <div class="col-lg-8 postcode-right-outer px-0" id="postcode-div">
             <div class="postcode-container-right" id="pContainter-top">
              <div class="row g-3 align-items-center mb-1" id="lblPostcode">
-                <div class="col-md-12 " id="lbl-searchbox">
+                <div class="col-md-12 col-xl-8 " id="lbl-searchbox">
                   <div class="search-container input-group mb-3">
-                    <label for="postcode" class="mb-1 fs-m mt-3 me-2 fs-15px color-black">Search by Postcode</label>
+                    <label for="postcode" class="mb-1 fs-m mt-ps-code me-2 fs-15px color-black">Search by Postcode</label>
                     <input type="text" class="form-control search-postcode" id="postcode" placeholder=""
                       value="CT1 2EH" aria-label="Enter postcode" aria-describedby="Enter-postcode">
                     <a href="" class="input-group-text wc-box-border" id="Enter-postcode"><i class="fas fa-search fs-2rem"></i> <span
@@ -790,9 +790,9 @@
                       </div>
                       <div class="col-md-12 col-xl-7">
                         <div class="patch-container ms-2rem mt-n10px">
-                            <div id="mapinput" class="form-control-coverage-level">
+                            <!-- <div id="mapinput" class="form-control-coverage-level">
                               Coverage Level
-                            </div>
+                            </div> -->
                           <div class="accordion" id="accordionMapPatch1">
                             <div class="accordion-item accordion-box">
                               <h2 class="accordion-header" id="headingOne">
@@ -818,7 +818,7 @@
                     <div class="col-12 iframe-wrapper mt-n10px-lg" id="iframe-wrapper">
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
-                        width="100%" height="400" style="border:0;" title="Mobile Coverage Map" allowfullscreen="" loading="lazy"
+                        width="100%" class="map-container" height="400" style="border:0;" title="Mobile Coverage Map" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                       </iframe>
                       <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
@@ -863,8 +863,8 @@
                                 </div>
                   </div>
                   <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
-                    <div class="container bg-white pt-3" id="accordionContainer">
-                      <h3 class="h4-class">Results for Flat 1, Starrs House, 14D, The Precints</h3>
+                    <div class="bg-white pt-3" id="accordionContainer">
+                      <h3 class="h4-class" id="addressHeader">Results for Flat 1, Starrs House, 14D, The Precints</h3>
                       <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
                         exercitationem
                         necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
@@ -984,8 +984,8 @@
                         exercitationem
                         necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
                     </div>
-                    <div class="row">
-                      <div class="col-12 col-md-2 col-xxl-2 mb-2">
+                    <div class="row mt-2">
+                      <div class="key-more-info">
                         <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
                           class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2" data-bs-toggle="popover"
                           data-bs-placement="right" data-bs-html="true" data-bs-content="
@@ -1008,53 +1008,53 @@
                                       </p>
                                     </div>
                                   </div>">
-                        </i>Key -
+                        </i><span class="fw-bold pe-none">Key</span>
                       </div>
-                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                      <div class="col-6 col-md-2 col-xxl-2">
                         <div class="box-container">
-                          <div class="color-box bg-magenta"></div>
+                          <div class="color-box bg-magenta ms-2 ms-md-0 mt-3px"></div>
                           <span>Good in-home and outdoor</span>
                         </div>
                       </div>
           
-                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                      <div class="col-6 col-md-2 col-xxl-2">
                         <div class="box-container">
                           <div class="color-box bg-green"></div>
                           <span>Patchy in-home, good outdoor</span>
                         </div>
                       </div>
           
-                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                      <div class="col-6 col-md-2 col-xxl-2">
                         <div class="box-container">
-                          <div class="color-box bg-skyBlue"></div>
+                          <div class="color-box bg-skyBlue  ms-2 ms-md-0 mt-3px"></div>
                           <span>Good<br /> (outdoor only)</span>
                         </div>
                       </div>
           
-                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                      <div class="col-6 col-md-2 col-xxl-2">
                         <div class="box-container">
-                          <div class="color-box bg-pink"></div>
+                          <div class="color-box bg-pink ms-md-0 mt-3px"></div>
                           <span>Patchy<br /> (outdoor only)</span>
                         </div>
                       </div>
           
-                      <div class="col-6 col-md-2 col-xxl-2 mb-2">
+                      <div class="col-6 col-md-2 col-xxl-2">
                         <div class="box-container">
-                          <div class="color-box bg-grey"></div>
+                          <div class="color-box bg-grey ms-2 ms-md-0 mt-3px"></div>
                           <span>None</span>
                         </div>
                       </div>
-                      <div class="col-12 d-flex justify-content-end">
+                      <!-- <div class="col-12 d-flex justify-content-end">
                         <a href="feedback-form.html" class="btn btn-primary width-md-100 mt-2"
                           aria-label="Provide Coverage Feedback map">Provide
                           Coverage
                           Feedback map</a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                   <div class="tab-pane fade" id="postal-district" role="tabpanel" aria-labelledby="postal-district-tab">
-                    <div class="container bg-white pt-3" id="accordionContainer-postal">
-                      <h3 class="h4-class">Results for CTI postal district</h3>
+                    <div class="bg-white pt-3" id="accordionContainer-postal">
+                      <h3 class="h4-class" id="postalDistrictInfo">Results for CTI postal district</h3>
                       <p class="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quae vero
                         exercitationem
                         necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
@@ -1164,27 +1164,27 @@
           
                 <div class="row mt-3 justify-content-center justify-content-lg-between text-center text-lg-start ">
           
-                  <div class="col-12 col-lg-6 order-1 order-mbl-2 order-lg-1 text-lg-start mb-3 mb-lg-0 mt-2 max-w-325">
-                    <a href="feedback-form.html" class="btn btn-primary" aria-label="Provide Coverage Feedback">
+                  <div class="col-12 col-lg-6 order-1 order-mbl-2 order-lg-1 text-lg-start mb-3 mb-lg-0 mt-2 max-w-340">
+                    <a href="feedback-form.html" class="btn btn-primary btn-feedback btn-txt" id="feedbackform-id" aria-label="Provide Coverage Feedback">
                       Provide Coverage Feedback
                     </a>
                   </div>
           
-                  <div class="col-12 col-lg-6 order-2 order-mbl-1 order-lg-2 mt-2 max-w-380">
+                  <div class="col-12 col-lg-6 order-2 order-mbl-1 order-lg-2 mt-2 accordion-provider-btn">
                     <div class="patch-container z-999">
                       <div class="accordion" id="accordionMapPatch">
-                        <div class="accordion-item accordion-box active">
+                        <div class="accordion-item accordion-box p-0 active">
                           <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button accordion-map-tab-button collapsed" type="button"
+                            <button class="accordion-button accordion-map-tab-button collapsed btn-txt fw-semibold" type="button"
                               data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false"
                               aria-controls="collapseOne1" aria-label="Can't find your provider? button collapsed">
                               <div class="color-box bg-skyBlue"></div>
                               <span>Can't find your provider?</span>
                             </button>
                           </h2>
-                          <div id="collapseOne1" class="accordion-collapse collapse acordion-content-upward"
+                          <div id="collapseOne1" class="accordion-collapse collapse acordion-content-styling accordion-upward"
                             data-bs-parent="#accordionMapPatch">
-                            <div class="accordion-body position-relative">
+                            <!-- <div class="accordion-body position-relative">
                               <div class="custom-popover position-relative text-start">
                                 <div class="mb-4">
                                   <h3 class="mb-3 mt-2">I can't find my service provider for the checker</h3>
@@ -1197,7 +1197,29 @@
                                   <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
                                 </div>
                               </div>
-                            </div>
+                            </div> -->
+                        <div class="accordion-body position-relative">
+    <div class="custom-popover position-relative text-start">
+        <div class="mb-4">
+
+            <div class="rich-text-block">
+                <div class="custom-popover">
+                    <div class="mb-4">
+                        <h3 class="mb-3 mt-2">I can't find my service provider for the checker</h3>
+                        <p>The coverage checker the four main mobile network operators in the UK. All other mobile
+                            operators in the UK. All other mobile operators in UK provide their service over these
+                            networks</p>
+                        <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
+                        <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and
+                            Lyca mobile</p>
+                        <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
+                        <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                           </div>
                         </div>
                       </div>
@@ -1205,7 +1227,7 @@
                   </div>
                 </div>
           
-                <button type="submit" class=" gray-bg-dark btn-primary collapse-left collapse-left-override d-md-inline d-none"
+                <button type="submit" class="btn btn-primary collapse-left collapse-left-override d-md-inline d-none gray-bg-dark"
                   id="collapseButton"><i class="fa-solid fa-chevron-right"></i><span
                     class="visually-hidden-focusable text-dark">Button</span></button>
               </div>
@@ -1215,11 +1237,11 @@
             <div class="postcode-container-left">
               <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
               <h2 class="mb-2 mb-lg-2">Performance across SE1</h2>
-<p class="my-4 text-start">We've scored mobile network operators based on 4G/5G download and upload
+<p class="text-start">We've scored mobile network operators based on 4G/5G download and upload
   speed tests, using crowdsourced meansurements
   , in the CTI district.
 </p>
-              <div class="col-md-12 text-center mt-5">
+              <div class="col-md-12 text-center">
                 <section>
                   <div class="chart-container pl-mobile-0">
                     <div class="chart-wrapper border-top-left">
@@ -1261,7 +1283,7 @@
                 <!-- <a href="feedback-form.html" class="btn btn-primary col-auto my-4"
                   aria-label="Provide Coverage Feedback">Provide Coverage Feedback </a> -->
                
-                  <a href="more-information.html" class="btn btn-primary mt-2 max-w-300"
+                  <a href="more-information.html" class="btn btn-primary max-w-300 btn-faq fixed-btn btn-txt"
                     aria-label="Frequently asked questions">Frequently asked questions</a>
               </div>
             </div>
