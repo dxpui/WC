@@ -729,23 +729,23 @@
     <section class="postcode-container">
       <div class="container-fluid mobile-checker-container" id="page-webchecker">
         <div class="row">
-          <div class="col-lg-8 postcode-right-outer px-0">
-            <div class="postcode-container-right">
-              <div class="row g-3 align-items-center mb-3 mt-3">
-                <div class="col-md-12 col-xl-8 ">
+          <div class="col-lg-8 postcode-right-outer px-0" id="postcode-div">
+            <div class="postcode-container-right" id="pContainter-top">
+             <div class="row g-3 align-items-center mb-1" id="lblPostcode">
+                <div class="col-md-12 " id="lbl-searchbox">
                   <div class="search-container input-group mb-3">
                     <label for="postcode" class="mb-1 fs-m mt-3 me-2 fs-15px color-black">Search by Postcode</label>
                     <input type="text" class="form-control search-postcode" id="postcode" placeholder=""
                       value="CT1 2EH" aria-label="Enter postcode" aria-describedby="Enter-postcode">
                     <a href="" class="input-group-text wc-box-border" id="Enter-postcode"><i class="fas fa-search fs-2rem"></i> <span
                         class="visually-hidden-focusable">Search</span> </a>
-                    <button class="d-flex justify-content-center align-items-center location-cross bg-transparent">
+                    <button class="d-flex justify-content-center align-items-center location-cross bg-transparent" aria-label="use current location" id="usecurrentlocation">
                       <i class="fa-solid fa-location-crosshairs"></i>
                     </button>
                   </div>
                 </div>
               </div>
-              <div class=" gray-bg-dark postcode-container-right position-relative pt-1 ">
+              <div class="gray-bg-dark postcode-container-right position-relative pt-1" id="mobileCoverage">
                 <div class="row g-3 align-items-center mb-1">
                   <div class="col-auto d-flex align-items-center w-100">
                     <h2 class="mb-0 pdng-left-btm">Coverage</h2>
@@ -758,17 +758,17 @@
                 <ul class="nav nav-tabs custom-nav-tabs" id="myTab" role="tablist">
                   <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button"
-                      role="tab" tabindex="0" aria-controls="map" aria-label="Map Tab" aria-selected="true"><b>Map</b></button>
+                      role="tab" tabindex="0" aria-controls="map" aria-label="Map Tab" aria-selected="true"><b id="map-label">Map</b></button>
                   </li>
                   <li class="nav-item" role="presentation">
                     <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address" type="button"
                       role="tab" tabindex="-1" aria-controls="address" aria-label="Address Tab"
-                      aria-selected="false"><b>Address</b></button>
+                      aria-selected="false"><b id="address-label">Address</b></button>
                   </li>
                   <li class="nav-item" role="presentation">
                     <button class="nav-link" id="postal-district-tab" data-bs-toggle="tab" data-bs-target="#postal-district"
                       type="button" role="tab" tabindex="-1" aria-controls="postal-district" aria-label="Postal District Tab"
-                      aria-selected="false"><b>Postal
+                      aria-selected="false"><b id="postal-district-label">Postal
                         district</b></button>
                   </li>
                 </ul>
@@ -776,11 +776,11 @@
                 <!-- Tab Content -->
                 <div class="tab-content custom-tab-content" id="myTabContent">
                   <div class="tab-pane fade show active " id="map" role="tabpanel" aria-labelledby="map-tab">
-                    <div class="row g-3 align-items-center mb-3 mt-3">
-                      <div class="col-auto">
+                    <div class="row g-3 align-items-center">
+                      <div class="col-auto mt-0 mt-3-max">
                         <label for="network" class="col-form-label"><b>Network :</b></label>
                       </div>
-                      <div class="col">
+                      <div class="col mt-0 mt-3-max">
                         <select class="form-select" aria-label="Select mobile network provider">
                           <option selected="">EE</option>
                           <option value="72579157">Three</option>
@@ -789,17 +789,20 @@
                         </select>
                       </div>
                       <div class="col-md-12 col-xl-7">
-                        <div class="patch-container">
+                        <div class="patch-container ms-2rem mt-n10px">
+                            <div id="mapinput" class="form-control-coverage-level">
+                              Coverage Level
+                            </div>
                           <div class="accordion" id="accordionMapPatch1">
                             <div class="accordion-item accordion-box">
                               <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button accordion-map-tab-button collapsed" type="button"
+                                <button class="accordion-button accordion-map-tab-button collapsed accordion-coverage ps-1" type="button"
                                   data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                   aria-controls="collapseOne">
                                   <div class="color-box bg-skyBlue "></div><span>Patch (outdoor only)</span>
                                 </button>
                               </h2>
-                              <div id="collapseOne" class="accordion-collapse collapse acordion-content-upward" aria-labelledby="headingOne"
+                              <div id="collapseOne" class="accordion-collapse collapse acordion-content-styling accordion-downward" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionMapPatch1">
                                 <div class="accordion-body">
                                   There is a reasonable chance of a good connection to support mobile services
@@ -812,76 +815,52 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 iframe-wrapper" id="iframe-wrapper">
+                    <div class="col-12 iframe-wrapper mt-n10px-lg" id="iframe-wrapper">
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488796.0730301729!2d-3.276575790001316!3d55.3780510!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb60d769fc9%3A0xb7e3f0bc174739e7!2sUnited%20Kingdom!5e0!3m2!1sen!2sus!4v1673536922332!5m2!1sen!2sus"
                         width="100%" height="400" style="border:0;" title="Mobile Coverage Map" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                       </iframe>
-                      <div class="row iframe-overlay">
-                        <div class="col-12 col-xxl-2 mb-2">
-                          <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
-                            class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2" data-bs-toggle="popover"
-                            data-bs-placement="right" data-bs-html="true" data-bs-content="
-                                    <div class='custom-popover col-12'>
-                                      <div class='mb-4'>
-                                        <h3 class='mb-3 mt-2'>I can't find my service provider for the checker</h3>
-                                        <p>The coverage checker the four main mobile network operators in the UK. All other mobile operators
-                                          in the UK. All other mobile operators in UK provide their service over these networks
-                                        </p>
-                                 
-                                        <p><b>Vodafone network -</b> Labara Mobile, Asda Mobile, Talk Mobile and VOXI.</p>
-                                 
-                                        <p><b>EE network -</b> Your Co-op, 1p Mobile, Utility Warehouse, Ecotalk, Plusnet, BT Mobile and Lyca mobile</p>
-                                 
-                                        <p><b>Three network -</b> iD Mobile, Smarty, Freedompop and Superdrug Mobile.</p>
-                                 
-                                        <p><b>O2 network -</b> Tesco Mobile, Giffgaff and Sky Mobile.</p>
-                                        <p class='text-center d-lg-none mt-2 '>
-                                          <a href='javascript:void(0);' class='btn btn-primary btn-md' style='border-radius: 0;'>OK</a>
-                                        </p>
-                                      </div>
-                                    </div>">
-                          </i>Key -
-                        </div>
-                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                          <div class="box-container">
-                            <div class="color-box bg-magenta"></div>
-                            <span>Good in-home and outdoor</span>
-                          </div>
-                        </div>
-          
-                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                          <div class="box-container">
-                            <div class="color-box bg-green"></div>
-                            <span>Patchy in-home, good outdoor</span>
-                          </div>
-                        </div>
-          
-                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                          <div class="box-container">
-                            <div class="color-box bg-skyBlue"></div>
-                            <span>Good<br /> (outdoor only)</span>
-                          </div>
-                        </div>
-          
-                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                          <div class="box-container">
-                            <div class="color-box bg-pink"></div>
-                            <span>Patchy<br /> (outdoor only)</span>
-                          </div>
-                        </div>
-          
-                        <div class="col-6 col-md-3 col-xxl-2 mb-2">
-                          <div class="box-container">
-                            <div class="color-box bg-grey"></div>
-                            <span>None</span>
-                          </div>
-                        </div>
-                      </div>
-          
+                      <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
                     </div>
-                    <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
+                      <div class="row mt-2">
+                                    <div class="key-more-info">
+                                        <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
+                                           class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
+                                           data-bs-toggle="popover" data-bs-placement="auto" data-bs-html="true" data-bs-content="&lt;p&gt;&lt;strong&gt;Key&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;br /&gt;&lt;strong&gt;&lt;span data-teams=&quot;true&quot;&gt;Good in-home and outdoo&lt;/span&gt;r&lt;/strong&gt; - &lt;span data-teams=&quot;true&quot;&gt;There is a good chance of getting a connection good enough to support mobile services in a typical home, as well as outdoors.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;br /&gt;&lt;strong&gt;&lt;span data-teams=&quot;true&quot;&gt;&lt;span&gt;Variable&lt;/span&gt; in-home, good outdoo&lt;/span&gt;r&lt;/strong&gt; - &lt;span data-teams=&quot;true&quot;&gt;There is a reasonable chance of getting a good connection to support mobile services in some parts of a typical home, as well as outdoors.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Good (outdoor only)&lt;/strong&gt; - &lt;span data-teams=&quot;true&quot;&gt;There is a good chance of getting a connection good enough to support mobile services. You may be able to get limited indoor coverage.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;br /&gt;&lt;strong&gt;&lt;span data-teams=&quot;true&quot;&gt;&lt;span&gt;Variable&lt;/span&gt; (outdoor only&lt;/span&gt;)&lt;/strong&gt; - &lt;span data-teams=&quot;true&quot;&gt;There is a reasonable chance of getting a good connection that will support services. Basic services such as voice and text messages are more likely to be available. Do not expect coverage indoors.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;br /&gt;&lt;strong&gt;&lt;span data-teams=&quot;true&quot;&gt;Poor to none (outdoor only)&lt;/span&gt;&lt;/strong&gt; - &lt;span data-teams=&quot;true&quot;&gt;There is limited to no chance of getting a connection. Do not expect coverage of any form.&lt;/span&gt;&lt;/p&gt;&#xA;&lt;p class=&quot;text-center d-md-none mt-2 &quot;&gt;&lt;a href=&quot;javascript:void(0);&quot; class=&quot;btn btn-primary btn-md&quot; style=&quot;border-radius: 0;&quot;&gt;OK&lt;/a&gt;&lt;/p&gt;"></i>
+                                        <span class="fw-bold pe-none">Key</span>
+                                    </div>
+                                    <div class="col-6 col-md-2 col-xxl-2">
+                                        <div class="box-container">
+                                            <div class="color-box ms-2 ms-md-0 mt-3px" style="background-color: #cd7be4 !important"></div>
+                                            <span>Good in-home and outdoor</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-2 col-xxl-2">
+                                        <div class="box-container">
+                                            <div class="color-box ms-2 ms-md-0 mt-3px" style="background-color: #a679b6 !important"></div>
+                                            <span>Variable in-home, good outdoor</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-2 col-xxl-2">
+                                        <div class="box-container">
+                                            <div class="color-box ms-2 ms-md-0 mt-3px" style="background-color: #77b4df !important"></div>
+                                            <span>Good (outdoor only)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-2 col-xxl-2">
+                                        <div class="box-container">
+                                            <div class="color-box ms-2 ms-md-0 mt-3px" style="background-color: #83e5f6 !important"></div>
+                                            <span>Variable (outdoor only)</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-2 col-xxl-2">
+                                        <div class="box-container">
+                                            <div class="color-box ms-2 ms-md-0 mt-3px" style="background-color: #d4d4d4 !important"></div>
+                                            <span>Poor to none (outdoor only)</span>
+                                        </div>
+                                    </div>
+                                </div>
                   </div>
                   <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
                     <div class="container bg-white pt-3" id="accordionContainer">
