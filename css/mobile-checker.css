@@ -1278,11 +1278,6 @@ span.plus-minus-icon {
         margin-top: 2rem !important;
     }
 
-
-    .collapse-left {
-        left: 1.2rem !important;
-    }
-
     /* Default: tabs stretch evenly */
     .mobile-checker-container .custom-nav-tabs .nav-item {
         flex: 0 0 auto !important;
@@ -1718,17 +1713,27 @@ html[lang="en"] .postcode-container-right .form-select {
     font-size: 15px !important;
 }
 
+html[lang="cy"] .faq-container .accordion-button{
+    font-size: 16px !important;
+    font-weight:700 !important;
+}
+
+html[lang="en"] .faq-container .accordion-button {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
 .key-more-info {
     flex: 0 0 auto;
     width: auto;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    padding-right: 5px;
 }
 
 @media (max-width: 992px) {
     .key-more-info {
         flex: 0 0 auto;
-        width: 100%;
     }
 }
 
@@ -1741,19 +1746,29 @@ html[lang="en"] .postcode-container-right .form-select {
     .order-mbl-2 {
         order: 2 !important;
     }
-}
 
- /*iPad Pro 12.9" portrait (1024 × 1366) */
-@media only screen and (width: 1024px) and (height: 1366px) {
-    .accordion-provider-btn {
-        max-width: 290px !important;
+    .key-more-info {
+        flex: 0 0 auto;
+        width: 100% !important;
+        margin-right: 0px;
+        margin-bottom: 10px !important;
+        padding-right: 5px;
+        margin-left: 8px;
+    }
+
+    .collapse-left {
+        left: 1.2rem !important;
     }
 }
 
 /*iPad Air portrait (820 × 1180) */
-@media only screen and (width: 820px) and (height: 1180px) {
+@media only screen and (width: 820px) and (height: 1180px) and (orientation: portrait) {
     .accordion-provider-btn {
         max-width: 425px !important;
+    }
+
+    div#lblPostcode {
+        margin-top: 10px !important;
     }
 }
 
@@ -1764,7 +1779,7 @@ html[lang="en"] .postcode-container-right .form-select {
 }
 
 /*iPad Mini landscape (1024 × 768) */
-@media only screen and (width: 1024px) and (height: 768px) {
+@media only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
     .accordion-provider-btn {
         max-width: 300px !important;
     }
@@ -1777,11 +1792,21 @@ html[lang="en"] .postcode-container-right .form-select {
         margin: auto !important;
         width: 280px !important;
     }
+
+    .key-more-info {
+        flex: 0 0 auto;
+        width: auto;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        padding-right: 0px;
+        font-size: 14px;
+    }
 }
 
 /* Hide #collapseButton for devices around 820x1180 and 768x1024 */
 @media (min-width: 768px) and (max-width: 830px) and (min-height: 1024px) and (max-height: 1180px) {
-    #collapseButton {
+
+    #pContainter-top #collapseButton {
         display: none !important;
     }
 }
@@ -1793,10 +1818,28 @@ html[lang="en"] .postcode-container-right .form-select {
         margin: auto !important;
         width: 280px !important;
     }
+
+    html[lang="cy"] .faq-container .accordion-button {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+    }
+
+    html[lang="en"] .faq-container .accordion-button {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+    }
+
+    .postcode-container-right {
+        padding-top:26px;
+    }
 }
 
 /*Ipad pro portarit*/
 @media only screen and (height: 1366px) and (width: 1024px) and (orientation: portrait) {
+
+    .accordion-provider-btn {
+        width: 340px !important;
+    }
 
     .feedback-accordion-btn {
         margin: auto !important;
@@ -1805,6 +1848,15 @@ html[lang="en"] .postcode-container-right .form-select {
 
     .btn-container {
         display: flex !important;
+    }
+
+    .key-more-info {
+        flex: 0 0 auto;
+        width: auto;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        padding-right: 0px !important;
+        font-size: 14px;
     }
 }
 
@@ -1818,5 +1870,37 @@ html[lang="en"] .postcode-container-right .form-select {
 
     .btn-container {
         display: flex !important;
+    }
+
+    div#lblPostcode {
+        margin-top: 10px !important;
+    }
+
+    .postcode-container-right {
+        padding-top: 26px;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 414px) {
+    html[lang="cy"] .mobile-checker-container .accordion-button,
+    html[lang="cy"] .postcode-container-right .form-select {
+        font-size: 12px !important;
+        line-height: 12px !important;
+    }
+
+    html[lang="cy"] .faq-container .accordion-button {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+    html[lang="en"] .faq-container .accordion-button {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (orientation: portrait) {
+    .accordion-provider-btn {
+        width: 290px !important;
     }
 }

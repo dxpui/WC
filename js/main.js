@@ -508,7 +508,7 @@ $(document).ready(function () {
         $icon.popover('hide');
     });
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 767) {
         $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
         $('#collapseButton').hide();
         $(document).on('click', '.accordion-collapse .accordion-body .item-list li', function () {
@@ -533,6 +533,17 @@ $(document).ready(function () {
         });
     }
 
+    if (window.innerWidth == 768 || window.innerWidth == 820) {
+    $('#collapseButton').hide();
+    $(document).on('click', '.accordion-collapse .accordion-body .item-list li', function () {
+        var $leftDrawer = $('.postcode-left-outer');
+        if (!$leftDrawer.hasClass('collapsed')) {
+            $('#collapseButton').show();
+        }
+ 
+    });
+}
+
     $('.content-faq').hide();
     $('#collapseButton').hide();
     /* Panel Collapse Left-Right*/
@@ -554,7 +565,7 @@ $(document).ready(function () {
             $(".postcode-container-left ").css("display", "none");
         }
 
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 767) {
             $('#collapseButton').hide();
             $('.postcode-right-outer.gray-bg.col-md-7').css('display', 'none');
         }
@@ -568,7 +579,7 @@ $(document).ready(function () {
         if ($('.default-msg:visible').length > 0) {
             return false;
         }
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 767) {
             let icon = $(this).find("i");
             addAriaAttribute(icon, false);
         }
