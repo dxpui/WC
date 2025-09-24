@@ -963,7 +963,7 @@ input::-webkit-date-and-time-value {
     color: #000045;
     transition: transform 0.3s;
     /*font-weight: 400;*/
-    line-height: 0.7;
+    height: auto;
 }
 
 .postcode-container .accordion-button:not(.collapsed)::after {
