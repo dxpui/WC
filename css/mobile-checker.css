@@ -788,15 +788,20 @@ input::-webkit-date-and-time-value {
     border-bottom: none;
 }
 
-    .custom-nav-tabs .nav-item:nth-child(2) {
-        background-color: #fff;
-    }
+.custom-nav-tabs .nav-item:nth-child(2) {
+    background-color: #fff;
+}
 
-        .custom-nav-tabs .nav-item:nth-child(2) .nav-link {
-            margin-inline: 3px;
-        }
+.custom-nav-tabs .nav-item:nth-child(2) .nav-link {
+    margin-inline: 3px;
+}
 
-
+/* When there are exactly 2 li elements, 
+       remove margin-inline-end from the second one */
+.custom-nav-tabs .nav-item:nth-child(2):nth-last-child(1) .nav-link {
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+}
 .custom-tab-content .tab-pane {
     background-color: var(--color-white);
     padding: 10px;
