@@ -64,6 +64,12 @@ input::-webkit-date-and-time-value {
     }
 }
 
+@media (max-width: 768px) {
+    .postcode-container-left {
+        padding: 0px 10px !important;
+    }
+}
+
 .postcode-container-right {
     padding-top: 4px;
     /*padding-bottom: 50px;*/
