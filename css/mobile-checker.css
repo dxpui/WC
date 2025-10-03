@@ -980,6 +980,7 @@ input::-webkit-date-and-time-value {
     /*font-weight: 400;*/
     /* line-height: 0.7; */
     /* height: auto; */
+    width: auto;
 }
 
 .postcode-container .accordion-button:not(.collapsed)::after {
