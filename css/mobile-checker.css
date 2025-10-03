@@ -245,7 +245,8 @@ input::-webkit-date-and-time-value {
     color: #000045;
     border: none;
     box-shadow: none;
-    line-height: 24px;
+    /* line-height: 24px; */
+     line-height: 1.25rem;
     font-size: 16px !important;
     font-style: normal !important;
     font-weight: 400 !important;
@@ -969,19 +970,25 @@ input::-webkit-date-and-time-value {
 
 .postcode-container .accordion-button::after {
     background-image: none !important;
-    content: '+';
+    font-family: FontAwesome;
+    content: '\2b' !important;
+    font-size: 20px;
+    /* content: '+';
     font-size: 30px;
-    color: #000045;
+    color: #000045; */
     transition: transform 0.3s;
     /*font-weight: 400;*/
     /* line-height: 0.7; */
-    height: auto;
+    /* height: auto; */
 }
 
 .postcode-container .accordion-button:not(.collapsed)::after {
-    content: '';
+    /* content: '';
     content: '−';
-    font-size: 40px;
+    font-size: 40px; */
+    font-family: FontAwesome;
+    content: '\f068' !important;
+    font-size: 20px;
 }
 
 
@@ -1666,7 +1673,7 @@ div#donut-chart {
 
 .accordion-coverage {
     padding-bottom: 0px !important;
-    line-height: 0.5 !important;
+    /* line-height: 0.5 !important; */
 }
 
 .accordion-provider-btn {
