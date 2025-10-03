@@ -246,7 +246,7 @@ input::-webkit-date-and-time-value {
     border: none;
     box-shadow: none;
     line-height: 24px;
-    font-size: 16px !important;
+    font-size: 1.25rem !important;
     font-style: normal !important;
     font-weight: 400 !important;
     font-family: var(--font-family-default) !important;
@@ -969,19 +969,16 @@ input::-webkit-date-and-time-value {
 
 .postcode-container .accordion-button::after {
     background-image: none !important;
-    content: '+';
-    font-size: 30px;
-    color: #000045;
+    font-family: FontAwesome;
+    content: '\2b' !important;
+    font-size: 20px;
     transition: transform 0.3s;
-    /*font-weight: 400;*/
-    /* line-height: 0.7; */
-    height: auto;
 }
 
 .postcode-container .accordion-button:not(.collapsed)::after {
-    content: '';
-    content: '−';
-    font-size: 40px;
+   font-family: FontAwesome;
+    content: '\f068' !important;
+    font-size: 20px;
 }
 
 
