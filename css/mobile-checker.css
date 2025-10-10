@@ -48,6 +48,13 @@ input::-webkit-date-and-time-value {
     font-size: 1rem;
 }
 
+.postcode-container-right {
+    padding-top: 20px;
+    padding-right:20px;
+    /* padding-bottom: 50px; */
+    /* padding-inline: 0.5rem; */
+}
+
 .postcode-container-left {
     padding: 30px;
     padding-left: 45px;
@@ -60,15 +67,10 @@ input::-webkit-date-and-time-value {
     }
 
     .postcode-container-right {
-        padding: 20px 10px;
+        padding: 0px;
     }
 }
 
-.postcode-container-right {
-    padding-top: 4px;
-    /*padding-bottom: 50px;*/
-    padding-inline: 0.5rem;
-}
 
 .postcode-container-left table .green-bg {
     background-color: var(--color-green);
@@ -340,6 +342,15 @@ input::-webkit-date-and-time-value {
     font-weight: bold;
 }
 
+
+
+@media (max-width: 992px) {
+   .search-container {
+    padding-right: 10px;
+}
+}
+
+
 .search-container .search-postcode {
     border-right: none;
     height: 58px;
@@ -390,7 +401,7 @@ input::-webkit-date-and-time-value {
 
 .search-postcode {
     height: 60px;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
 /* popover related css */
@@ -788,13 +799,24 @@ input::-webkit-date-and-time-value {
     border-bottom: none;
 }
 
-    .custom-nav-tabs .nav-item:nth-child(2) {
-        background-color: #fff;
-    }
+.custom-nav-tabs.nav-tabs {
+    background-color: #fff;
+    display: inline-flex;
+}
 
+.custom-nav-tabs .nav-item {
+    background-color: #d3d3d3;
+}
+
+     .custom-nav-tabs .nav-item:nth-child(2),
+     .custom-nav-tabs .nav-item:nth-child(3)
+      {
+        margin-left: 3px;
+    }
+/*
         .custom-nav-tabs .nav-item:nth-child(2) .nav-link {
             margin-inline: 3px;
-        }
+        } */
 
 /* When there are exactly 2 li elements, 
 remove margin-inline-end from the second one */
@@ -807,7 +829,8 @@ remove margin-inline-end from the second one */
 .custom-tab-content .tab-pane {
     background-color: var(--color-white);
     padding: 15px;
-    padding-top: 0px !important;
+    /* padding-top: 0px !important; */
+    padding-bottom: 25px;
 }
 
 .custom-nav-tabs .nav-link {
@@ -819,16 +842,15 @@ remove margin-inline-end from the second one */
     margin-bottom: 0px;
     font-family: var(--font-family-default) !important;
     font-weight: 700;
-    font-size: 20px;
+    font-size: .875rem;
 }
 
     .custom-nav-tabs .nav-link:hover {
         color: var(--color-default);
     }
 
-    .custom-nav-tabs .nav-link.active {
+    .custom-nav-tabs .nav-item:has(.active)  {
         color: var(--color-default);
-        background-color: var(--color-white);
         border-color: var(--bs-nav-tabs-link-active-border-color);
         border-bottom: 5px solid var(--color-default);
     }
@@ -840,8 +862,8 @@ remove margin-inline-end from the second one */
 
 @media (max-width: 768px) {
     .custom-nav-tabs .nav-link {
-        padding: 5px 10px !important;
-        font-size: 20px !important;
+        padding: 5px 20px !important;
+        /* font-size: 20px !important; */
     }
 
     .custom-nav-tabs .nav-item, .custom-nav-tabs .nav-link {
@@ -856,7 +878,7 @@ remove margin-inline-end from the second one */
     }
 }
 
-@media screen and (min-width: 359px) and (max-width: 391px) {
+/* @media screen and (min-width: 359px) and (max-width: 391px) {
     .custom-nav-tabs .nav-link {
         padding: 5px 5px !important;
         font-size: 18px !important;
@@ -866,7 +888,7 @@ remove margin-inline-end from the second one */
         height: 40px !important;
         font-size: 13px !important;
     }
-}
+} */
 
 .row.col-12.mt-5 {
     margin-left: 5px;
@@ -1141,7 +1163,7 @@ remove margin-inline-end from the second one */
 
 .mobile-checker-container .col-form-label {
     font-weight: 400;
-    font-size: 20px;
+    font-size: .875rem;
 }
 
 .patch-container {
@@ -1159,7 +1181,7 @@ remove margin-inline-end from the second one */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -1329,7 +1351,7 @@ span.plus-minus-icon {
     display: block;
     background-color: var(--color-default);
     width: 100%;
-    padding: 5px 1px 5px 5px;
+    padding: 5px 0px 15px 15px;
 }
 
 /* Load More Button feature realted css - start */
@@ -1428,24 +1450,27 @@ ul.item-list.p-0 {
 }
 
 .mt-title {
-    margin-top: 12px !important;
+    /* margin-top: 12px !important; */
     padding-left: 20px;
     padding-right: 10px;
 }
 
+@media (max-width: 1024px) {
+     .search-container.input-group {
+        margin-top: 25px;
+    }
+}
+
+
 @media (max-width: 768px) {
 
-    h2.mb-0.pdng-left-btm {
+    /* h2.mb-0.pdng-left-btm {
         margin-bottom: 0px !important;
         margin-top: 15px !important;
-    }
+    } */
 
     .mt-title {
         margin-top: 10px !important;
-    }
-
-    .search-container.input-group.mb-3 {
-        margin-top: 25px !important;
     }
 
     .location-cross {
@@ -1470,14 +1495,14 @@ ul.item-list.p-0 {
         font-size: 15px;
     }
 
-    .postcode-container-right {
+    /* .postcode-container-right {
         padding: 0px 10px;
-    }
+    } */
 
-    .pdng-left-btm {
+    /* .pdng-left-btm {
         padding-left: 15px;
-        /*padding-bottom: 15px;*/
-    }
+        padding-bottom: 15px;
+    } */
 
     /* Expanded iframe */
     .expanded iframe {
@@ -1529,16 +1554,14 @@ ul.item-list.p-0 {
     h2.mb-0.pdng-left-btm {
         margin-bottom: 0px !important;
         margin-top: 10px;
-        margin-left: -7px;
     }
 
     .postcode-container-right {
         padding-top: 26px;
         /*padding-bottom: 50px;*/
-        padding-inline: 0.5rem;
-        padding-left: 20px;
-        margin-left: -10px;
-        padding-right: 20px;
+        /* padding-inline: 0.5rem; */
+        /* padding-left: 20px; */
+        /* padding-right: 20px; */
     }
 
     /*.search-container.input-group.mb-3 {
@@ -1614,13 +1637,13 @@ i.fa-solid.fa-location-crosshairs {
 }
 
 div#landing-page-image-block {
-    padding-right: 20px;
-    padding-left: 30px;
+    padding-right: 0px;
+    padding-left: 15px;
 }
 
-div#lblPostcode {
+/* div#lblPostcode {
     padding-left: 10px;
-}
+} */
 
 div#donut-chart {
     margin-top: 1.2rem !important;
@@ -1644,7 +1667,7 @@ div#donut-chart {
     height: 34px;
     border: 3px solid var(--color-default);
     padding-left: 10px;
-    font-size: 15px;
+    font-size: 0.875rem;
 }
 
 .postcode-container-right .form-select {
@@ -1652,7 +1675,7 @@ div#donut-chart {
     line-height: 1;
     padding-top: 0px;
     padding-bottom: 0px;
-    font-size: 15px;
+    font-size: 0.875rem;
     font-weight: 600;
 }
 
@@ -1689,14 +1712,14 @@ div#donut-chart {
     /* font-weight: 700; */
 }
 
-#map-tab {
+/* #map-tab {
     margin-bottom: 10px;
-}
+} */
 
-#address-tab,
+/* #address-tab,
 #postal-district-tab {
     margin-bottom: -2px;
-}
+} */
 
 .custom-nav-tabs:has(#address-tab.active)
 #map-tab {
@@ -1712,10 +1735,10 @@ html[lang="cy"] .postcode-container-right .form-select {
     font-size: 14px !important;
 }
 
-html[lang="en"] .mobile-checker-container .accordion-button,
+/* html[lang="en"] .mobile-checker-container .accordion-button,
 html[lang="en"] .postcode-container-right .form-select {
     font-size: 15px !important;
-}
+} */
 
 html[lang="cy"] .faq-container .accordion-button{
     font-size: 16px !important;
@@ -1732,7 +1755,7 @@ html[lang="en"] .faq-container .accordion-button {
     width: auto;
     margin-right: 0px;
     margin-bottom: 0px;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 @media (max-width: 992px) {
@@ -1776,11 +1799,11 @@ html[lang="en"] .faq-container .accordion-button {
     }
 }
 
-@media (max-width: 1200px) and (min-width: 790px) and (max-height: 1366px) and (min-height: 768px) {
+
     .mt-3-max {
         margin-top: 1rem !important;
     }
-}
+
 
 /*iPad Mini landscape (1024 × 768) */
 @media only screen and (width: 1024px) and (height: 768px) and (orientation: landscape) {
@@ -1832,10 +1855,6 @@ html[lang="en"] .faq-container .accordion-button {
         font-size: 14px !important;
         font-weight: 700 !important;
     }
-
-    .postcode-container-right {
-        padding-top:26px;
-    }
 }
 
 /*Ipad pro portarit*/
@@ -1879,10 +1898,6 @@ html[lang="en"] .faq-container .accordion-button {
     div#lblPostcode {
         margin-top: 10px !important;
     }
-
-    .postcode-container-right {
-        padding-top: 26px;
-    }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 414px) {
@@ -1907,4 +1922,18 @@ html[lang="en"] .faq-container .accordion-button {
     .accordion-provider-btn {
         width: 290px !important;
     }
+}
+
+.postcode-label{
+    font-size: 1.3rem;
+    margin-top: 12px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+@media (max-width: 768px) {
+   .postcode-label{
+    margin-top: 10px;
+    font-size: 1rem;
+}
 }
