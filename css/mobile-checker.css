@@ -1937,3 +1937,8 @@ html[lang="en"] .faq-container .accordion-button {
     font-size: 1rem;
 }
 }
+/* For Github UI (Local Environment) only - To override disabled input field styles */
+#postcode.form-control:disabled {
+   background: #fff !important;
+    opacity: initial !important;
+}
