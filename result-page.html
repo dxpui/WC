@@ -698,8 +698,8 @@
       </div>
       
       <div class="breadcrumb-title">
-         <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
-        <h2 class="mb-2 mb-lg-0 mt-1 ms-2 text-white" >Map Your Mobile</h2>
+         <!-- <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1> -->
+        <h1 class="text-white" >Map Your Mobile</h1>
       </div>
     </section>
     <section>
@@ -730,9 +730,9 @@
           <div class="col-lg-8 postcode-right-outer px-0" id="postcode-div">
             <div class="postcode-container-right" id="pContainter-top">
              <div class="row g-3 align-items-center mb-1" id="lblPostcode">
-                <div class="col-md-12 col-xl-8 " id="lbl-searchbox">
+                <div class="col-md-12 col-xl-9 " id="lbl-searchbox">
                   <div class="search-container input-group mb-3">
-                    <label for="postcode" class="mb-1 fs-m mt-ps-code me-2 fs-15px color-black">Search by Postcode</label>
+                    <label for="postcode" class="mb-1 fs-m mt-ps-code me-2 fs-15px color-black postcode-label">Search by Postcode</label>
                     <input type="text" class="form-control search-postcode" id="postcode" placeholder=""
                       value="CT1 2EH" aria-label="Enter postcode" aria-describedby="Enter-postcode">
                     <a href="" class="input-group-text wc-box-border" id="Enter-postcode"><i class="fas fa-search fs-2rem"></i> <span
@@ -743,10 +743,10 @@
                   </div>
                 </div>
               </div>
-              <div class="gray-bg-dark postcode-container-right position-relative pt-1" id="mobileCoverage">
+              <div class="gray-bg-dark position-relative postcode-container-right p-3" id="mobileCoverage">
                 <div class="row g-3 align-items-center mb-1">
                   <div class="col-auto d-flex align-items-center w-100">
-                    <h2 class="mb-0 pdng-left-btm">Coverage</h2>
+                    <h2 class="text-start fw-bold h2">Coverage</h2>
                          <div class="d-block d-md-none ms-auto" id="iframe-height-toggle">
                       <i class="fa-solid fa-chevron-down" aria-label="expand mobile checker pane"></i>
                     </div>
@@ -768,7 +768,7 @@
                 <!-- Tab Content -->
                 <div class="tab-content custom-tab-content" id="myTabContent">
                   <div class="tab-pane fade show active " id="map" role="tabpanel" aria-labelledby="map-tab">
-                    <div class="row g-3 align-items-center">
+                    <div class="row g-3">
                       <div class="col-auto mt-0 mt-3-max">
                         <label for="network" class="col-form-label"><b>Network :</b></label>
                       </div>
@@ -812,7 +812,7 @@
                       </iframe>
                       <div id="afterMapIframe" tabindex="0" class="hiddenMapIFrame"></div>
                     </div>
-                      <div class="row mt-2">
+                      <div class="row mt-2 justify-content-center">
                                     <div class="key-more-info">
                                         <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
                                            class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2"
@@ -973,7 +973,7 @@
                         exercitationem
                         necessitatibus atque magnam nemo, dolor assumenda rerum corporis saepe totam eaque.</p>
                     </div>
-                    <div class="row mt-2">
+                    <div class="row mt-2 justify-content-center">
                       <div class="key-more-info">
                         <i tabindex="0" role="button" aria-label="More info" style="color: #8F0057;"
                           class="popover-trigger okok popover-icon fa-solid fa-circle-info me-2" data-bs-toggle="popover"
@@ -1203,8 +1203,7 @@
             </div>
           </div>
           <div class="col-lg-4 position-relative postcode-left-outer">
-            <div class="postcode-container-left">
-              <h1 id="skipToContent" class="visually-hidden-focusable">Web Checker</h1>
+            <div class="postcode-container-left mt-4">
               <h2 class="mb-2 mb-lg-2">Performance across SE1</h2>
 <p class="text-start">We've scored mobile network operators based on 4G/5G download and upload
   speed tests, using crowdsourced meansurements
