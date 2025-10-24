@@ -1130,3 +1130,10 @@ $(".accordion-body").each(function () {
 
   /* Load More Button feature realted css - end */
 });
+
+$(document).ready(function() {
+    // Check if the <i> inside the button has the class 'fa-chevron-right'
+    if ($('#collapseButton i').hasClass('fa-chevron-right')) {
+        $('#collapseButton i').attr('aria-label', 'expand mobile checker pane');
+    }
+});
