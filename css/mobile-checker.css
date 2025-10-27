@@ -1944,8 +1944,8 @@ html[lang="en"] .faq-container .accordion-button {
 }
 
 /* Result page: To highlight the exapand and collapse button on tab focus */
-#collapseButton i:focus-visible {
-    outline: 3px solid var(--color-outline-focus);
+#collapseButton:focus-visible {
+    color: inherit !important;
+    outline: 3px solid var(--color-outline-focus) !important;
     outline-offset: 0;
-    border-radius: 2px; /* optional: makes outline look nicer */
 }
