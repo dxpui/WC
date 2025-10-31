@@ -1584,13 +1584,14 @@ ul.item-list.p-0 {
 
 .wc-box-border {
     border: 1px solid #000 !important;
-    color: #d3d3d3 !important;
+    color: #212529 !important;
     height: 58px;
 }
 
-    .wc-box-border:hover {
-        background-color: transparent !important;
-    }
+.wc-box-border:hover {
+    background-color: transparent !important;
+    color: #212529 !important;
+}
 
 .mt-35 {
     margin-top: 35%;
